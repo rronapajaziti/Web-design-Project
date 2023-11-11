@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(co.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    backdrop-filter: blur(5px);
+
+}
+header{
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    font-weight: bold;
+
+}
+ul{
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%;
+    list-style: none;
+    font-size: larger;
+    text-decoration-line: underline;
+    opacity: 0.4;
+
+}
+.Logo{
+    display: flex;
+    justify-content: left;
+    height: 125px;
+}
+
+.paragrafi h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    opacity: 0.3;
+    font-family: 'Brush Script MT', cursive;
+
+
+}
+.paragrafi{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: baseline;
+	align-content: space-around;
+  
+}
+.pershkrimi{
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.Foto{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 100px 300px;
+    gap: 20px;
+}
+.travelPhotos{
+    background-color: white;
+    border-radius: 15px;
+
+}
+.Pershkrimi{
+    text-align: center;
+}
+.footer{
+    margin-top: 20px;
+    background-color: transparent ;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px;
+    flex-direction: row;
+    background-color:rgba(16,32,53,255);
+    
+}
+.h2{
+    color: #a2a3a3;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 20%;
+}
+.footermain{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.Adresa{
+    display: flex;
+    justify-content: space-between;
+}
+.logos{
+    width: 250px;
+}
+.Referenca{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
