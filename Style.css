@@ -1,8 +1,62 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-body{
+@media screen and (max-width: 768px){
+.paragrafi h1 {
+    font-size: 6vw;
+}
+}
+@media screen and (max-width: 1200px) {
+    .paragrafi h1 {
+        font-size: 5vw;
+    }
+
+    .pershkrimi {
+        font-size: 2vw;
+    }
+
+    .Foto {
+        margin: 5% 1%;
+    }
+
+    .logos {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .paragrafi h1 {
+        font-size: 6vw;
+    }
+
+    .pershkrimi {
+        font-size: 2.5vw;
+    }
+
+    .Foto {
+        margin: 5% 0;
+    }
+
+    .logos {
+        width: 100%;
+        max-width: 150px;
+    }
+} 
+/* @media only screen and (max-width: 600px) {
+    header, footer {
+        font-size: 14px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+} */
+
+header{
     background-image: url(co.jpg);
     background-size: auto;
     background-repeat: no-repeat;
@@ -10,8 +64,6 @@ body{
     background-size: cover;
     backdrop-filter: blur(5px);
 
-}
-header{
     height: 400px;
     display: flex;
     justify-content: space-between;
@@ -22,7 +74,7 @@ header{
 ul{
     display: flex;
     justify-content: space-evenly;
-    width: 60%;
+    width: 100%;
     list-style: none;
     font-size: larger;
     text-decoration-line: underline;
@@ -39,7 +91,7 @@ ul{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 100px;
+    font-size: 4vw;
     opacity: 0.3;
     font-family: 'Brush Script MT', cursive;
 
@@ -55,15 +107,15 @@ ul{
   
 }
 .pershkrimi{
-    font-size: 15px;
+    font-size: 1.5vw;
     font-family: 'Times New Roman', Times, serif;
 
 }
 .Foto{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 100px 300px;
+    justify-content: space-evenly;
+    margin: 5% 10%;
     gap: 20px;
 }
 .travelPhotos{
@@ -79,7 +131,7 @@ ul{
     background-color: transparent ;
     display: flex;
     justify-content: space-evenly;
-    padding: 40px;
+    padding: 2% 5%;
     flex-direction: row;
     background-color:rgba(16,32,53,255);
     
@@ -87,25 +139,30 @@ ul{
 .h2{
     color: #a2a3a3;
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    width: 20%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 .footermain{
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: center;
+    align-items:center;
+    width: 100%;
 }
 .Adresa{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 .logos{
-    width: 250px;
+    width: 100px;
+    max-width: 250px;
 }
 .Referenca{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    width: 70%;
+    width: 100%;
 }
