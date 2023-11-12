@@ -1,84 +1,29 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-@media screen and (max-width: 768px){
-.paragrafi h1 {
-    font-size: 6vw;
-}
-}
-@media screen and (max-width: 1200px) {
-    .paragrafi h1 {
-        font-size: 5vw;
-    }
-
-    .pershkrimi {
-        font-size: 2vw;
-    }
-
-    .Foto {
-        margin: 5% 1%;
-    }
-
-    .logos {
-        width: 100%;
-        max-width: 200px;
-    }
 }
 
-@media screen and (max-width: 768px) {
-    .paragrafi h1 {
-        font-size: 6vw;
-    }
 
-    .pershkrimi {
-        font-size: 2.5vw;
-    }
-
-    .Foto {
-        margin: 5% 0;
-    }
-
-    .logos {
-        width: 100%;
-        max-width: 150px;
-    }
-} 
-/* @media only screen and (max-width: 600px) {
-    header, footer {
-        font-size: 14px;
-    }
-
-    main {
-        padding: 10px;
-    }
-
-} */
-
-header{
-    background-image: url(co.jpg);
+.heading{
+    background-image: url(mountain-4810958_1280.jpg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    backdrop-filter: blur(5px);
-
     height: 400px;
     display: flex;
     justify-content: space-between;
-    color: black;
+    color: white;
     font-weight: bold;
 
 }
 ul{
     display: flex;
-    justify-content: space-evenly;
-    width: 100%;
+    justify-content: space-between;
+    width: 30%;
     list-style: none;
     font-size: larger;
     text-decoration-line: underline;
-    opacity: 0.4;
 
 }
 .Logo{
@@ -87,7 +32,7 @@ ul{
     height: 125px;
 }
 
-.paragrafi h1{
+/* .paragrafi h1{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,7 +55,7 @@ ul{
     font-size: 1.5vw;
     font-family: 'Times New Roman', Times, serif;
 
-}
+} */
 .Foto{
     display: flex;
     flex-wrap: wrap;
@@ -127,42 +72,49 @@ ul{
     text-align: center;
 }
 .footer{
-    margin-top: 20px;
-    background-color: transparent ;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 2% 5%;
-    flex-direction: row;
-    background-color:rgba(16,32,53,255);
-    
-}
-.h2{
-    color: #a2a3a3;
+    height: 200px;
+	margin: 0px;
+	background-color: rgb(194,195,195);
+    color: white;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-content: space-between;
+    justify-content: space-between;
+    padding: 15px;
+}
+.h2{
     width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
 }
 .footermain{
     display: flex;
-    justify-content: center;
-    align-items:center;
+    justify-content: space-evenly;
     width: 100%;
 }
 .Adresa{
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+.Kontakti{
+    display: flex;
+    flex-direction: column;
     align-items: center;
     width: 100%;
+    margin: auto;
+    
 }
 .logos{
-    width: 100px;
-    max-width: 250px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 .Referenca{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     width: 100%;
+	display: flex;
+    justify-content: center;
 }
