@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+body{
+    background-color: #f7f6f1;
+}
 
 
 .heading{
@@ -10,52 +13,105 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    height: 400px;
-    display: flex;
-    justify-content: space-between;
-    color: white;
-    font-weight: bold;
-
+    width: 100%;
+    height: 80vh;
+    
 }
-ul{
+.navbar{
+    width: 100%;
+    margin: auto;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    width: 30%;
-    list-style: none;
-    font-size: larger;
-    text-decoration-line: underline;
-
 }
 .Logo{
     display: flex;
-    justify-content: left;
+    justify-content: flex-start;
     height: 125px;
+    cursor: pointer;
 }
-
-/* .paragrafi h1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 4vw;
-    opacity: 0.3;
-    font-family: 'Brush Script MT', cursive;
-
-
+.navbar ul{
+    list-style: none;
+    padding: 0;
+}
+.navbar ul li{
+    display: inline-block;
+    margin: 0 20px;
+    list-style: none;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+}
+/* me kap ni element te vetem */
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #4d4848;
+    position:  absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover:after{
+    width: 100%;
 }
 .paragrafi{
-    display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-items: baseline;
-	align-content: space-around;
-  
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
 }
-.pershkrimi{
-    font-size: 1.5vw;
-    font-family: 'Times New Roman', Times, serif;
+.paragrafi h1{
+    font-size: 70px;
+    text-transform: uppercase;
+    text-shadow: 2px 10px #4d4848;
+}
+.paragrafi p{
+    margin: 20px auto;
+    font-weight: bold;
+    line-height: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+.paragrafi button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #4d4848;
+    background: transparent;
+    color: #2c2929;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+span{
+    background: #4d4848;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+.paragrafi button:hover span{
+    width: 100%;
+}
+.paragrafi button:hover{
+    border: none;
+}
 
-} */
+
 .Foto{
     display: flex;
     flex-wrap: wrap;
@@ -71,76 +127,93 @@ ul{
 .Pershkrimi{
     text-align: center;
 }
-.main-footer{
-    padding: auto;
-    background-color: rgb(194,195,195);
+footer{
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(to right,#4d4848,rgb(194,195,195));
     color: white;
-    display: flex;
-    justify-content: space-around;
-    align-items:center;
-    
-
-}
-.k {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: flex-start;
-    justify-content: center;
-    text-align:flex;
-    width: 100px;
-}
-
-.main-footer h3{
-    
-    font-weight: bold;
-    font-size: 15px;
-    margin-bottom: 10px;
-    margin-left: 30px;
- 
-   
-}
-.main-footer ul{
     padding: 0;
-    flex-direction: column;
-    list-style: none;
-    line-height: 1.6;
-    font-size: 14px;
-    width: 100px;
-    margin: 2px;
+    border-top-left-radius: 125px;
+    font-size: 13px;
+    line-height: 20px;
+}
+.rreshti{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.kolona{
+    flex-basis: 15%;
+    padding: 5px;
+}
+.logo{
+    width: 125px;
+  
 }
 
-
-.main-footer ul a{
-    
-    color: inherit;
+.kolona h3{
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+}
+.id{
+    width: fit-content;
+    border-bottom: 1px solid #4d4848;
+    margin: 20px 0;
+}
+.kolona a{
     text-decoration: none;
-    opacity: 0.8;
-   
-   
+    color: inherit;
+    font-weight: bold;
 }
+form{
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid;
+    margin-bottom: 50px;
+}
+form .fa{
+    font-size: 18px;
+    margin-right: 10px;
+}
+form input{
+    width: 100%;
+    background: transparent;
+    color: white;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+form button {
+    background: transparent;
+    border: 0;
+    outline: none;
+    color: white;
+    cursor: pointer;
+}
+.social-media{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-.main-footer .social-media{
+}
+.Copyright{
     text-align: center;
-}   
-.main-footer .social-media > a{
-    font-size: 24px;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    display: inline-flex;
-    text-align: center;
-     border-radius:50% ;
-     border: 1px solid;
-     margin-left: 10px;
-     margin-top: 25px;
+}
+.underline{
+    width: 100%;
+    height: 3px;
+    background: #4d4848;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+
 }
 
-
-.main-footer .Copyright{
-    margin-top: 20px;
-    margin-bottom: 0;
-    font-size: 15px;
-    opacity: 0.6;
-}
 
