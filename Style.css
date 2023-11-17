@@ -1,21 +1,19 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body{
     background-color: #f7f6f1;
 }
-
-
 .heading{
-    background-image: url(mountain-4810958_1280.jpg);
+    background-image: url(Photos/mountain.jpg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     width: 100%;
     height: 80vh;
-    
 }
 .navbar{
     width: 100%;
@@ -71,6 +69,7 @@ body{
     font-size: 70px;
     text-transform: uppercase;
     text-shadow: 2px 10px #4d4848;
+    color: #f7f6f1;
 }
 .paragrafi p{
     margin: 20px auto;
@@ -110,30 +109,148 @@ span{
 .paragrafi button:hover{
     border: none;
 }
+/*Foto*/
+.destinacionet {
+    padding: 100px 0;
+}
+h1{
+    text-align: center;
+    padding-bottom: 30px;
+    font-size: xx-large;
+    color: #4d4848;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
 
+.images .img{
+    width: 100%;
+}
+.cmimi{
+    width: 50px;
+    height: 50px;
+    background: #4d4848;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 30%;
+    box-shadow: 0 0 10px 1px #4d4848;
+    position: absolute;
+    left: 20px;
+    bottom:-25px;
 
-.Foto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.images{
+    position: relative;
+    width: 100%;
+}
+.row{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin: 5% 10%;
+    justify-content: center;
     gap: 20px;
 }
-.travelPhotos{
-    background-color: white;
-    border-radius: 15px;
+.column .img{
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    height: 300px;
+}
+.container{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.rating{
+    padding: 3px;
+    float: right;
+    background: #fff;
+    bottom: -1px;
+    right: 0;
+    position: absolute;
+}
+.destinacionet .fa{
+    font-size: 15px;
+    color: #4d4848;
+}
+.detaje{
+    width: 300px;
+    flex-basis: 15%;
+    padding: 5px;
+}
+.detaje h4{
+    font-weight: 700;
+    font-size: larger;
+    margin-top: 30px;
+}
+.detaje .fa{
+    margin-right: 5px;
+}
+.icona{
+    display: flex;
+    justify-content: space-around;
+}
+.box {
+    box-shadow: 0 0 10px 1px #4d4848;
+    margin-bottom: 30px;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+}
+
+.drejtkendesh{
+    width: 100%;
+    height: 400px;
+    background-color: #2f2d2b;
+    border: 5px solid white;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.pic{
+    float: left;
+    padding: 5px;
+    position: relative;
+}
+.drejtkendesh::after{
+    content: "";
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.h{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.6s;
+}
+.h:hover{
 
 }
-.Pershkrimi{
-    text-align: center;
+.mbeshtjell{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+/*Footer*/
 footer{
     width: 100%;
     position: absolute;
     background: linear-gradient(to right,#4d4848,rgb(194,195,195));
-    color: white;
+    color: #f7f6f1;
     padding: 0;
-    border-top-left-radius: 125px;
+    border-top-left-radius: 100px;
     font-size: 13px;
     line-height: 20px;
 }
@@ -184,7 +301,7 @@ form .fa{
 form input{
     width: 100%;
     background: transparent;
-    color: white;
+    color: #f7f6f1;
     border: 0;
     outline: none;
     cursor: pointer;
@@ -193,14 +310,16 @@ form button {
     background: transparent;
     border: 0;
     outline: none;
-    color: white;
+    color: #f7f6f1;
     cursor: pointer;
 }
 .social-media{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+}
+.social-media i{
+    font-size: 32px;
 }
 .Copyright{
     text-align: center;
@@ -213,7 +332,6 @@ form button {
     position: absolute;
     top: 25px;
     left: 0;
-
 }
 
 
