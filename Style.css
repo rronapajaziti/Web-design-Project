@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #f7f6f1;
+    background-color: #eae9e9;
 }
 .heading{
     background-image: url(Photos/mountain.jpg);
@@ -200,47 +200,22 @@ h1{
 .drejtkendesh{
     width: 100%;
     height: 400px;
-    background-color: #2f2d2b;
+    background-color: #434342;
     border: 5px solid white;
     border-radius: 20px;
     margin-bottom: 30px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
 }
 .pic{
     float: left;
     padding: 5px;
     position: relative;
 }
-.drejtkendesh::after{
+.mbeshtjell::after{
     content: "";
     display: flex;
     flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
-}
-.h{
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    position: absolute;
-    background: rgba(0,0,0,0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    opacity: 0;
-    transition: 0.6s;
-}
-.h:hover{
-
-}
-.mbeshtjell{
-    width:100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 /*Footer*/
@@ -270,7 +245,6 @@ footer{
     width: 125px;
   
 }
-
 .kolona h3{
     width: fit-content;
     margin-bottom: 40px;
