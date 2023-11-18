@@ -1,0 +1,272 @@
+.heading{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f7f6f1;
+}
+.heading{
+
+    background-size: auto;   
+     background-image: url(ph1.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 80vh;
+}
+.navbar{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Logo{
+    display: flex;
+    justify-content: flex-start;
+    height: 125px;
+    cursor: pointer;
+}
+.navbar ul{
+    list-style: none;
+    padding: 0;
+}
+.navbar ul li{
+    display: inline-block;
+    margin: 0 20px;
+    list-style: none;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: rgb(172, 170, 170);
+    text-transform: uppercase;
+}
+/* me kap ni element te vetem */
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #4d4848;
+    position:  absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover:after{
+    width: 100%;
+}
+/* body{
+    font-family:Arial, Helvetica, sans-serif;
+    padding: 30px;
+}
+ .foto{
+    position: relative;
+}
+.foto img{
+    width: 100%;
+    height:auto; } */
+
+    
+
+.about{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color:rgb(44, 43, 43) ;
+   
+}
+.about h1{
+    font-size: 71px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.story{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+.wrapper{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family:Georgia, 'Times New Roman', Times, serif,cursive;
+}
+.wrapper{
+	width: 100%;
+	min-height: 100vh;
+	overflow: hidden;
+    background-color: white;
+
+}
+.row{
+	width: 100%;
+	padding: 50px 60px;
+	
+}
+.image{
+	width: 40%;
+	float: left;
+}
+.image img{
+	width:70% ;
+	margin-left: 80px;
+	height: auto;
+}
+.content{
+	width: 50%;
+	float: left;
+	margin-left: 50px;
+}
+.content h1{
+	font-size: 80px;
+	letter-spacing: 3.5px;
+	margin-top: 15px;
+	color: gray;
+
+}
+.content h2{
+	font-size: 40px;
+	font-family: sans-serif;
+	color: palevioletred;
+	margin-top: 15px;
+}
+.content p{
+	font-size: 20px;
+	font-family: eb garamond,serif;
+	margin-top: 15px;
+	line-height:1.5 ;
+
+}
+.vacation{
+    margin-top: 40px; 
+    position: relative;
+    background-color: #d9bda1;
+    
+
+}
+.vacation img{
+    width: 50%;
+    
+
+   
+    
+}
+.text{
+    position:absolute;
+    top: 32%;
+    width: 100%;
+    color:rgb(44, 43, 43) ;
+    
+   
+}
+.text h1{
+    font-size: 74px;
+    text-transform: uppercase;
+    font-weight: bold;
+  
+  text-align:start;
+  float:right;
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+    
+}
+footer{
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(to right,#4d4848,rgb(194,195,195));
+    color: #f7f6f1;
+    padding: 0;
+    border-top-left-radius: 100px;
+    font-size: 13px;
+    line-height: 20px;
+}
+.rreshti{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.kolona{
+    flex-basis: 15%;
+    padding: 5px;
+}
+.logo{
+    width: 125px;
+  
+}
+
+.kolona h3{
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+}
+.id{
+    width: fit-content;
+    border-bottom: 1px solid #4d4848;
+    margin: 20px 0;
+}
+.kolona a{
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+form{
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid;
+    margin-bottom: 50px;
+}
+form .fa{
+    font-size: 18px;
+    margin-right: 10px;
+}
+form input{
+    width: 100%;
+    background: transparent;
+    color: #f7f6f1;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+form button {
+    background: transparent;
+    border: 0;
+    outline: none;
+    color: #f7f6f1;
+    cursor: pointer;
+}
+.social-media{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.social-media i{
+    font-size: 32px;
+}
+.Copyright{
+    text-align: center;
+}
+.underline{
+    width: 100%;
+    height: 3px;
+    background: #4d4848;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+}
+
+
+
