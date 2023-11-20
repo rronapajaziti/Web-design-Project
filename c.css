@@ -9,7 +9,7 @@ body{
 .heading{
 
     background-size: auto;   
-     background-image: url(ph1.jpg);
+    background-image: url(Photos/ph1.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
