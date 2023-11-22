@@ -364,7 +364,7 @@ body{
     margin:20px 0 15px;
 
 }
-register-link p a{
+.register-link p a{
     color: #fff;
     text-decoration: none;
     font-weight: 600;
