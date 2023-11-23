@@ -6,8 +6,7 @@
     <title>Flights</title>
     <link rel="stylesheet" href="Style.css">
 </head>
-<body>
-    <div class="all">
+<body class="body">
     <header class="heading1">
         <div class="navbar">
         <div class="Logo">
@@ -21,11 +20,60 @@
         </ul>
         </div>
     </div> 
-    <div class="booking-form">
-        
+        <div class="booking-form-box">
+        <h2 class="u">Book now</h2>
+        <div class="radio">
+            <p>Roundtrip
+                <input type="radio" class="book" name="check" checked></p>
+            <p>One Way
+                <input type="radio" class="book" name="check"></p>
+            <p>Multy-City
+                <input type="radio" class="book" name="check"></p>      
+        </div>
+        <div class="in">
+        <div class="booking-form">
+            <label>Flying From</label>
+            <div class="input">
+            
+            <input type="text" class="form-control" placeholder="City or Airport"></div>
+            <label>Flying To</label>
+            <div class="input">
+            <input type="text" class="form-control" placeholder="City or Airport">
+        </div>
+           <label>Departing</label>
+            <div class="input">
+            
+            <input type="date" class="form-control select-date"></div>
+            <label>Returning</label>
+            <div class="input">
+            
+            <input type="date" class="form-control select-date">
+            </div>
+            
+            <label>Adults</label>
+            
+            <div class="input">
+            <input type="number" class="form-control" value="1"></div>
+                <label>Children</label>
+                <div class="input">
+            <input type="number" class="form-control" value="0">
+            </div>
+            <div class="input">
+                <label>Travel</label>
+                <select class="cosutum-select">
+                    <option value="1">Economy Class</option>
+                    <option value="2">Buisness Class</option>
+                    <option value="3">First Class</option>
+                </select>
+            </div>
+            <div class="input">
+                <button type="button" class="btn">Show Flights</button>
 
+            </div>
+        </div>
+        </div>
+        </div>
     </div>
-</div>
     
 </body>
 </html>
