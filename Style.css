@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+/*--------------------------------Homepage--------------------------------*/
 body{
     background-color: #eae9e9;
 }
@@ -114,12 +115,12 @@ span{
 .destinacionet {
     padding: 100px 0;
 }
-h1{
+.destinacionet h1{
     text-align: center;
     padding-bottom: 30px;
     font-size: 70px;
-    color: #4f95c4;
-    text-shadow: 2px 5px #22475f;
+    color: #193441;
+    text-shadow: 2px 2px #4f95c4;
 }
 
 .images .img{
@@ -198,12 +199,80 @@ h1{
     border-bottom-left-radius: 5%;
     border-bottom-right-radius: 5%;
 }
+.content2{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items:center;
+	width: 100%;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 4px 1px black;
+}
+.content2 p{
+  width: 600px;
+  font-size: x-large;
+  line-height: 1.5;
+}
+.foto-2{
+    display: flex;
+    margin-right: 200px;
+}
+.foto-2 img{
+    border: 2px solid #555;
+}
+.img1{
+    position: absolute;
+    margin-left: 200px;
+    margin-top: 0;
+}
+.img2{
 
-/*Footer*/
+    position: relative;
+    margin-top: 100px;
+    z-index: 1;
+}
+.places{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 100px;
+}
+.rretha-foto{
+    height: 220px;
+    width: 220px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 6px solid #eae9e9;
+}
+.rretha-foto img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    filter: grayscale(30%);
+    transition: 0.5s;
+    cursor: pointer;
+}
+.rretha-foto img:hover{
+    transform: scale(1.3);
+    filter: grayscale(0%);
+}
+.popular h1{
+    text-align: center;
+    font-size: 60px;
+    margin-top: 150px;
+    color: #193441;
+    text-shadow: 2px 2px #4f95c4;
+}
+
+
+
+
+/*--------------------------------Footer--------------------------------*/
 footer{
     width: 100%;
     position: absolute;
-    background: rgba(17,62,83,255);
+    background: #193441;
     color: #f7f6f1;
     padding: 0;
     font-size: 13px;
@@ -254,6 +323,9 @@ form .fa{
     font-size: 18px;
     margin-right: 10px;
 }
+form i.fa-regular{
+    margin-right: 15px;
+}
 form input{
     width: 100%;
     background: transparent;
@@ -290,7 +362,8 @@ form button {
     left: 0;
 }
 
-/*About us*/
+
+/*--------------------------------About us--------------------------------*/
 .heading2{
     
     background-size: auto;   
@@ -318,8 +391,8 @@ form button {
    justify-content: center;
    align-content: center ;
    justify-items: start;
-     position: absolute;
-        top: 30%;
+    position: absolute;
+    top: 30%;
     width: 100%;
     text-align: center;
     color:rgb(44, 43, 43); 
@@ -440,6 +513,7 @@ form button {
     width: 100%;
     display: flex;
     grid-gap:100px;
+
 }
 .card{
     width:100%;
@@ -493,7 +567,8 @@ form button {
     display: flex;
     flex-direction: row;
     align-items:center;
-    background-color: rgb(242, 242, 249);
+    background-color: #f2f2f9;
+    margin-bottom: 50px;
 }
 .vacation img{
 
@@ -518,10 +593,10 @@ form button {
     /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;   */
     
 }
-/*Flights*/
+/*---------------------------------Flights--------------------------------*/
 
 .body{
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(Photos/bg.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(Photos/airplane.jpg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -643,13 +718,13 @@ input::placeholder{
     transition: 0.5s;
 }
 
-/*Log in*/
+/*--------------------------------Log in--------------------------------*/
 .b{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image:url(bg.jpg);
+    background-image:url(Photos/bg.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
