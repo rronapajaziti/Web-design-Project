@@ -407,20 +407,18 @@ form button {
     text-transform: uppercase;
     font-weight: bold;
    
-    /* font-family:Georgia, 'Times New Roman', Times, serif;  */
 }
+
 .story{
   
     font-size: 30px;
     font-weight: bold;
-    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     text-align: center;
    
 }
 .wrapper{
   
 	box-sizing: border-box;
-	/* font-family:Georgia, 'Times New Roman', Times, serif,cursive; */
 }
 .wrapper{
     display: flex;
@@ -467,14 +465,12 @@ form button {
     flex-direction: row;
   
 	font-size: 40px;
-	/* font-family: sans-serif; */
 	color: #4f95c4;
 }
 .content p{
     display: flex;
     flex-direction: row;
 	font-size: 20px;
-	/* font-family:  garamond,serif;	 */
     line-height:1.5 ;
 
 }
@@ -505,7 +501,6 @@ form button {
     display: flex;
     justify-content: space-evenly;
     font-size: 20px;
-    /* font-family: 'Times New Roman', Times, serif; */
     margin: 30px 0px;
     color: #4f95c4;;
 }
@@ -547,14 +542,12 @@ form button {
  } 
   .contenti-tjeter h4{
     font-size: 17px;
-    /* margin-top: 10px; */
     letter-spacing: 1.5px;
     color: rgb(111, 122, 172);
 
 }
 .contenti-tjeter p{
     font-size: 15px;
-    /* margin :16px,0px; */
    line-height: 1.5;
     color:#22475f;
 
@@ -590,7 +583,6 @@ form button {
     font-size: 74px;
     text-transform: uppercase;
     font-weight: bold;
-    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;   */
     
 }
 /*---------------------------------Flights--------------------------------*/
@@ -719,7 +711,17 @@ input::placeholder{
 }
 
 /*--------------------------------Log in--------------------------------*/
-.b{
+
+
+.log{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: serif;
+  
+
+}
+.trupi{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -729,7 +731,7 @@ input::placeholder{
     background-attachment: fixed;
     background-size: cover;
 }
-.login{
+.log{
     width: 420px;
     background-color: transparent;
     border: 2px solid rgba(255, 255, 255, .2);
@@ -739,17 +741,17 @@ input::placeholder{
     border-radius: 10px;
     padding: 30px 40px;
 }
-.login h1{
+.log h1{
     font-size: 36px;
     text-align: center;
 }
-.login.input-box{
+.log .box1{
     position: relative;
     width: 100%;
     height: 50px;
     margin: 30px 0;
 }
-.input-box input{
+.box1 input{
     width: 100%;
     height: 100%;
     background: transparent;
@@ -761,35 +763,35 @@ input::placeholder{
     color: #fff;
     padding: 20px 45px 20px 20px;
 }
-.input-box input::placeholder{
+.box1 input::placeholder{
     color:#fff;
 
 }
-.input-box i{
+.box1 i{
     position: absolute;
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
     font-size: 20px;
 }
-.login .remeber-forgot{
+.log .remeber{
     display: flex;
     justify-content: space-between;
     font-size: 14.5px;
     margin: -15px 0 15px;
 }
-.remeber-forgot label input{
+.remeber label input{
     accent-color: #fff;
     margin-right: 3px;
 }
-.remeber-forgot a{
+.remeber a{
     color: #fff;
     text-decoration: none;
 }
-.remeber-forgot a:hover{
+.remeber a:hover{
     text-decoration: underline;
 }
-.login .btn{
+.log .btn{
     width: 100%;
     height: 45px;
     background: #fff;
@@ -802,23 +804,17 @@ input::placeholder{
     color: #333;
     font-weight: 600;
 }
-.login .register-link{
+.log .register{
     font-size: 14.5px;
     text-align: center;
     margin:20px 0 15px;
 
 }
-.register-link p a{
+.register p a{
     color: #fff;
     text-decoration: none;
     font-weight: 600;
 }
-.register-link p a:hover{
+.register p a:hover{
     text-decoration: underline;
 }
-
-
-
-
-
-
