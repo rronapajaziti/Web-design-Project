@@ -727,6 +727,10 @@ footer{
     background-size: cover;
 }
 .log{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: start;
     width: 420px;
     background-color: transparent;
     border: 2px solid rgba(255, 255, 255, .2);
@@ -734,42 +738,46 @@ footer{
     box-shadow: 0 0 10px rgba(0,0,0,.2);
     color:#fff;
     border-radius: 10px;
-    padding: 30px 40px;
+    padding: 30px 60px;
 }
 .log h1{
     font-size: 36px;
     text-align: center;
 }
-.log .box1{
+.emri-mbiemri{
+    display: flex;
+    flex-direction: column;
     position: relative;
     width: 100%;
     height: 50px;
     margin: 30px 0;
 }
-.box1 input{
+.emri-mbiemri input{
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     height: 100%;
     background: transparent;
     border: none;
     outline: none;
     border: 2px solid #3e4a87;
-    border-radius: 40px;
-    font-size: 16px;
-    color: #fff;
+    border-radius: 40px; 
+     font-size: 16px;
+    /* color: #fff; */
     padding: 20px 45px 20px 20px;
 }
-.box1 input::placeholder{
+.emri-mbiemri input::placeholder{
     color:#fff;
 
 }
-.box1 i{
+.emri-mbiemri i{
     position: absolute;
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
     font-size: 20px;
 }
-.log .remeber{
+ .remeber{
     display: flex;
     justify-content: space-between;
     font-size: 14.5px;
@@ -786,7 +794,7 @@ footer{
 .remeber a:hover{
     text-decoration: underline;
 }
-.log .btn{
+ .btn{
     width: 100%;
     height: 45px;
     background: #fff;
@@ -799,7 +807,7 @@ footer{
     color: #333;
     font-weight: 600;
 }
-.log .register{
+ .register{
     font-size: 14.5px;
     text-align: center;
     margin:20px 0 15px;
@@ -812,4 +820,133 @@ footer{
 }
 .register p a:hover{
     text-decoration: underline;
+}
+/* ------------------------------------------ SIGN IN----------------------------------------------- */
+.body-sign{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image:url(Photos/bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+
+
+    
+}
+.signU{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+     
+
+
+
+}
+.forma-Sign{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+   
+
+    
+
+   
+}
+
+.forma-Sign h1{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+}
+
+.sg{
+    border: 2px solid rgba(255, 255, 255, .2);
+    margin: 15px ;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    border-radius: 5px;
+    
+
+
+
+
+}
+.sg input{
+   
+    display: flex;
+    flex-direction: row;
+    color: #fff;  
+    background: transparent;
+    border: none;
+    outline: none;
+     font-size: 18px;  
+     border-radius: 5px;
+     padding: 5px; 
+}
+.sg input::placeholder {
+    color: white; 
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+.sg i{ 
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+    color: #fff;  
+}
+
+
+ .butoni-Sign{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+
+}
+.butoni-Sign button{
+    text-align: center;
+    
+    background-color:#262f3d;
+    color:#fff ;
+    height: 36px;
+    border-radius: 20px;
+    border: 0;
+    width: 150px;
+    outline: 0;
+    cursor: pointer;
+}
+
+.SI{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    height: 400px;
+    color: #fff;  
+
+
+}
+.Click{
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+.Click a{
+    color:#193441;
 }
