@@ -594,14 +594,16 @@ footer{
     background-position: center center;
     background-size: cover;
     width: 100%;
-    height: 100vh;
+    height: 100%;
 }
-.booking-form-box{
+
+.booking-form-box fieldset{
     width: 80%;
-    margin: 10% auto 0;
-    padding: 20px;
-    color: white;
-    border: 2px solid white;
+    margin: 5% auto 0;
+    padding:  20px;
+    font-size: x-large;
+    color: rgb(242, 242, 249);
+    border: 3px solid rgb(242, 242, 249);
 }
 .in input{
     width: 100%;
@@ -609,16 +611,17 @@ footer{
     background: transparent;
     border: none;
     outline: none;
-    border: 2px solid #fff;
+    border: 2px solid rgb(242, 242, 249);
     border-radius: 15px;
     font-size: 16px;
-    color: #fff;
+    color: rgb(242, 242, 249);
     padding: 20px 45px 20px 20px;
 }
 .radio{
     margin: 10px 20px;
     display: flex;
     justify-content: space-evenly;
+    padding-bottom: 20px;
 }
 .radio .book{
     box-shadow: none;
@@ -632,7 +635,7 @@ footer{
     background-color: #1a3649;
     position: relative;
     display: inline-block;
-    border: 3px solid white;
+    border: 3px solid rgb(242, 242, 249);
     visibility: visible;
     border-radius: 50%;
 }
@@ -642,71 +645,100 @@ footer{
     transition: 0.5s;
 }
 .radio .book p{
-    color: white;
+    color: rgb(242, 242, 249);
     margin-right: 5px;
     font-size: 13px;
 }
 .booking-form{
-    padding: 0 20px 20px;
+    padding: 0 20px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    align-content: space-between;
-    justify-content: space-between;
+    align-items: stretch;
+    justify-content: space-evenly;
+    position: relative;
+    margin-top: 70px;
 }
-
+.booking-form input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    font-size: 16px;
+    color: rgb(242, 242, 249);
+    padding: 20px 45px 20px 20px;
+    border: 2px solid rgb(242, 242, 249);
+}
+.booking-form input:hover{
+    border: 4px solid rgb(242, 242, 249);
+}
+.pjeset{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-between;
+    padding-bottom: 30px;
+    gap: 70px;
+}
+.pjeset label{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: text;
+    padding-bottom: 70px;
+}
 .booking-form label{
-    margin-bottom: 5px;
+    margin-bottom: 50px;
     margin-top: 10px;
     font-size: 20px;
-    color: white;
-    display: block;
+    color: rgb(242, 242, 249);
 }
-.input::placeholder{
-    color: white ;
+.booking-form input::placeholder{
+    color: rgb(242, 242, 249) ;
 }
 .input{
    width: 50%;
    display: flex;
    flex-direction: row;
-   justify-content: center;
+   justify-content: flex-start;
    align-items: center;
-   align-content: space-around;
+   padding-bottom: 30px;
 }
-.an{
-    display: flex;
-}
+
 .form-control{
     font-size: 12px;
     border-radius: 0;
-    color: white;
+    color: rgb(242, 242, 249);
     background: transparent;
     box-shadow: none;
 }
 .cosutum-select{
-    color: white;
-    font-size: 12px;
-    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+    color: rgb(242, 242, 249);
+    font-size: 15px;
+    border: 2px solid rgb(242, 242, 249);
     box-shadow: none;
-    border-radius: 0;
     background: transparent;
+    padding: 20px 45px 20px 20px;
 }
 .cosutum-select option{
     color: #22475f;
 }
 .button{
     width: 100% ;
-    padding: 9px ;
-    color: white ;
-    font-size: 12px ;
-    border: 1px solid #1a3649 ;
+    color: rgb(242, 242, 249);
+    font-size: 20px ;
+    border: 3px solid rgb(242, 242, 249);
     background: transparent;
     box-shadow: none;
     border-radius: 0;
+    padding: 20px 45px 20px 20px;
 }
 .button:hover{
-    background: #1a3649;
-    color: white;
+    background: #22475f;
+    color: rgb(242, 242, 249);
     transition: 0.5s;
 }
 
@@ -821,7 +853,7 @@ footer{
 .register p a:hover{
     text-decoration: underline;
 }
-/* ------------------------------------------ SIGN IN----------------------------------------------- */
+/* ------------------------------------------ SIGN UP----------------------------------------------- */
 .body-sign{
     margin: 0;
     padding: 0;
@@ -833,11 +865,7 @@ footer{
     background-image:url(Photos/bg.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
-    
-
-
-    
+    background-size: cover;  
 }
 .signU{
     display: flex;
@@ -847,21 +875,12 @@ footer{
     border: 2px solid rgba(255, 255, 255, .2);
     backdrop-filter: blur(20px);
     border-radius: 10px;
-     
-
-
-
 }
 .forma-Sign{
     display: flex;
     flex-direction: column;
     position: relative;
-    width: 100%;
-   
-
-    
-
-   
+    width: 100%; 
 }
 
 .forma-Sign h1{
@@ -879,10 +898,6 @@ footer{
     flex-direction: row;
     justify-content: start;
     border-radius: 5px;
-    
-
-
-
 
 }
 .sg input{
@@ -901,9 +916,6 @@ footer{
     color: white; 
     font-family: 'Times New Roman', Times, serif;
 }
-
-
-
 .sg i{ 
     position: absolute;
     right: 20px;
@@ -945,6 +957,7 @@ footer{
 .Click{
     text-align: center;
     margin-bottom: 10px;
+    font-style: none;
 
 }
 .Click a{

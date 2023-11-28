@@ -21,7 +21,8 @@
         </div>
     </div> 
         <div class="booking-form-box">
-        <h2 class="u">Book now</h2>
+            <fieldset><legend><h1 class="u">Book now</h1></legend>
+        
         <div class="radio">
             <p>Roundtrip
                 <input type="radio" class="book" name="check" checked></p>
@@ -30,47 +31,79 @@
             <p>Multy-City
                 <input type="radio" class="book" name="check"></p>      
         </div>
-        <div class="in">
+        <!-- -------------------------------Booking form---------------------------------------- -->
         <div class="booking-form">
-            <label>Flying From</label>
-            <div class="input">
+            <div class="pjeset">
             
-            <input type="text" class="form-control" placeholder="City or Airport"></div>
-            <label>Flying To</label>
             <div class="input">
+                <label><h3>Flying From</h3></label>
+            <input type="text" class="form-control" placeholder="City or Airport"></div>
+            
+            <div class="input">
+                <label><h3>Flying To</h3></label>
             <input type="text" class="form-control" placeholder="City or Airport">
             </div>
-            </div>
-           <label>Departing</label>
+        </div>
+        <!-- -------------------------------Data---------------------------------------- -->
+            <div class="pjeset">
+           
             <div class="input">
+                <label><h3>Departing</h3></label>
             
             <input type="date" class="form-control select-date"></div>
-            <label>Returning</label>
+            
             <div class="input">
+                <label><h3>Returning</h3></label>
             
             <input type="date" class="form-control select-date">
             </div>
-            
-            <label>Adults</label>
-    
+        </div>
+
+        <!-- -------------------------------Persona---------------------------------------- -->
+            <div class="pjeset">
+        
             <div class="input">
+                <label><h3>Adults</h3></label>
             <input type="number" class="form-control" value="1"></div>
-                <label>Children</label>
+                
                 <div class="input">
+                    <label><h3>Children</h3></label>
             <input type="number" class="form-control" value="0">
             </div>
+        </div>
+        <!-- -------------------------------Personal info---------------------------------------- -->
+        <div class="pjeset">
             <div class="input">
-                <label>Travel</label>
+                <label><h3>Name</h3></label>
+            <input type="text" class="form-control" placeholder="">
+            </div>
+        <div class="input">
+            <label><h3>Last Name</h3></label>
+        <input type="text" class="form-control" placeholder="">
+        </div>
+        <div class="input">
+            <label><h3>Email</h3></label>
+        <input type="text" class="form-control" placeholder="">
+       </div>
+        </div>
+        <!-- -------------------------------Travel/Butoni---------------------------------------- -->
+        <div class="pjeset">
+            <div class="input">
+                <label><h3>Travel</h3></label>
                 <select class="cosutum-select">
                     <option value="1">Economy Class</option>
                     <option value="2">Buisness Class</option>
                     <option value="3">First Class</option>
                 </select>
+            </div><div class="input">
+                <a href="#">
+                <button type="button" class="button">Book now</button>
+                </a>
             </div>
-            <div class="input">
-                <button type="button" class="button">Show Flights</button>
-
-            </div>
+        </div>
+            
+        </div>
+      </fieldset>
         </div>
         </div>
         </div>
