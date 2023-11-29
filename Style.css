@@ -381,7 +381,7 @@ footer{
     font-size: 70px;
     text-transform: uppercase;
     text-shadow: 2px 5px #4f95c4;
-    color: white;
+    color: #f2f2f9 ;
     
  }
  
@@ -426,7 +426,7 @@ footer{
 	width: 100%;
 	min-height: 100vh;
 	overflow: hidden;
-    background-color:  rgb(242, 242, 249);
+    background-color:  #f2f2f9 ;
 
 }
 .ro{
@@ -558,14 +558,15 @@ footer{
 .vacation{
  
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     align-items:center;
     background-color: #f2f2f9;
     margin-bottom: 50px;
 }
 .vacation img{
 
-  width: 60%;
+  width: 30%;
+  margin-right: 15%;
 }
 .text{
     
@@ -588,7 +589,7 @@ footer{
 /*---------------------------------Flights--------------------------------*/
 
 .body{
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(Photos/airplane.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(Photos/back.jpg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -604,6 +605,16 @@ footer{
     font-size: x-large;
     color: rgb(242, 242, 249);
     border: 3px solid rgb(242, 242, 249);
+}
+.booking-form{
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-evenly;
+    position: relative;
+    margin-top: 70px;
 }
 .in input{
     width: 100%;
@@ -649,16 +660,7 @@ footer{
     margin-right: 5px;
     font-size: 13px;
 }
-.booking-form{
-    padding: 0 20px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: space-evenly;
-    position: relative;
-    margin-top: 70px;
-}
+
 .booking-form input{
     width: 100%;
     height: 100%;
@@ -753,7 +755,8 @@ footer{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image:url(Photos/bg.jpg);
+    background: linear-gradient(#012f49,#1e4041);
+    /* background-image:url(Photos/bg.jpg); */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -770,10 +773,10 @@ footer{
     box-shadow: 0 0 10px rgba(0,0,0,.2);
     color:#fff;
     border-radius: 10px;
-    padding: 30px 60px;
+    padding: 50px 70px;
 }
 .log h1{
-    font-size: 36px;
+    font-size: 50px;
     text-align: center;
 }
 .emri-mbiemri{
@@ -792,7 +795,7 @@ footer{
     background: transparent;
     border: none;
     outline: none;
-    border: 2px solid #3e4a87;
+    border: 2px solid #dee9fa;
     border-radius: 40px; 
      font-size: 16px;
     /* color: #fff; */
@@ -812,7 +815,7 @@ footer{
  .remeber{
     display: flex;
     justify-content: space-between;
-    font-size: 14.5px;
+    font-size: 16px;
     margin: -15px 0 15px;
 }
 .remeber label input{
@@ -833,14 +836,14 @@ footer{
     border: none;
     outline: none;
     border-radius: 40px;
-    box-shadow: 0 0 10px  #3e4a87;
+    box-shadow: 0 0 10px  #193441;
     cursor: pointer;
     font-size: 16px;
     color: #333;
     font-weight: 600;
 }
  .register{
-    font-size: 14.5px;
+    font-size: 17px;
     text-align: center;
     margin:20px 0 15px;
 
@@ -862,7 +865,8 @@ footer{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image:url(Photos/bg.jpg);
+    background: linear-gradient(#012f49,#1e4041);
+    /* background-image:url(Photos/bg.jpg); */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;  
@@ -870,11 +874,12 @@ footer{
 .signU{
     display: flex;
     flex-direction: column;
-    width: 350px;
+    width: 400px;
     background-color: transparent;
-    border: 2px solid rgba(255, 255, 255, .2);
+    border: 2px solid white;
     backdrop-filter: blur(20px);
     border-radius: 10px;
+    padding: 10px 30px;
 }
 .forma-Sign{
     display: flex;
@@ -889,10 +894,11 @@ footer{
     text-align: center;
     font-size: 50px;
     color: white;
+    margin-bottom: 20px;
 }
 
 .sg{
-    border: 2px solid rgba(255, 255, 255, .2);
+    border: 2px solid white;
     margin: 15px ;
     display: flex;
     flex-direction: row;
@@ -904,17 +910,16 @@ footer{
    
     display: flex;
     flex-direction: row;
-    color: #fff;  
+    color: #0a171f;  
     background: transparent;
     border: none;
     outline: none;
      font-size: 18px;  
      border-radius: 5px;
-     padding: 5px; 
+     padding: 10px; 
 }
 .sg input::placeholder {
-    color: white; 
-    font-family: 'Times New Roman', Times, serif;
+    color: #0a171f; 
 }
 .sg i{ 
     position: absolute;
