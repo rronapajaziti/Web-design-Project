@@ -6,9 +6,10 @@
     <title>Hotels</title>
     <link rel="stylesheet" href="Style.css">
     <script src="https://kit.fontawesome.com/0feed4ec37.js" crossorigin="anonymous"></script>
+    <script src="Funksion.js"></script>
 </head>
 <body>
-    <header class="heading">
+    <header class="heading3">
         <div class="navbar">
         <div class="Logo">
             <img src="Photos/logo1.png" alt="Logo">
@@ -21,7 +22,39 @@
         </ul>
         </div>
     </div>
+         <!-- ---------------------------Slideshow header--------------------------- -->
+
+         <div class="slides">
+            <div class="slideshow">
+                <img src="Photos/hotel1.jpg" id="slide">
+                <div class="texts">Bora Bora</div>
+            </div>
+            <div class="slideshow">
+                <img src="Photos/hotel2.jpg" id="slide">
+                <div class="texts">Spain</div>
+            </div>
+            <div class="slideshow">
+                <img src="Photos/hotel4.jpg" alt="">
+                <div class="texts">Bora Bora</div>
+            </div>
+            <div class="slideshow">
+                <img src="Photos/hotel5.jpg" alt="">
+                <div class="texts">Portugal</div>
+            </div>
+            
+            <a  class="previous" onclick="prevSlide()">&#10094;</a>
+            <a class="next" onclick="nextSlide()">&#10095;</a>
+        </div>
+        <!-- <br>
+        <div style="text-align: center;">
+            <span class="dot" onclick=""></span>
+            <span class="dot" onclick=""></span>
+            <span class="dot" onclick=""></span>
+        </div> -->
+    
+    
  </header>
+
 
 <!-- ---------------------------Footeri--------------------------- -->
     <footer>
