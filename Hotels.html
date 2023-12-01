@@ -54,6 +54,26 @@
     
     
  </header>
+<!-- -------------------Ofertat e hoteleve-------------------------- -->
+ <section>
+      <div class="hotelet">
+        <div class="hotel-box">
+            <img src="Photos/h1.jpg" alt="">
+            <div class="text-hotel"> 
+                <h2>Standard Room: Starting at €120 per night</h2>
+            <h2>Deluxe Suite with Sea View: Starting at €250 per night</h2>
+            <p>Welcome to "Soléa Retreat," a charming hotel nestled in the heart
+                 of Spain's picturesque Costa del Sol. This exquisite establishment 
+                 captures the essence of Mediterranean luxury, providing 
+                guests with an unforgettable blend of comfort, style, and cultural richness.</p>
+        </div>
+           
+
+            
+        </div>
+
+      </div>
+ </section>
 
 
 <!-- ---------------------------Footeri--------------------------- -->
@@ -84,8 +104,8 @@
             <h3>RECIVE NEWS <div class="underline"><span></span></div></h3>
             <form class="form">
                 <i class="fa-regular fa-envelope"></i>
-                <input type="email" placeholder="Enter your email" required>
-                <button type="submit"><i class="fa-solid fa-right-long" ></i></button>
+                <input type="email" placeholder="Enter your email" id="email" required>
+                <button type="submit"><i class="fa-solid fa-right-long" onclick="emalValid()"></i></button>
             </form>
             <div class="social-media">
                 <a href="https://www.facebook.com/"><i class="fa-brands fa-square-facebook" style="color: #ededed;"></i></a>
@@ -99,6 +119,19 @@
         <p class="Copyright">&copy; 2023 Coral Travel Agency</p>
         
     </footer>
-    
+    <script>
+        function emalValid(){
+
+            var email =document.getElementById('email').value;
+            var emailRegex = /^[^\s@] + @[^\s@] + \.[^\s@] +$/;
+            if(!emailRegex.test(email)){
+                alert('Please enter a valid email address');
+                return false;
+
+            }
+
+        }
+        
+    </script>
 </body>
 </html>

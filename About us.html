@@ -136,8 +136,8 @@
         <h3>RECIVE NEWS <div class="underline"><span></span></div></h3>
         <form class="form">
             <i class="fa-regular fa-envelope"></i>
-            <input type="email" placeholder="Enter your email" required>
-            <button type="submit"><i class="fa-solid fa-right-long" ></i></button>
+            <input type="email" placeholder="Enter your email"  id="email" required>
+            <button type="submit"><i class="fa-solid fa-right-long" onclick="emalValid()"></i></button>
         </form>
         <div class="social-media">
             <a href="https://www.facebook.com/"><i class="fa-brands fa-square-facebook" style="color: #ededed;"></i></a>
@@ -152,5 +152,19 @@
     
 </footer>
  
+<script>
+    function emalValid(){
+
+        var email =document.getElementById('email').value;
+        var emailRegex = /^[^\s@] + @[^\s@] + \.[^\s@] +$/;
+        if(!emailRegex.test(email)){
+            alert('Please enter a valid email address');
+            return false;
+
+        }
+
+    }
+    
+</script>
 </body>
 </html>

@@ -31,13 +31,4 @@ function prevSlide(){
 
 // -------------------------------------Log in-----------------------------------
 
-function validimi(){
-    var username =getElementById('username').value;
-    var password =getElementById('password').value;
 
-    var usernameRegex = /^[a-zA-Z\s]+$/;
-    if(!usernameRegex .test(username)){
-        alert('Please enter a valid username');
-        return false;
-    }
-}
