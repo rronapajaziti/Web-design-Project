@@ -890,23 +890,21 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     background: linear-gradient(#012f49,#1e4041);
-    /* background-image:url(Photos/bg.jpg); */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;  
 }
 .signU{
     display: flex;
-    flex-direction: column;
-    width: 400px;
+    flex-direction:row;
+    width:430px;
     background-color: transparent;
     border: 2px solid white;
-    backdrop-filter: blur(20px);
-    border-radius: 10px;
-    padding: 10px 30px;
+        border-radius: 30px;
+    padding: 10px 20px;
 }
+
 .forma-Sign{
     display: flex;
     flex-direction: column;
@@ -916,44 +914,64 @@ footer{
 
 .forma-Sign h1{
     display: flex;
-    flex-direction: column;
-    text-align: center;
-    font-size: 50px;
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-between;
+    font-size: 40px;
     color: white;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
-.sg{
-    border: 2px solid white;
-    margin: 15px ;
+.sg{  
+    position: relative;
+    margin: 20px;
     display: flex;
-    flex-direction: row;
-    justify-content: start;
-    border-radius: 5px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:start;
+     border: 1px solid white;
+    border-radius: 10px; 
 
 }
+
+
 .sg input{
-   
     display: flex;
-    flex-direction: row;
-    color: #0a171f;  
+    flex-direction:row;
+    color: white;
     background: transparent;
     border: none;
     outline: none;
-     font-size: 18px;  
+     font-size: 14px;  
      border-radius: 5px;
      padding: 10px; 
-}
+}  
+
 .sg input::placeholder {
-    color: #0a171f; 
+    color:#81909a; 
 }
+/* Nderrimi i ngjyres se ikones date */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1) sepia(0) saturate(0) hue-rotate(0);
+  }
+
 .sg i{ 
+   
     position: absolute;
     right: 20px;
     font-size: 20px;
     color: #fff;  
 }
 
+.sg label {
+  text-align: start;
+    position: absolute;
+    color: white;
+    top: -20px;
+    left: 10px; 
+  
+ 
+}
 
  .butoni-Sign{
     width: 100%;
@@ -992,9 +1010,23 @@ footer{
 
 }
 .Click a{
-    color:#193441;
+    color:#0f2129;
 }
-/* 
+
+
+.regjister-form {
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: flex-start; 
+    padding: 0 5px;
+    margin-bottom: -16px; 
+}
+
+
+
+
 ----------------------------------Hotel----------------------------------- */
 .slides{
     display: flex;
