@@ -393,6 +393,11 @@ footer{
 
 
 /*--------------------------------About us--------------------------------*/
+.aboutUS{
+    background-color:  #f2f2f9 ;
+
+    
+}
 .heading2{
     
     background-size: auto;   
@@ -472,8 +477,9 @@ footer{
 .image img{
 	width:80% ;
 }
-.content{
+.kontenti{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
     text-align:start;
@@ -481,22 +487,23 @@ footer{
 	float: left;
 	
 }
-.content h1{
+.kontenti h1{
     display: flex;
     flex-direction: row;
+
 	font-size: 80px;
 	letter-spacing: 3.5px;
 	color: #22475f;
 
 }
-.content h2{
+.kontenti h2{
     display: flex;
     flex-direction: row;
   
 	font-size: 40px;
 	color: #4f95c4;
 }
-.content p{
+.kontenti p{
     display: flex;
     flex-direction: row;
 	font-size: 20px;
@@ -518,7 +525,7 @@ footer{
 
 .rreshtiS h1{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     width: 100%;
     font-size: 74px;
     color:#22475f;
@@ -528,15 +535,26 @@ footer{
 
  .titulli p{
     display: flex;
-    justify-content: space-evenly;
+    /* flex-direction: column;
+    justify-content: space-evenly; */
     font-size: 20px;
     margin: 30px 0px;
     color: #4f95c4;;
 }
+.titulli{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    
+}
 .staf-card{
     width: 100%;
     display: flex;
-    grid-gap:100px;
+     flex-direction: row;
+      grid-gap:100px;
 
 }
 .card{
@@ -544,6 +562,7 @@ footer{
     background-color:#dee9fa;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     padding: 25px;
@@ -557,6 +576,7 @@ footer{
 
 
 .pjesa-fotove img{
+   
     height: 300px;
     width:300px;
     border-radius: 50%;
