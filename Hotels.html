@@ -25,15 +25,10 @@
          <!-- ---------------------------Slideshow header--------------------------- -->
 
          <div class="slides">
-            <button class="previous" onclick=" plusDivs(-1)">&#10094;</button>
-    
-                <div class="slideshow">
-                <div class="slide active" style="background-image:  url(Photos/hotel1.jpg);"></div>
-                <div class="slide" style="background-image:  url(Photos/hotel2.jpg);"></div>
-                <div class="slide" style="background-image:  url(Photos/hotel4.jpg);"></div>
-                <div class="slide" style="background-image:  url(Photos/hotel5.jpg);"></div>
+            <button class="previous" onclick="prevImg()">&#10094;</button>
+            <img id="slide" src="Photos/hotel1.jpg">
             </div> 
-        <button class="next"  onclick=" plusDivs(+1)">&#10095;</button>
+        <button class="next"  onclick="nextImg()">&#10095;</button>
             
         </div>
     

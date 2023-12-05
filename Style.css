@@ -363,6 +363,13 @@ footer{
     outline: none;
     cursor: pointer;
 }
+.error-message {
+    color: #0a171f;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: xx-large;
+}
 .form button {
     background: transparent;
     border: 0;
@@ -1051,6 +1058,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 /* 
 ----------------------------------Hotel----------------------------------- */ 
 
+.heading3{
+    background-position: center center;
+    background-size: cover;
+    background-size: auto;
+}
 .slides{
     display: flex;
     flex-direction: row;
@@ -1058,8 +1070,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     justify-content: center;
     height: 100vh;
     overflow: hidden;
-    background-position: center center;
-    background-size: cover;
     transition: 0.4s;
     flex: 0 0 100%;
 }
@@ -1079,7 +1089,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     overflow: hidden;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),0 3px 6px  rgba(0, 0, 0, 0.23);
 }
-.slide{
+.slideshow{
     opacity: 0;
     height: 100vh;
     width: 100%;
@@ -1090,7 +1100,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     transition: 0.4s ease;
     z-index: 1;
 }
-.slide.active{
+#slide.active{
     opacity: 1;
 }
 .next {

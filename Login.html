@@ -14,11 +14,13 @@
             <h1>Login</h1>
             <div class="emri-mbiemri">
                 <input type="text"placeholder="Username" id="username" required>
+                <div class="error-message" id="usernameError"></div>
                 <!-- icona e userit -->
                 <i class='bx bxs-user'></i>
             </div>
             <div class="emri-mbiemri">
                 <input type="password"placeholder="Password" id="password" required>
+                <div class="error-message" id="passwordError"></div>
                 <!-- icona e drynit -->
                 <i class='bx bxs-lock'></i>
             </div>
@@ -34,22 +36,26 @@
         </form>
     </div>
     <script>
+        let usernameRegex = /^[a-zA-Z\s]$/;
+        let passwordRegex =  /^[A-Za-z]\w{7,14}$/
+
     function validimi(){
-        var username =document.getElementById('username').value;
-        var password =document.getElementById('password').value;
+        let username =document.getElementById('username');
+        let usernameError = document.getElementById('usernameError');
+        let password =document.getElementById('password');
+        let passwordError =document.getElementById('passwordError');
     
-        var usernameRegex = /^[a-zA-Z\s]+$/;
-        if(!usernameRegex .test(username)){
-            alert('Please enter a valid username');
-            return false;
-        }
+        usernameError.innerText = '';
+        passwordError.innerText = '';
 
-        var passwordRegex =  /^[A-Za-z]\w{7,14}$/;
-        if(!passwordRegex .test(password)){
-            alert('Please enter a valid password');
-            return false;
+        if(!usernameRegex.test(username.value)){
+            usernameError.innerText ='username invalid';
+            return;
         }
-
+        if(!passwordRegex.test(password.value)){
+            passwordError.innerText ='password invalid';
+            return;
+        }
         alert('Login successful!');
         location.replace("Travel.html")
     }

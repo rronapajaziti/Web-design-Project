@@ -1,20 +1,25 @@
-var slideIndex = 1;
-showDivs(slideIndex);
+let i =0;
+let imgVarg=['Photos/hotel1.jpg','Photos/hotel5.jpg','Photos/hotel3.jpg','Photos/hotel4.jpg'];
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length} ;
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
+function nextImg(){
+  document.getElementById('slide').src = imgVarg[i];
+  if(i<imgVarg.length -1){
+    i++;
+  }else{
+    i=0;
   }
-  x[slideIndex-1].style.display = "block";
 }
+function prevImg(){
+  document.getElementById('slide').src = imgVarg[i];
+  if(i> 0){
+    i++;
+  }else{
+    i= imgVarg.length -1;
+  }
+}
+
+document.addEventListener(onload,nextImg());
+document.addEventListener(onload,prevImg());
 
 
 function emalValid(){
