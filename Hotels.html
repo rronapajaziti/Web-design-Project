@@ -6,10 +6,9 @@
     <title>Hotels</title>
     <link rel="stylesheet" href="Style.css">
     <script src="https://kit.fontawesome.com/0feed4ec37.js" crossorigin="anonymous"></script>
-    
+    <script src="Funksion.js"></script>
 </head>
 <body>
-    <script src="Funksion.js"></script>
     <header class="heading3">
         <div class="navbar">
         <div class="Logo">
@@ -26,15 +25,15 @@
          <!-- ---------------------------Slideshow header--------------------------- -->
 
          <div class="slides">
-            <button class="previous">&#10094;</button>
-            
-            <div class="slideshow">
+            <button class="previous" onclick=" plusDivs(-1)">&#10094;</button>
+    
+                <div class="slideshow">
                 <div class="slide active" style="background-image:  url(Photos/hotel1.jpg);"></div>
                 <div class="slide" style="background-image:  url(Photos/hotel2.jpg);"></div>
                 <div class="slide" style="background-image:  url(Photos/hotel4.jpg);"></div>
                 <div class="slide" style="background-image:  url(Photos/hotel5.jpg);"></div>
             </div> 
-        <button class="next">&#10095;</button>
+        <button class="next"  onclick=" plusDivs(+1)">&#10095;</button>
             
         </div>
     
