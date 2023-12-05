@@ -888,8 +888,6 @@ footer{
 /* ------------------------------------------ SIGN UP----------------------------------------------- */
 .body-sign{
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -901,10 +899,12 @@ footer{
 .signU{
     display: flex;
     flex-direction:row;
+    justify-content: center;
+    align-items: center;
     width:430px;
     background-color: transparent;
     border: 2px solid white;
-        border-radius: 30px;
+    border-radius: 30px;
     padding: 10px 20px;
 }
 
