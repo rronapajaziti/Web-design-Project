@@ -14,33 +14,36 @@
         
                 <div class="">
                     <div class="sg">
-                        <label >Name</label>
-                        
+                        <label>Name:</label>
+                        <input type="text" id="name">
+                        <div class="error-message" id="nameError1"></div>
+                             <!-- icona -->
+               `        <i class='bx bx-user'></i>
+                    </div>
 
-                        <i class='bx bx-user'></i>
-                        <input type="text"placeholder="Enter your name">
-                        
-               </div>
 
                     <div class="sg">
                         <label >Surname</label>
-
+                        <input type="text"id="surname1">
+                        <div class="error-message" id="surnameError1"></div>
                         <i class='bx bx-user'></i>
-                        <input type="text"placeholder="Enter your surname">
                     </div>
                     
 
                     <div class="sg">
                         <label >Email</label>
+                        
+                        <input type="email"id="email1">
+                        <div class="error-message" id="emailiError1"></div>
                         <i class='bx bx-envelope' ></i>
-                        <input type="email"placeholder="Enter your email">
                     </div>
                
 
                 <div class="sg"> 
                     <label >Phone</label>
+                    <input type="text" id="phone1">
+                    <div class="error-message" id="phoneError1"></div>
                     <i class='bx bx-phone'></i>
-                    <input type="text"placeholder="Enter your phone number">
                 </div>
             
 
@@ -67,13 +70,56 @@
             </div>
             </div>
             <div class="butoni-Sign">
-                <button type="button"id="sign">Sign up </button>
+                <button type="button"id="sign" onclick="validimiSignIn()">Sign up </button>
             </div>
  
         </form>
     </div>
+    <script>
+        let nameSignUp = /^[A-Z][a-z]{3,8}$/;
+        let surnameSignUp = /^[A-Z][a-z]{3,8}$/;
+        let emailSignUp=/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        let phoneSignUp= /^\d{3}(\s|-)?\d{3}(\s|-)?\d{4}$/;
 
-   
+    
+        function validimiSignIn() {
+          
+    
+            let nameInput1 = document.getElementById('name');
+            let nameError1 = document.getElementById('nameError1');
+    
+            let surnameInput1 = document.getElementById('surname1');
+            let surnameError1 = document.getElementById('surnameError1');
+
+            let emailInput1=document.getElementById('email1');
+            let emailiError1=document.getElementById('emailiError1');
+
+            let phoneInput1=document.getElementById('phone1');
+            let phoneError1=document.getElementById('phoneError1');
+    
+            nameError1.innerText = '';
+            surnameError1.innerText = '';
+            emailiError1.innerText='';
+            phoneError1.innerText='';
+    
+            if (!nameSignUp.test(nameInput1.value)) {
+                nameError1.innerText = 'Name is invalid';
+                return;
+            }
+            if (!surnameSignUp.test(surnameInput1.value)) {
+                surnameError1.innerText = 'Surname is invalid';
+                return;
+            }
+            if(!emailSignUp.test(emailInput1.value)){
+                emailiError1.innerText='Email is invalid';
+            }
+            if (!phoneSignUp.test(phoneInput1.value)) {
+             phoneError1.innerText = 'Phone is invalid';
+             return;
+    }
+        }
+    </script>
+    
     
 </body>
 </html>
