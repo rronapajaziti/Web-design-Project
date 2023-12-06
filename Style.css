@@ -1043,7 +1043,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .error-message{
     display: flex;
-    font-size: 18px;
+    font-size: 16px;
+    margin-left: 20px;
+    color: whitesmoke;
+    font-style: normal;
 }
 
 

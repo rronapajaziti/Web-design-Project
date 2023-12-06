@@ -164,6 +164,15 @@
             confrimError1.innerText='Passwords do not match';
             return;
         }
+      if (  namePattern.test(nameInput.value) &&
+    surnamePattern.test(surnameInput.value) &&
+    emailPattern.test(emailInput.value) &&
+    phonePattern.test(phoneInput.value) &&
+    password.test(passwordInput.value) &&
+    passwordInput.value === confrimInput.value
+) {
+    window.location.href = "login.html";
+}
     }
     </script>
     
