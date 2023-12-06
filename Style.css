@@ -859,7 +859,7 @@ footer{
     display: flex;
     justify-content: space-between;
     font-size: 16px;
-    margin: -3px 0 15px;
+    margin: -5px 0 15px;
 }
 .remeber label input{
     accent-color: #fff;
