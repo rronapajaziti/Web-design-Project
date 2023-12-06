@@ -10,57 +10,58 @@
 </head>
 <body class="trupi">
     <div class="log">
-        <form action="">
+        <form onsubmit="validimi(); return false;">
             <h1>Login</h1>
             <div class="emri-mbiemri">
-                <input type="text"placeholder="Username" id="username" required>
-                <div class="error-message" id="usernameError"></div>
+                <input type="text" placeholder="Username" id="username">
+                <div class="error-message1" id="usernameError"></div>
                 <!-- icona e userit -->
                 <i class='bx bxs-user'></i>
             </div>
             <div class="emri-mbiemri">
-                <input type="password"placeholder="Password" id="password" required>
-                <div class="error-message" id="passwordError"></div>
+                <input type="password" placeholder="Password" id="password">
+                <div class="error-message1" id="passwordError"></div>
                 <!-- icona e drynit -->
                 <i class='bx bxs-lock'></i>
             </div>
             <div class="remeber">
-                <label ><input type="checkbox">Remember me</label>
+                <label><input type="checkbox">Remember me</label>
                 <a href="#">Forgot password?</a>
             </div>
-            <a href="Travel.html"><button type="submit"class="btn" onclick="validimi()">Login</button></a>
+            <button type="submit" class="btn">Login</button>
             
             <div class="register">
-                <p>Don't have an account? <br><a href="Regjister.html">Register</a></p>
+                <p>Don't have an account?<br><a href="Regjister.html">Register</a></p>
             </div>
         </form>
     </div>
     <script>
-        let usernameRegex = /^[a-zA-Z\s]$/;
-        let passwordRegex =  /^[A-Za-z]\w{7,14}$/
+        let usernameRegex = /^[A-Za-z]{2,}$/;
+        let passwordRegex = /^(?=.*[A-Z])(?=.*[@$!%*#?&])(?=.*\d)[A-Za-z@$!%*#?&\d]{8,}$/;
 
-    function validimi(){
-        let username =document.getElementById('username');
-        let usernameError = document.getElementById('usernameError');
-        let password =document.getElementById('password');
-        let passwordError =document.getElementById('passwordError');
-    
-        usernameError.innerText = '';
-        passwordError.innerText = '';
+        function validimi() {
+            let username = document.getElementById('username');
+            let usernameError = document.getElementById('usernameError');
+            let password = document.getElementById('password');
+            let passwordError = document.getElementById('passwordError');
+            
+            usernameError.innerText = '';
+            passwordError.innerText = '';
 
-        if(!usernameRegex.test(username.value)){
-            usernameError.innerText ='username invalid';
-            return;
+            if (!usernameRegex.test(username.value)) {
+                usernameError.innerText = 'Username is invalid';
+                return;
+            }
+
+            if (!passwordRegex.test(password.value)) {
+                passwordError.innerText = 'Password is invalid';
+                return;
+            }
+{
+           
+            window.location.href = "Travel.html";
         }
-        if(!passwordRegex.test(password.value)){
-            passwordError.innerText ='password invalid';
-            return;
-        }
-        alert('Login successful!');
-        location.replace("Travel.html")
     }
     </script>
-
-    
 </body>
 </html>

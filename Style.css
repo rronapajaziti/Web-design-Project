@@ -859,7 +859,7 @@ footer{
     display: flex;
     justify-content: space-between;
     font-size: 16px;
-    margin: -15px 0 15px;
+    margin: -3px 0 15px;
 }
 .remeber label input{
     accent-color: #fff;
@@ -898,6 +898,14 @@ footer{
 }
 .register p a:hover{
     text-decoration: underline;
+}
+.error-message1{
+    display: flex;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-left: 16px;
+    color: whitesmoke;
+    font-style: normal;
 }
 /* ------------------------------------------ SIGN UP----------------------------------------------- */
 .body-sign{
