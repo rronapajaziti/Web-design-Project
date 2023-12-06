@@ -425,8 +425,85 @@ footer{
     color: #f2f2f9 ;
     
  }
- 
- .about{
+
+
+ /* ---------Pjesa e pare---------- */
+
+
+.Stafi{
+   
+    background-color: #f2f2f9;
+}
+
+.Stafi .kontenti .staf-cardAbout .card:hover{
+    background-color:#f2f2f9 ;
+    transition: 0.3s;
+}
+
+
+
+.rreshtiS h1{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 74px;
+    color:#22475f;
+    
+} 
+ .titulliUB p{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    margin: 30px 0px;
+    color: #4f95c4;;
+}
+.titulliUB{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
+.staf-cardAbout {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.card {
+    width: calc(33.33% - 100px); 
+    background-color: #dee9fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+}
+
+.pjesa-fotoveUB img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 4px solid #262f3d;
+}
+.contenti-tjeterUB {
+    padding-left: 10px; 
+}
+
+  .contenti-tjeterUB h3{
+    font-size:27px ; 
+   letter-spacing: 1.5px;
+   color: rgb(90, 71, 71);
+ } 
+  .contenti-tjeterUB h4{
+   
+    font-size: 17px;
+    letter-spacing: 1.5px;
+    color: rgb(111, 122, 172);
+
+}
+/* ---------------Pjesa dyte----------- */
+.about{
     display: flex;
     flex-direction: column; 
    justify-content: center;
@@ -484,7 +561,7 @@ footer{
 .image img{
 	width:80% ;
 }
-.kontenti{
+.contenti-AU{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -494,7 +571,8 @@ footer{
 	float: left;
 	
 }
-.kontenti h1{
+
+.contenti-AU h1{
     display: flex;
     flex-direction: row;
 
@@ -503,14 +581,14 @@ footer{
 	color: #22475f;
 
 }
-.kontenti h2{
+.contenti-AU h2{
     display: flex;
     flex-direction: row;
   
 	font-size: 40px;
 	color: #4f95c4;
 }
-.kontenti p{
+.contenti-AU p{
     display: flex;
     flex-direction: row;
 	font-size: 20px;
@@ -519,98 +597,7 @@ footer{
 }
 
 
-.Stafi{
-   
-    background-color: #f2f2f9;
-}
-.rreshtiS{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-}
-
-.rreshtiS h1{
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    font-size: 74px;
-    color:#22475f;
-    
-} 
-
-
- .titulli p{
-    display: flex;
-    /* flex-direction: column;
-    justify-content: space-evenly; */
-    font-size: 20px;
-    margin: 30px 0px;
-    color: #4f95c4;;
-}
-.titulli{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-    
-}
-.staf-card{
-    width: 100%;
-    display: flex;
-     flex-direction: row;
-      grid-gap:100px;
-
-}
-.card{
-    width:100%;
-    background-color:#dee9fa;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 25px;
-    cursor: pointer;  
-   
-}
-.Stafi .kontenti .staf-card .card:hover{
-    background-color:#f2f2f9 ;
-    transition: 0.3s;
-}
-
-
-.pjesa-fotove img{
-   
-    height: 300px;
-    width:300px;
-    border-radius: 50%;
-    border: 6px solid #262f3d;
-
-}
-
-  .contenti-tjeter h3{
-    font-size:27px ; 
-   letter-spacing: 1.5px;
-   color: rgb(90, 71, 71);
- } 
-  .contenti-tjeter h4{
-    font-size: 17px;
-    letter-spacing: 1.5px;
-    color: rgb(111, 122, 172);
-
-}
-.contenti-tjeter p{
-    font-size: 15px;
-   line-height: 1.5;
-    color:#22475f;
-
-}
-
-
-
+/* --------------Pjesa Trete-------- */
 .vacation{
  
     display: flex;
