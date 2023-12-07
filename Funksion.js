@@ -36,6 +36,31 @@ function emalValid(){
   window.location.href = "Travel.html";
 }
 
+function validimiFlights(){
+  let flyingFrom = document.getElementById('fromF');
+  let flyingTo = document.getElementById('toF');
+  let departing = document.getElementById('departingF');
+  let returning = document.getElementById('returningF');
+  let adults = document.getElementById('adultsF');
+  let children = document.getElementById('childrenF');
+  let name = document.getElementById('nameF');
+  let lastName = document.getElementById('lastNameF');
+  let email2 = document.getElementById('emailF');
+
+  // Erroret
+  let flyingFromError = document.getElementById('flyingFromError');
+  let flyingToError = document.getElementById('flyingToError');
+  let departingError = document.getElementById('departError');
+  let returningError = document.getElementById('returnError');
+  let adultsError = document.getElementById('adultsError');
+  let childrenError = document.getElementById('childrenError');
+  let nameError = document.getElementById('nameError');
+  let lastNameError = document.getElementById('lastNameError');
+  let email2Error = document.getElementById('emailErrors');
+
+
+}
+
 // -------------------------------------Log in-----------------------------------
 
 

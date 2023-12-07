@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flights</title>
     <link rel="stylesheet" href="Style.css">
+    <script src="Funksion.js"></script>
 </head>
 <body class="body">
     <header class="heading1">
@@ -24,7 +25,7 @@
 
         
         <div class="booking-form-box">
-            <fieldset><legend><h1 class="u">Book now</h1></legend>
+            <fieldset><legend><h1 class="u">Book Your Flights</h1></legend>
         
         <div class="radio">
             <p>Roundtrip
@@ -41,12 +42,13 @@
             
             <div class="input">
                 <label><h3>Flying From</h3></label>
-            <input type="text" class="form-control" placeholder="City or Airport" required></div>
-            
+            <input type="text" class="form-control" placeholder="City or Airport" id="fromF" required></div>
+            <div class="error-message" id="flyingFromError"></div>
             <div class="input">
                 <label><h3>Flying To</h3></label>
-            <input type="text" class="form-control" placeholder="City or Airport" required>
+            <input type="text" class="form-control" placeholder="City or Airport" id="toF" required>
             </div>
+            <div class="error-message" id="flyingToError"></div>
         </div>
         <!-- -------------------------------Data---------------------------------------- -->
             <div class="pjeset">
@@ -54,13 +56,16 @@
             <div class="input">
                 <label><h3>Departing</h3></label>
             
-            <input type="date" class="form-control select-date" required></div>
+            <input type="date" class="form-control select-date" id="departingF" required>
+        </div>
+        <div class="error-message" id="departError"></div>
             
             <div class="input">
                 <label><h3>Returning</h3></label>
             
-            <input type="date" class="form-control select-date" required>
+            <input type="date" class="form-control select-date" id="returningF" required>
             </div>
+            <div class="error-message" id="returnError"></div>
             </div>
 
         <!-- -------------------------------Persona---------------------------------------- -->
@@ -68,34 +73,40 @@
         
             <div class="input">
                 <label><h3>Adults</h3></label>
-            <input type="number" class="form-control" value="1" required></div>
+            <input type="number" class="form-control" value="1" required id="adultsF">
+        </div>
+        <div class="error-message" id="adultsError"></div>
                 
                 <div class="input">
                     <label><h3>Children</h3></label>
-            <input type="number" class="form-control" value="0" required>
+            <input type="number" class="form-control" value="0" id="childrenF" required>
             </div>
+            <div class="error-message" id="childrenError"></div>
         </div>
         <!-- -------------------------------Personal info---------------------------------------- -->
         <div class="pjeset">
             <div class="input">
                 <!-- boni me id krejt -->
                 <label><h3>Name</h3></label>
-            <input type="text" class="form-control" placeholder="" required>
+            <input type="text" class="form-control" placeholder="name"id="nameF" required>
             </div>
+            <div class="error-message" id="nameError"></div>
         <div class="input">
             <label><h3>Last Name</h3></label>
-        <input type="text" class="form-control" placeholder="" required>
+        <input type="text" class="form-control" placeholder="Last name"id="lastNameF" required>
         </div>
+        <div class="error-message" id="lastNameError"></div>
         <div class="input">
             <label><h3>Email</h3></label>
-        <input type="text" class="form-control" placeholder="" required>
+        <input type="email" class="form-control" placeholder="example@email.com" id="emailF" required>
        </div>
+       <div class="error-message" id="emailErrors"></div>
         </div>
         <!-- -------------------------------Travel/Butoni---------------------------------------- -->
         <div class="pjeset">
             <div class="input">
                 <label><h3>Travel</h3></label>
-                <select class="cosutum-select">
+                <select class="cosutum-select" id="travelClass">
                     <option value="1">Economy Class</option>
                     <option value="2">Buisness Class</option>
                     <option value="3">First Class</option>
@@ -111,10 +122,7 @@
         </div>
       </fieldset>
         </div>
-        </div>
-        </div>
     </form>
-    </div>
 
     </main>
 </body>
