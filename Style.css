@@ -7,6 +7,7 @@
 /*--------------------------------Homepage--------------------------------*/
 body{
     background-color: #eae9e9;
+    margin: 0;
 }
 .heading{
     background-image: url(Photos/pe.jpg);
@@ -71,7 +72,7 @@ body{
 .paragrafi h1{
     font-size: 70px;
     text-transform: uppercase;
-    text-shadow: 2px 10px #4f95c4;
+    text-shadow: 2px 6px #4f95c4;
     color: #f7f6f1;
 }
 .paragrafi p{
@@ -218,7 +219,7 @@ span{
 }
 .foto-2{
     display: flex;
-    margin-right: 200px;
+    margin-right: 00px;
 }
 .foto-2 img{
     border: 2px solid #555;
@@ -314,7 +315,7 @@ footer{
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .kolona{
     flex-basis: 15%;
@@ -364,11 +365,16 @@ footer{
     cursor: pointer;
 }
 .error-message {
-    color: #0a171f;
     margin-top: -10px;
     margin-bottom: 10px;
     font-weight: bold;
-    font-size: xx-large;
+    font-size: large;
+}
+.error-messagee {
+    margin-top: -40px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 16px;
 }
 .form button {
     background: transparent;

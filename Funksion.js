@@ -23,15 +23,17 @@ document.addEventListener(onload,prevImg());
 
 
 function emalValid(){
+  let email = document.getElementById('email');
+  let emailError = document.getElementById('emailiError');
 
-    var email =document.getElementById('email').value;
-    var emailRegex = /^[^\s@] + @[^\s@] + \.[^\s@] +$/;
-    if(!emailRegex.test(email)){
-        alert('Please enter a valid email address');
-        return false;
+  emailError.innerText = '';
+  let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    }
-
+  if (!emailRegex.test(email.value)) {
+    emailError.innerText = 'Example: name@gmail.com';
+    return;
+  }
+  window.location.href = "Travel.html";
 }
 
 // -------------------------------------Log in-----------------------------------

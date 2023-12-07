@@ -6,6 +6,7 @@
     <title>Travel</title>
     <link rel="stylesheet" href="Style.css">
     <script src="https://kit.fontawesome.com/0feed4ec37.js" crossorigin="anonymous"></script>
+    <script src="Funksion.js"></script>
 </head>
 <body>
 <header class="heading">
@@ -212,8 +213,12 @@
             <form class="form">
                 <i class="fa-regular fa-envelope"></i>
                 <input type="email" placeholder="Enter your email"  id="email" required>
+                
                 <button type="submit"><i class="fa-solid fa-right-long" onclick="emalValid()"></i></button>
+                <br>
+                
             </form>
+            <div class="error-messagee" id="emailiError"></div>
             <div class="social-media">
                 <a href="https://www.facebook.com/"><i class="fa-brands fa-square-facebook" style="color: #ededed;"></i></a>
                 <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram" style="color: #ededed;"></i></a>
@@ -226,20 +231,6 @@
         <p class="Copyright">&copy; 2023 Coral Travel Agency</p>
         
     </footer>
-    <script>
-        function emalValid(){
-
-            var email =document.getElementById('email').value;
-            var emailRegex = /^[^\s@] + @[^\s@] + \.[^\s@] +$/;
-            if(!emailRegex.test(email)){
-                alert('Please enter a valid email address');
-                return false;
-
-            }
-
-        }
-        
-    </script>
  
 </body>
 </html>
