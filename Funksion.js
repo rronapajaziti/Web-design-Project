@@ -58,6 +58,26 @@ function validimiFlights(){
   let lastNameError = document.getElementById('lastNameError');
   let email2Error = document.getElementById('emailErrors');
 
+  flyingFromError.innerText='';
+  flyingToError.innerText='';
+  departingError.innerText='';
+  returningError.innerText='';
+  adultsError.innerText='';
+  childrenError.innerText='';
+  nameError.innerText='';
+  lastNameError.innerText='';
+  email2Error.innerText='';
+
+  let flyingFromRegex = /^[A-Za-z\s'-]{2,}$/;
+  let flyingToRegex = /^[A-Za-z\s'-]{2,}$/;
+  let departingRegex = /^(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])-\d{4}$/;
+  let returningRegex= /^(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])-\d{4}$/;
+  let adultsRegex= /^[1-9][0-9]*$/;
+  let childrenRegex = /^[0-9]*$/;
+  let nameRegex = /^[A-Za-z]{2,}$/;
+  let surnameRegex = /^[A-Za-z]{2,}$/;
+  let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 
 }
 
