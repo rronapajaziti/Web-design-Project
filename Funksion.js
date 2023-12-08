@@ -1,25 +1,31 @@
 let i =0;
-let imgVarg=['Photos/hotel1.jpg','Photos/hotel5.jpg','Photos/hotel3.jpg','Photos/hotel4.jpg'];
+let imgVarg=['Photos/hotel1.jpg','Photos/hotel6.jpg','Photos/hotel5.jpg','Photos/hotel3.jpg','Photos/hotel7.jpg'];
 
 function nextImg(){
-  document.getElementById('slide').src = imgVarg[i];
-  if(i<imgVarg.length -1){
-    i++;
+  if(i % 2 === 0){
+    //nese i ehte cift shfaq img 1
+    document.getElementById('slide').src = imgVarg[i];
+    if(i+1<imgVarg.length){
+      //foton e dyte ne varg e bene te dyten ne rresht
+      document.getElementById('slide2').src = imgVarg[i+1];
+    }
   }else{
+    //nese i eshte tek shfaq foton e dyte
+    document.getElementById('slide2').src = imgVarg[i];
+    if(i -1 >= 0){
+      //nese eshte nje foto para kesaj merre ate si te paren ne rresht
+      document.getElementById('slide').src = imgVarg[i-1];
+    }
+  }
+  i++;
+  //nese i behet ma e madhe se vargu.length beje i=0
+  if(i>= imgVarg.length){
     i=0;
   }
-}
-function prevImg(){
-  document.getElementById('slide').src = imgVarg[i];
-  if(i> 0){
-    i++;
-  }else{
-    i= imgVarg.length -1;
-  }
+  setTimeout(nextImg,1600);
 }
 
-document.addEventListener(onload,nextImg());
-document.addEventListener(onload,prevImg());
+window.addEventListener('load',nextImg);
 
 
 function emalValid(){
@@ -77,6 +83,22 @@ function validimiFlights(){
   let nameRegex = /^[A-Za-z]{2,}$/;
   let surnameRegex = /^[A-Za-z]{2,}$/;
   let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!flyingFromRegex.test(flyingFrom.value)) {
+    flyingFromError.innerText = 'Invalid city';
+    return;
+  }
+  if (!flyingToRegex.test(flyingTo.value)) {
+    flyingToError.innerText = 'Invalid city';
+    return;
+  }
+  if (!departingRegex.test(departing.value)) {
+    departingError.innerText = 'Invalid Date';
+    return;
+  }
+
+  
+
 
 
 }
