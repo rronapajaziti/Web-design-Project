@@ -131,8 +131,7 @@ function validimiFlights(){
     email2Error.innerText = 'Enter a valid email, Example: name@gmail.com';
     isValid=false;
   }
-  {
-           
+  if(isValid){      
     window.location.href = "Travel.html";
   }
 }
