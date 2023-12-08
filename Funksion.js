@@ -45,19 +45,16 @@ function emalValid(){
 function validimiFlights(){
   let flyingFrom = document.getElementById('fromF');
   let flyingTo = document.getElementById('toF');
-  let departing = document.getElementById('departingF');
-  let returning = document.getElementById('returningF');
   let adults = document.getElementById('adultsF');
   let children = document.getElementById('childrenF');
   let name = document.getElementById('nameF');
   let lastName = document.getElementById('lastNameF');
   let email2 = document.getElementById('emailF');
+  var isValid = true;
 
   // Erroret
   let flyingFromError = document.getElementById('flyingFromError');
   let flyingToError = document.getElementById('flyingToError');
-  let departingError = document.getElementById('departError');
-  let returningError = document.getElementById('returnError');
   let adultsError = document.getElementById('adultsError');
   let childrenError = document.getElementById('childrenError');
   let nameError = document.getElementById('nameError');
@@ -66,41 +63,78 @@ function validimiFlights(){
 
   flyingFromError.innerText='';
   flyingToError.innerText='';
-  departingError.innerText='';
-  returningError.innerText='';
   adultsError.innerText='';
   childrenError.innerText='';
   nameError.innerText='';
   lastNameError.innerText='';
   email2Error.innerText='';
 
+
   let flyingFromRegex = /^[A-Za-z\s'-]{2,}$/;
   let flyingToRegex = /^[A-Za-z\s'-]{2,}$/;
-  let departingRegex = /^(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])-\d{4}$/;
-  let returningRegex= /^(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])-\d{4}$/;
   let adultsRegex= /^[1-9][0-9]*$/;
   let childrenRegex = /^[0-9]*$/;
   let nameRegex = /^[A-Za-z]{2,}$/;
-  let surnameRegex = /^[A-Za-z]{2,}$/;
+  let lastNameRegex = /^[A-Za-z]{2,}$/;
   let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   if (!flyingFromRegex.test(flyingFrom.value)) {
     flyingFromError.innerText = 'Invalid city';
-    return;
+    isValid=false;
   }
   if (!flyingToRegex.test(flyingTo.value)) {
     flyingToError.innerText = 'Invalid city';
-    return;
+    isValid=false;
   }
-  if (!departingRegex.test(departing.value)) {
-    departingError.innerText = 'Invalid Date';
-    return;
+  //merr dates e sotme
+  var currentDateTime = new Date();
+  var year = currentDateTime.getFullYear();
+  var month = (currentDateTime.getMonth() + 1);
+  var date = (currentDateTime.getDate() + 1);
+
+  //sigurohemi qe muaji dhe data jan nga dy numra
+  if(date < 10) {
+    date = '0' + date;
+  }
+  if(month < 10) {
+    month = '0' + month;
   }
 
-  
+  var dateTomorrow = year + "-" + month + "-" + date;
+  var departingD = document.querySelector("#departingF");
+  var returningD = document.querySelector("#returningF");
 
+  departingD.setAttribute("min", dateTomorrow);
 
+    departingD.onchange = function () {
+      //min prej dates se selektuar ne departing
+    returningD.setAttribute("min", this.value);
+  }
 
+  if (!adultsRegex.test(adults.value)) {
+    adultsError.innerText = 'There must be at least one adult';
+    isValid=false;
+  }
+  if (!childrenRegex.test(children.value)) {
+    childrenError.innerText = 'Add a valid number';
+    isValid=false;
+  }
+  if (!nameRegex.test(name.value)) {
+    nameError.innerText = 'Invalid name';
+    isValid=false;
+  }
+  if (!lastNameRegex.test(lastName.value)) {
+    lastNameError.innerText = 'Invalid Last name';
+    isValid=false;
+  }
+  if (!emailRegex.test(email2.value)) {
+    email2Error.innerText = 'Enter a valid email, Example: name@gmail.com';
+    isValid=false;
+  }
+  {
+           
+    window.location.href = "Travel.html";
+  }
 }
 
 // -------------------------------------Log in-----------------------------------

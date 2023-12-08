@@ -731,7 +731,7 @@ footer{
 .pjeset{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     align-content: space-between;
     padding-bottom: 30px;
@@ -743,7 +743,7 @@ footer{
     flex-direction: row;
     align-items: center;
     cursor: text;
-    padding-bottom: 70px;
+    padding-bottom: 95px;
 }
 .booking-form label{
     margin-bottom: 50px;
@@ -754,11 +754,14 @@ footer{
 .booking-form input::placeholder{
     color: rgb(242, 242, 249) ;
 }
+.input ::placeholder{
+    font-size: 14px;
+}
 .input{
    width: 50%;
    display: flex;
    flex-direction: row;
-   justify-content: flex-start;
+   flex-wrap: wrap;
    align-items: center;
    padding-bottom: 30px;
 }
@@ -797,6 +800,12 @@ footer{
     background: #22475f;
     color: rgb(242, 242, 249);
     transition: 0.5s;
+}
+.error-message3{
+    display: flex;
+    font-size: 20px;
+    margin-top: 15px;
+    color: #acb9c2;
 }
 
 /*--------------------------------Log in--------------------------------*/

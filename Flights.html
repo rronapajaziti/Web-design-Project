@@ -40,13 +40,15 @@
             
             <div class="input">
                 <label><h3>Flying From</h3></label>
-            <input type="text" class="form-control" placeholder="City or Airport" id="fromF" required></div>
-            <div class="error-message" id="flyingFromError"></div>
+            <input type="text" class="form-control" placeholder="City or Airport" id="fromF" required>
+            <div class="error-message3" id="flyingFromError"></div>
+        </div>
             <div class="input">
                 <label><h3>Flying To</h3></label>
             <input type="text" class="form-control" placeholder="City or Airport" id="toF" required>
+            <div class="error-message3" id="flyingToError"></div>
             </div>
-            <div class="error-message" id="flyingToError"></div>
+            
         </div>
         <!-- -------------------------------Data---------------------------------------- -->
             <div class="pjeset">
@@ -56,14 +58,12 @@
             
             <input type="date" class="form-control select-date" id="departingF" required>
         </div>
-        <div class="error-message" id="departError"></div>
             
             <div class="input">
                 <label><h3>Returning</h3></label>
             
             <input type="date" class="form-control select-date" id="returningF" required>
             </div>
-            <div class="error-message" id="returnError"></div>
             </div>
 
         <!-- -------------------------------Persona---------------------------------------- -->
@@ -71,15 +71,17 @@
         
             <div class="input">
                 <label><h3>Adults</h3></label>
-            <input type="number" class="form-control" value="1" required id="adultsF">
+            <input type="number" class="form-control" value="1" id="adultsF" required >
+            <div class="error-message3" id="adultsError"></div>
         </div>
-        <div class="error-message" id="adultsError"></div>
+        
                 
                 <div class="input">
                     <label><h3>Children</h3></label>
             <input type="number" class="form-control" value="0" id="childrenF" required>
+            <div class="error-message3" id="childrenError"></div>
             </div>
-            <div class="error-message" id="childrenError"></div>
+            
         </div>
         <!-- -------------------------------Personal info---------------------------------------- -->
         <div class="pjeset">
@@ -87,18 +89,21 @@
                 <!-- boni me id krejt -->
                 <label><h3>Name</h3></label>
             <input type="text" class="form-control" placeholder="name"id="nameF" required>
+            <div class="error-message3" id="nameError"></div>
             </div>
-            <div class="error-message" id="nameError"></div>
+            
         <div class="input">
             <label><h3>Last Name</h3></label>
-        <input type="text" class="form-control" placeholder="Last name"id="lastNameF" required>
+        <input type="text" class="form-control" placeholder="Last name"id="lastNameF" required>      
+          <div class="error-message3" id="lastNameError"></div>
         </div>
-        <div class="error-message" id="lastNameError"></div>
+
         <div class="input">
             <label><h3>Email</h3></label>
         <input type="email" class="form-control" placeholder="example@email.com" id="emailF" required>
+        <div class="error-message3" id="emailErrors"></div>
        </div>
-       <div class="error-message" id="emailErrors"></div>
+       
         </div>
         <!-- -------------------------------Travel/Butoni---------------------------------------- -->
         <div class="pjeset">
@@ -111,9 +116,7 @@
                 </select>
             </div>
             <div class="input">
-                <a href="#">
                 <button type="submit" class="button" onclick="validimiFlights()">Book now</button>
-                </a>
             </div>
         </div>
             
