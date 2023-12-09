@@ -22,7 +22,7 @@ function nextImg(){
   if(i>= imgVarg.length){
     i=0;
   }
-  setTimeout(nextImg,1600);
+  setTimeout(nextImg,1000);
 }
 
 window.addEventListener('load',nextImg);
@@ -41,6 +41,35 @@ function emalValid(){
   }
   window.location.href = "Travel.html";
 }
+
+function dateValidim(){
+   //merr dates e sotme
+   var currentDateTime = new Date();
+  currentDateTime.setDate(currentDateTime.getDate() + 1);
+   var year = currentDateTime.getFullYear();
+   var month = (currentDateTime.getMonth() + 1);
+   var date = (currentDateTime.getDate());
+ 
+   //sigurohemi qe muaji dhe data jan nga dy numra
+   if(date < 10) {
+     date = '0' + date;
+   }
+   if(month < 10) {
+     month = '0' + month;
+   }
+ 
+   var dateTomorrow = year + "-" + month + "-" + date;
+   var departingD = document.querySelector("#departingF");
+   var returningD = document.querySelector("#returningF");
+ 
+   departingD.setAttribute("min", dateTomorrow);
+   departingD.onchange = function () {
+    //min prej dates se selektuar ne departing
+   returningD.setAttribute("min", this.value);
+  }
+}
+//ne load te faqes bllokon datat e meparshme tek departing
+  window.addEventListener('load',dateValidim);
 
 function validimiFlights(){
   let flyingFrom = document.getElementById('fromF');
@@ -86,30 +115,7 @@ function validimiFlights(){
     flyingToError.innerText = 'Invalid city';
     isValid=false;
   }
-  //merr dates e sotme
-  var currentDateTime = new Date();
-  var year = currentDateTime.getFullYear();
-  var month = (currentDateTime.getMonth() + 1);
-  var date = (currentDateTime.getDate() + 1);
 
-  //sigurohemi qe muaji dhe data jan nga dy numra
-  if(date < 10) {
-    date = '0' + date;
-  }
-  if(month < 10) {
-    month = '0' + month;
-  }
-
-  var dateTomorrow = year + "-" + month + "-" + date;
-  var departingD = document.querySelector("#departingF");
-  var returningD = document.querySelector("#returningF");
-
-  departingD.setAttribute("min", dateTomorrow);
-
-    departingD.onchange = function () {
-      //min prej dates se selektuar ne departing
-    returningD.setAttribute("min", this.value);
-  }
 
   if (!adultsRegex.test(adults.value)) {
     adultsError.innerText = 'There must be at least one adult';
@@ -136,6 +142,6 @@ function validimiFlights(){
   }
 }
 
-// -------------------------------------Log in-----------------------------------
+
 
 

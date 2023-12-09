@@ -87,8 +87,8 @@ body{
     text-align: center;
     margin: 20px 10px;
     border-radius: 25px;
-    font-weight: 600;
-    font-size: larger;
+    font-weight: 550;
+    font-size: 20px;
     border: 2px solid #4f95c4;
     background: transparent;
     color: white;
@@ -1104,7 +1104,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 #slide, #slide2{
     width: 50%;
     height: 100%;
-    margin: 0 25px;
+    margin: 0 15px;
 }
 .hotel-box{
     display: flex;
