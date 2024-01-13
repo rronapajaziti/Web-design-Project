@@ -38,7 +38,7 @@
             <div class="rreshtiS">
                 <div class="titulliUB">
                     <h1>Our Team</h1>
-                    <p>“Find a group of people who challenge and inspire you, spend a lot of time with them, and it will change your life.”</p>
+                    <p>“Find a group of people who challenge and inspire you,, spend a lot of time with them, and it will change your life.”</p>
                 </div>
             </div>
     
