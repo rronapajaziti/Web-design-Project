@@ -101,6 +101,7 @@ class RegjistrimiDB
         }
     }
     function getAllUsers()
+    //incializim i te dhanave permes while qe me  për të marrë rreshtat e të dhënave nga rezultati i kthyer nga databaza edhe tani te rujta te vlera data
     {
         $data = null;
         $query = "SELECT * FROM regjistrimidb";
@@ -134,6 +135,7 @@ class RegjistrimiDB
                     $_SESSION['user_type'] = 'admin';
 
                     echo "<script>alert('You have logged in successfuly!!');</script>";
+                    //lidhjen me dashboard
                     echo "<script>window.location.href = './dashboard/dashboard.php';</script>";
                 } elseif ($row['user_type'] == 'user') {
                     $_SESSION['user_type'] = 'user';

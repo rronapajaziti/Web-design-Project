@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,39 +8,15 @@
     <link rel="stylesheet" href="Style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<a href="<?php if (isset($_SESSION['user_type'])) {
-                echo "Flights.php";
-            } else {
-                echo "Login.php";
-            } ?>" class="bx">
-                
-                <button type="button" class="bx bxs-contact stil"<?php if (!isset($_SESSION['user_type'])) {
-                    echo "onclick=\"alert('You cannot make rezervation without being logged in!')\"";
-                } ?>>Rezervo</button>
-            </a>                        
-                        </li>
 
-                </ul>
-                <ul class="loginforma">
-                        <li><a href="Regjister.html">Regjistrohu</a></li>
-                        <li>
-                        <?php
-                    if (!(isset($_SESSION['user_type']))) {
-                        echo "<a class='ula' id='pad' href='login.php'>Login</a>";
-                    } else if (isset($_SESSION['user_type']) == 'user') {
-                        echo "<a class='ula' id='pad' href='logout.php'>Logout</a>";
-                    }
-                    ?>                        </li>
-                    </ul>
-                </a>
 
 <body class="body-sign">
     <div class="signU">
         <form class="forma-Sign">
             <h1>Sign Up</h1>
             <?php
-            include 'config_register.php';
-            $register = new DatabaseRegister();
+            include 'RegjistrimiDB.php';
+            $register = new RegjistrimiDB ();
             $insert = $register->insert();
 
             ?>
@@ -122,6 +99,29 @@
         </form>
 
     </div>
+    <a href="<?php if (isset($_SESSION['user_type'])) {
+                echo "Flights.php";
+            } else {
+                echo "Login.php";
+            } ?>" class="bx">
+                
+                <button type="button" class="bx bxs-contact stil"<?php if (!isset($_SESSION['user_type'])) {
+                    echo "onclick=\"alert('You cannot make rezervation without being logged in!')\"";
+                } ?>>Rezervo</button>
+            </a>                        
+                        
+                <ul class="loginforma">
+                        <li><a href="Regjister.html">Regjistrohu</a></li>
+                        <li>
+                        <?php
+                    if (!(isset($_SESSION['user_type']))) {
+                        echo "<a class='ula' id='pad' href='login.php'>Login</a>";
+                    } else if (isset($_SESSION['user_type']) == 'user') {
+                        echo "<a class='ula' id='pad' href='logout.php'>Logout</a>";
+                    }
+                    ?>                        </li>
+                    </ul>
+                </a>
 
     <!-- </div> -->
     
