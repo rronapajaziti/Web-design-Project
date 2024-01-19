@@ -1,4 +1,33 @@
-<!DOCTYPE html>
+<?php session_start()
+
+include_once '../Web-design-Project/RegjistrimiDB.php';
+    if($_SERVER['REQUEST_METHOD']=="POST"){
+        $gmail=$_POST['email'];
+        $password=$_POST['password'];
+
+        if(!empty($email)&& !empty($password)&& !is_numeric($email))
+        {
+            $query="select * from regjistrimidb where emaili='$email'limit 1 ";
+            $result =mysqli_query($con,$query);
+
+            if($result)
+            {
+                if($result && mysqli_num_rows($result)>0)
+                {
+                    $user_data=mysqli_fetch_assoc($result);
+                    if($user_data['password']==$password)
+                    {
+                        header("location:index.php");
+                    }
+                }
+            }
+        }
+    }
+    
+
+
+?>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,13 +39,10 @@
 </head>
 <body class="trupi">
     <div class="log">
+        <form method="POST">
         <form onsubmit="validimi(); return false;">
             <h1>Login</h1>
-            <?php
-            include 'RegjistrimiDB.php';
-            $register = new RegjistrimiDB ();
-            $insert = $register->insert();
-            ?>
+            
             <div class="emri-mbiemri">
                 <input type="text" placeholder="Username" id="username">
                 <div class="error-message1" id="usernameError"></div>
