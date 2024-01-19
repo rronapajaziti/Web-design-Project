@@ -1,4 +1,26 @@
-<?php session_start() ?>
+<?php session_start()
+include_once '../Web-design-Project/RegjistrimiDB.php';
+    if($_SERVER['REQUEST_METHOD']=="POST")
+    {
+        $id=$_POST['id'];
+        $name = $_POST['name'];
+        $surname = $_POST['surname'];
+        $email = $_POST['email'];
+        $phone = $_POST['phone'];
+        $birthday = $_POST['birthday'];
+        $password = $_POST['password'];
+
+        if(!empty($email)&& !empty($password)&& !is_numeric($email)){
+            $query="insert into regjistrimidb(id,name,surname,email,phone,birthday,password) values('$id','$name','$surname','$email','$phone','$birthday','$password')";
+            mysqli_query($con,$query);
+            echo "<script type='text/javascript'>alert('Successfully Register')</script>";
+        }
+        else
+        {
+            echo "<script type='text/javascript'>alert('Please Enter some Valid Information')</script>";  
+        }
+    }
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,14 +34,12 @@
 
 <body class="body-sign">
     <div class="signU">
+        
         <form class="forma-Sign">
+            <form method="POST">
             <h1>Sign Up</h1>
-            <?php
-            include 'RegjistrimiDB.php';
-            $register = new RegjistrimiDB ();
-            $insert = $register->insert();
-
-            ?>
+           
+          
         
                 <!-- <div class=""> -->
                     <div class="sg">
@@ -89,7 +109,7 @@
                     <div class="error-message" id="confrimError1">
                      </div>
                 <div class="Click">
-                <p> <a href="Login">Log In!</a></p>
+                <p> <a href="Login.php">Log In!</a></p>
             </div>
             
             <div class="butoni-Sign">
@@ -99,29 +119,7 @@
         </form>
 
     </div>
-    <a href="<?php if (isset($_SESSION['user_type'])) {
-                echo "Flights.php";
-            } else {
-                echo "Login.php";
-            } ?>" class="bx">
-                
-                <button type="button" class="bx bxs-contact stil"<?php if (!isset($_SESSION['user_type'])) {
-                    echo "onclick=\"alert('You cannot make rezervation without being logged in!')\"";
-                } ?>>Rezervo</button>
-            </a>                        
-                        
-                <ul class="loginforma">
-                        <li><a href="Regjister.html">Regjistrohu</a></li>
-                        <li>
-                        <?php
-                    if (!(isset($_SESSION['user_type']))) {
-                        echo "<a class='ula' id='pad' href='login.php'>Login</a>";
-                    } else if (isset($_SESSION['user_type']) == 'user') {
-                        echo "<a class='ula' id='pad' href='logout.php'>Logout</a>";
-                    }
-                    ?>                        </li>
-                    </ul>
-                </a>
+              
 
     <!-- </div> -->
     

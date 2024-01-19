@@ -12,6 +12,11 @@
     <div class="log">
         <form onsubmit="validimi(); return false;">
             <h1>Login</h1>
+            <?php
+            include 'RegjistrimiDB.php';
+            $register = new RegjistrimiDB ();
+            $insert = $register->insert();
+            ?>
             <div class="emri-mbiemri">
                 <input type="text" placeholder="Username" id="username">
                 <div class="error-message1" id="usernameError"></div>
@@ -28,6 +33,7 @@
                 <label><input type="checkbox">Remember me</label>
                 <a href="#">Forgot password?</a>
             </div>
+            
             <button type="submit" class="btn">Login</button>
             
             <div class="register">
@@ -35,6 +41,7 @@
             </div>
         </form>
     </div>
+    
     <script>
         let usernameRegex = /^[A-Za-z]{2,}$/;
         let passwordRegex = /^(?=.*[A-Z])(?=.*[@$!%*#?&])(?=.*\d)[A-Za-z@$!%*#?&\d]{8,}$/;

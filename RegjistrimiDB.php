@@ -50,7 +50,7 @@ class RegjistrimiDB
             $phone = $_POST['phone'];
             $birthday = $_POST['birthday'];
             $password = $_POST['password'];
-            $confirm = $_POST['confirm'];
+            
 
 
             if ($this->emailExists()) {
@@ -58,7 +58,7 @@ class RegjistrimiDB
                 echo "<script>window.location.href = 'Regjister.php';</script>";
                 return;
             } else {
-                $query = "INSERT INTO RegjisterDB(id,name, surname, email,phone,birthday, password,confirm, user_type) VALUES ('$name', '$surname','$email','$phone','$birthday', '$password','$confirm', 'user')";
+                $query = "INSERT INTO RegjisterDB(id,name, surname, email,phone,birthday, password, user_type) VALUES ('$name', '$surname','$email','$phone','$birthday', '$password', 'user')";
                 if ($sql = $this->conn->query($query)) {
                     echo "<script>alert('You have been registered successfully!!');</script>";
                     echo "<script>window.location.href = 'Login.php';</script>";
@@ -81,7 +81,7 @@ class RegjistrimiDB
             $phone = $_POST['phone'];
             $birthday = $_POST['birthday'];
             $password = $_POST['password'];
-            $confrim = $_POST['confrim'];
+          
             $user_type = $_POST['user_type'];
 
             if ($this->emailExists()) {
@@ -89,7 +89,7 @@ class RegjistrimiDB
                 echo "<script>window.location.href = 'userAdd.php';</script>";
                 return;
             } else {
-                $query = "INSERT INTO regjistrimidb(name, surname, email,phone,birthday, password,confirm, user_type) VALUES ('$name', '$surname','$email','$phone','$birthday', '$password','$confirm', '$user_type')";
+                $query = "INSERT INTO regjistrimidb(name, surname, email,phone,birthday, password, user_type) VALUES ('$name', '$surname','$email','$phone','$birthday', '$password', '$user_type')";
                 if ($sql = $this->conn->query($query)) {
                     echo "<script>alert('You have been registered successfully!!');</script>";
                     echo "<script>window.location.href = 'userDashboard.php';</script>";
@@ -183,14 +183,14 @@ class RegjistrimiDB
         return $data;
     }
 
-    function updateUser($id,$name,$surname,$email,$phone,$birthday,$password,$confirm){
+    function updateUser($id,$name,$surname,$email,$phone,$birthday,$password,){
         $conn = $this->connection;
 
         $sql = "UPDATE user SET name=?, surname=?, email=?, username=?, password=? WHERE id=?";
 
         $statement = $conn->prepare($sql);
 
-        $statement->execute([$id,$name,$surname,$email,$phone,$birthday,$password,$confirm]);
+        $statement->execute([$id,$name,$surname,$email,$phone,$birthday,$password,]);
 
         echo "<script>alert('update was successful'); </script>";
    }
