@@ -15,10 +15,11 @@
             <img src="Photos/logo1.png" alt="Logo">
         </div>
         <ul>
-            <li><a href="Travel.html"><h2>Home</h2></a></li>
-            <li><a href="About us.html"><h2>About us</h2></a></li>
-            <li><a href="Flights.html"><h2>Flights </h2></a></li>
-            <li><a href="Hotels.html"><h2>Hotels</h2></a></li>
+            <li><a href="Travel.php"><h2>Home</h2></a></li>
+            <li><a href="About us.php"><h2>About us</h2></a></li>
+            <li><a href="Flights.php"><h2>Flights </h2></a></li>
+            <li><a href="Hotels.php"><h2>Hotels</h2></a></li>
+            <li><a href="Offers.php"><h2>Offers</h2></a></li>
         </ul>
         </div>
     </div>
