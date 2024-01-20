@@ -1,4 +1,21 @@
+<?php
+include_once 'username.php';
+include_once 'userRepository.php';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
+    $id=$_POST['id'];
+        $name = $_POST['name'];
+        $surname = $_POST['surname1'];
+        $email = $_POST['email1'];
+        $phone = $_POST['phone1'];
+        $birthday = $_POST['birthday1'];
+        $password = $_POST['password1'];
+
+    $user = new username($id,$name,$surname,$phone,$birthday,$email,$password,$confirm);
+    $userRepository = new userRepository();
+    $userRepository->insert($student);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +31,7 @@
     <div class="signU">
         
         <form class="forma-Sign">
-            <<form class="forma-Sign" method="POST" action="../Web-design-Project/confgRegister.php">>
+            <form class="forma-Sign" method="POST" action="../Web-design-Project/confgRegister.php">
             <h1>Sign Up</h1>
            
           

@@ -1,5 +1,5 @@
 <?php
-include_once '../Web-design-Project/RegjistrimiDB.php';
+include_once '../Web-design-Project/userRepository.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -7,7 +7,7 @@ class LidhjaDb {
     private $server = "localhost";
     private $username = "root";
     private $password = "";
-    private $database = "travelagency";
+    private $database = "travel agency";
 
     function startConnection() {
         try {
