@@ -1,4 +1,4 @@
-<?php session_start();
+<!-- session_start();
 include '../Web-design-Project/Regjistrimi.php';
 
     if($_SERVER['REQUEST_METHOD']=="POST"){
@@ -27,10 +27,10 @@ include '../Web-design-Project/Regjistrimi.php';
             echo "<script type='text/javascript'>alert('wrong username or password')</script>";
         }
     }
-    
+     -->
 
 
-?>
+
     <!DOCTYPE html>
 <html lang="en">
 <head>

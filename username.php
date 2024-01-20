@@ -1,6 +1,5 @@
 <?php
-
-class user{
+class username{
     private $id;
     private $name;
     private $surname;
@@ -9,8 +8,9 @@ class user{
     private $birthday;
     private $password;
     private $confirm;
+    private $usertype;
 
-    function __construct($id,$name,$surname,$phone,$birthday,$email,$password,$confirm){
+    function __construct($id,$name,$surname,$phone,$birthday,$email,$password,$confirm,$usertype){
         $this->id = $id;
         $this->name = $name;
         $this->surname = $surname;
@@ -19,6 +19,7 @@ class user{
         $this->phone = $phone;
         $this->birthday = $birthday;
         $this->confirm = $confirm;
+        $this->usertype= $usertype;
     }
 
     function getId(){
@@ -44,6 +45,9 @@ class user{
     }
     function getConfirm(){
         return $this->confirm;
+    }
+    function getUsertype(){
+        return $this->usertype;
     }
 }
 ?>

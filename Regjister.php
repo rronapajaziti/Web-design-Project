@@ -1,41 +1,4 @@
-<?php session_start();
 
-include '../Web-design-Project/Regjistrimi.php';
-
-    if($_SERVER['REQUEST_METHOD']=="POST")
-    {
-        $id=$_POST['id'];
-        $name = $_POST['name'];
-        $surname = $_POST['surname1'];
-        $email = $_POST['email1'];
-        $phone = $_POST['phone1'];
-        $birthday = $_POST['birthday1'];
-        $password = $_POST['password1'];
-        $confirm = $_POST['confirm1'];
-
-        function insertUser($user){
-            $conn = $this->connection;
-    
-            $id = $user->getId();
-            $name = $user->getName();
-            $surname = $user->getSurname();
-            $email = $user->getEmail();
-            $phone = $user->getPhone();
-            $birthday = $user->getBirthday();
-            $password = $user->getPassword();
-            $confirm = $user->getConfirm();
-    
-            $sql = "INSERT INTO regjistrimidb (id,name,surname,email,phone,birthday,password,confirm) VALUES (?,?,?,?,?,?,?)";
-    
-            $statement = $conn->prepare($sql);
-    
-            $statement->execute([$id,$name,$surname,$email,$phone,$birthday,$password,$confirm]);
-    
-            echo "<script> alert('User has been inserted successfuly!'); </script>";
-        }
-        
-    }
- ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,7 +14,7 @@ include '../Web-design-Project/Regjistrimi.php';
     <div class="signU">
         
         <form class="forma-Sign">
-            <form method="POST">
+            <<form class="forma-Sign" method="POST" action="../Web-design-Project/confgRegister.php">>
             <h1>Sign Up</h1>
            
           
@@ -116,6 +79,9 @@ include '../Web-design-Project/Regjistrimi.php';
                      
                 </div>
 
+                
+                
+
                 <div class="sg">
                     <label >Confirm </label>
                     <i class='bx bx-lock-alt'></i>
@@ -128,12 +94,13 @@ include '../Web-design-Project/Regjistrimi.php';
             </div>
             
             <div class="butoni-Sign">
-                <button type="button"id="sign" onclick="validimiSignIn()">Sign up </button>
+                <button type="button"id="sign"name="registerBtn" onclick="validimiSignIn()">Sign up </button>
             </div>
  
         </form>
 
     </div>
+    <?php include '../Web-design-Project/confgRegister.php';?>
               
 
     <!-- </div> -->
