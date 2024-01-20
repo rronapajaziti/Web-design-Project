@@ -1,5 +1,7 @@
-<?php session_start()
+<?php session_start();
+
 include_once '../Web-design-Project/RegjistrimiDB.php';
+
     if($_SERVER['REQUEST_METHOD']=="POST")
     {
         $id=$_POST['id'];
@@ -10,7 +12,7 @@ include_once '../Web-design-Project/RegjistrimiDB.php';
         $birthday = $_POST['birthday'];
         $password = $_POST['password'];
 
-        if(!empty($email)&& !empty($password)&& !is_numeric($email)){
+        if(!empty($name)&& !empty($password)&& !is_numeric($name)){
             $query="insert into regjistrimidb(id,name,surname,email,phone,birthday,password) values('$id','$name','$surname','$email','$phone','$birthday','$password')";
             mysqli_query($con,$query);
             echo "<script type='text/javascript'>alert('Successfully Register')</script>";
@@ -19,6 +21,7 @@ include_once '../Web-design-Project/RegjistrimiDB.php';
         {
             echo "<script type='text/javascript'>alert('Please Enter some Valid Information')</script>";  
         }
+        
     }
  ?>
 <!DOCTYPE html>

@@ -1,23 +1,25 @@
 <?php
 
-class RegjistrimiDB 
-{
-    public $server = 'localhost';
-    public $username = 'root';
-    public $password;
-    public $database = 'travel agency';
-    public $conn;
+class RegjistrimiDB {
+    private $server="localhost";
+    private $username="root";
+    private $password="";
+    private $database = "travel agency";
 
-    public function __construct()
-    {
-        try {
-            $this->conn = new mysqli($this->server, $this->username, $this->password, $this->database);
-        } catch (Exception $e) {
-            echo 'Connection Failed' . $e->getMessage();
+    function startConnection(){
+        try{
+            $conn = new PDO("mysql:host=$this->server;dbname=$this->database",$this->username,$this->password);
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            return $conn;
+        }catch(PDOException $e){
+            echo "Database Conenction Failed".$e->getMessage();
+            return null;
         }
     }
+
+
     //metode per kontrollimin e emaiilit
-    public function emailExists()
+     function emailExists()
     {
         try {
             $email = $_POST['email'];
@@ -39,7 +41,7 @@ class RegjistrimiDB
         }
     }
     //metode qe perdoret per me shtu 
-    public function insert()
+     function insert()
     {
         if (isset($_POST['submit'])) {
 
@@ -70,7 +72,7 @@ class RegjistrimiDB
         }
     }
     //per usertype
-    public function insert2()
+  function insert2()
     {
         if (isset($_POST['submit'])) {
 
@@ -155,7 +157,7 @@ class RegjistrimiDB
     }
 
 
-    public function delete($id)
+     function delete($id)
     {
 
         $conn = $this->connection;
@@ -169,7 +171,7 @@ class RegjistrimiDB
         echo "<script>alert('delete was successful'); </script>";
     }
 
-    public function edit($id)
+     function edit($id)
     {
 
         $data = null;

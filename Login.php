@@ -1,13 +1,15 @@
-<?php session_start()
-
+<?php session_start();
 include_once '../Web-design-Project/RegjistrimiDB.php';
+
     if($_SERVER['REQUEST_METHOD']=="POST"){
-        $gmail=$_POST['email'];
+        $name = $_POST['name'];
         $password=$_POST['password'];
 
-        if(!empty($email)&& !empty($password)&& !is_numeric($email))
+        if(!empty($name)&& !empty($password)&& !is_numeric($name))
+        $regjistrimiDB = new RegjistrimiDB();
+        $conn = $regjistrimiDB->startConnection();
         {
-            $query="select * from regjistrimidb where emaili='$email'limit 1 ";
+            $query="select * from regjistrimidb where name='$name'limit 1 ";
             $result =mysqli_query($con,$query);
 
             if($result)
@@ -18,9 +20,15 @@ include_once '../Web-design-Project/RegjistrimiDB.php';
                     if($user_data['password']==$password)
                     {
                         header("location:index.php");
+                        die;
                     }
                 }
             }
+            echo "<script type='text/javascript'>alert('wrong username or password')</script>";
+
+        }
+        else {
+            echo "<script type='text/javascript'>alert('wrong username or password')</script>";
         }
     }
     
@@ -63,7 +71,7 @@ include_once '../Web-design-Project/RegjistrimiDB.php';
             <button type="submit" class="btn">Login</button>
             
             <div class="register">
-                <p>Don't have an account?<br><a href="Regjister.html">Register</a></p>
+                <p>Don't have an account?<br><a href="Regjister.php">Register</a></p>
             </div>
         </form>
     </div>
