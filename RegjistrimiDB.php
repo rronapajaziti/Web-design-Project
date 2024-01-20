@@ -6,14 +6,12 @@ class RegjistrimiDB {
     private $password="";
     private $database = "travel agency";
 
-    function startConnection(){
-        try{
-            $conn = new PDO("mysql:host=$this->server;dbname=$this->database",$this->username,$this->password);
-            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            return $conn;
-        }catch(PDOException $e){
-            echo "Database Conenction Failed".$e->getMessage();
-            return null;
+    public function __construct()
+    {
+        try {
+            $this->conn = new mysqli($this->server, $this->username, $this->password, $this->database);
+        } catch (Exception $e) {
+            echo 'Connection Failed' . $e->getMessage();
         }
     }
 
