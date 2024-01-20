@@ -20,7 +20,8 @@
         <li><a href="Flights.php"><h2>Flights </h2></a></li>
         <li><a href="Hotels.php"><h2>Hotels</h2></a></li>
         <li><a href="Offers.php"><h2>Offers</h2></a></li>
-    </ul>
+    </ul>    
+     
     </div>
    <div class="header1">
 <div class="paragrafi">
@@ -28,8 +29,8 @@
     <p>Like never before,unique adventures that fill your soul with happiness and fun stories to tell. 
     </p>   
     <div>
-        <a href="Login.html"><button type="button"><span></span>LOG IN</button></a>
-        <a href="Regjister.html"><button type="button"><span></span>SIGN UP</button></a>
+        <a href="Login.php"><button type="button"><span></span>LOG IN</button></a>
+        <a href="Regjister.php"><button type="button"><span></span>SIGN UP</button></a>
     </div>    
 </div>
 </div>

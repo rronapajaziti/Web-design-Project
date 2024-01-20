@@ -50,7 +50,11 @@ include_once '../Web-design-Project/RegjistrimiDB.php';
         <form method="POST">
         <form onsubmit="validimi(); return false;">
             <h1>Login</h1>
-            
+            <?php
+            include 'RegjistrimiDB.php';
+            $login = new RegjistrimiDB();
+            $check = $login->check();
+             ?>
             <div class="emri-mbiemri">
                 <input type="text" placeholder="Username" id="username">
                 <div class="error-message1" id="usernameError"></div>
