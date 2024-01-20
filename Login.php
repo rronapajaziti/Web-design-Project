@@ -6,8 +6,8 @@ include '../Web-design-Project/Regjistrimi.php';
         $password=$_POST['password'];
 
         if(!empty($name)&& !empty($password)&& !is_numeric($name)){
-        $regjistrimiD = new RegjistrimiDB();
-        $conn = $regjistrimiD->startConnection();
+        $regjistrimi = new Regjistrimi();
+        $conn = $regjistrimi->startConnection();
         
             $query="select * from regjistrimidb where name='$name'limit 1 ";
             $result =mysqli_query($conn,$query);
@@ -25,7 +25,6 @@ include '../Web-design-Project/Regjistrimi.php';
                 }
             }
             echo "<script type='text/javascript'>alert('wrong username or password')</script>";
-
         }
     }
     

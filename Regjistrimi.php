@@ -4,7 +4,7 @@ class Regjistrimi {
     private $server = "localhost";
     private $username = "root";
     private $password = "";
-    private $database = "travel_agency";
+    private $database = "travel agency";
     private $conn;
 
     public function startConnection()
@@ -54,6 +54,10 @@ class Regjistrimi {
             $phone = $_POST['phone'];
             $birthday = $_POST['birthday'];
             $password = $_POST['password'];
+
+            $user = new user($id,$name,$surname,$phone,$birthday,$email,$password,$confirm);
+            $regjistrim = new Regjistrimi();
+            $regjistrim->insert($user);
             
 
 
