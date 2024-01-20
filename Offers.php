@@ -34,8 +34,8 @@
                             <h4>Thailand</h4>
                             <p>Rambling mountains and lumbering elephants to its far-flung islands, 
                                 heavenly beaches and kaleidoscopic marine life,
-                                 cloud-piercing skyscrapers and honking traffic,
-                                 Thailand will impress you at every turn</p>
+                                cloud-piercing skyscrapers and honking traffic,
+                                Thailand will impress you at every turn</p>
                                 <div class="icona">
                                 <p><i class="fa fa-location-dot"></i>Thailand</p>
                                 <p><i class="fa fa-sun"></i>4 Days</p>

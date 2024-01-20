@@ -54,7 +54,7 @@ body {
   object-fit: cover;
 }
 /* me kap ni element te vetem */
- .navbar ul li::after {
+.navbar ul li::after {
   content: "";
   height: 3px;
   width: 0;
@@ -63,10 +63,10 @@ body {
   left: 0;
   bottom: -10px;
   transition: 0.5s;
-} 
- .navbar ul li:hover:after {
+}
+.navbar ul li:hover:after {
   width: 100%;
- }
+}
 .paragrafi {
   width: 100%;
   position: absolute;
@@ -83,24 +83,24 @@ body {
   animation: slideIn 1s ease-in-out;
 }
 
-/* @keyframes slideIn {
+@keyframes slideIn {
   from {
     /*Nuk shihet titulli ne start*/
-    /* opacity: 0;
+    opacity: 0;
     transform: translateY(-50px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
   }
-} */ */
+}
 .paragrafi p {
   margin: 20px auto;
   font-weight: bolder;
   line-height: 30px;
   font-size: x-large;
 }
-/* .paragrafi button {
+.paragrafi button {
   width: 200px;
   padding: 15px 0;
   text-align: center;
@@ -114,8 +114,8 @@ body {
   cursor: pointer;
   position: relative;
   overflow: hidden;
-} */
-/* span {
+}
+span {
   background: #4f95c4;
   height: 100%;
   width: 0;
@@ -125,16 +125,16 @@ body {
   bottom: 0;
   z-index: -1;
   transition: 0.5s;
-} */
-/* .paragrafi button:hover span {
+}
+.paragrafi button:hover span {
   width: 100%;
-} */
-/* .paragrafi button:hover {
+}
+.paragrafi button:hover {
   border: none;
-} */
+}
 /*Foto*/
 .destinacionet {
-  padding: 100px 0;
+  padding: 100px 9.9%;
 }
 .destinacionet h1 {
   text-align: center;
@@ -171,7 +171,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 60px;
+  gap: 50px;
 }
 .column .img {
   display: flex;

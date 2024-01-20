@@ -1,16 +1,16 @@
 <?php session_start();
-include_once '../Web-design-Project/RegjistrimiDB.php';
+include '../Web-design-Project/Regjistrimi.php';
 
     if($_SERVER['REQUEST_METHOD']=="POST"){
         $name = $_POST['name'];
         $password=$_POST['password'];
 
-        if(!empty($name)&& !empty($password)&& !is_numeric($name))
-        $regjistrimiDB = new RegjistrimiDB();
-        $conn = $regjistrimiDB->startConnection();
-        {
+        if(!empty($name)&& !empty($password)&& !is_numeric($name)){
+        $regjistrimiD = new RegjistrimiDB();
+        $conn = $regjistrimiD->startConnection();
+        
             $query="select * from regjistrimidb where name='$name'limit 1 ";
-            $result =mysqli_query($con,$query);
+            $result =mysqli_query($conn,$query);
 
             if($result)
             {
@@ -26,9 +26,6 @@ include_once '../Web-design-Project/RegjistrimiDB.php';
             }
             echo "<script type='text/javascript'>alert('wrong username or password')</script>";
 
-        }
-        else {
-            echo "<script type='text/javascript'>alert('wrong username or password')</script>";
         }
     }
     
@@ -48,13 +45,9 @@ include_once '../Web-design-Project/RegjistrimiDB.php';
 <body class="trupi">
     <div class="log">
         <form method="POST">
-        <form onsubmit="validimi(); return false;">
+        <form onsubmit="validimi(); return false;" >
             <h1>Login</h1>
-            <?php
-            include 'RegjistrimiDB.php';
-            $login = new RegjistrimiDB();
-            $check = $login->check();
-             ?>
+             
             <div class="emri-mbiemri">
                 <input type="text" placeholder="Username" id="username">
                 <div class="error-message1" id="usernameError"></div>
@@ -104,7 +97,7 @@ include_once '../Web-design-Project/RegjistrimiDB.php';
             }
         {
            
-            window.location.href = "Travel.html";
+            window.location.href = "Travel.php";
         }
     }
     </script>

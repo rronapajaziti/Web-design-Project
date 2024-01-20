@@ -1,17 +1,21 @@
 <?php
 
-class RegjistrimiDB {
-    private $server="localhost";
-    private $username="root";
-    private $password="";
-    private $database = "travel agency";
+class Regjistrimi {
+    private $server = "localhost";
+    private $username = "root";
+    private $password = "";
+    private $database = "travel_agency";
+    private $conn;
 
-    public function __construct()
+    public function startConnection()
     {
-        try {
-            $this->conn = new mysqli($this->server, $this->username, $this->password, $this->database);
-        } catch (Exception $e) {
-            echo 'Connection Failed' . $e->getMessage();
+        try{
+            $conn = new PDO("mysql:host=$this->server;dbname=$this->database",$this->username,$this->password);
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            return $conn;
+        }catch(PDOException $e){
+            echo "Database Conenction Failed".$e->getMessage();
+            return null;
         }
     }
 

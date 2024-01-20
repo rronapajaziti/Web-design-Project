@@ -1,25 +1,37 @@
 <?php session_start();
 
-include_once '../Web-design-Project/RegjistrimiDB.php';
+include '../Web-design-Project/Regjistrimi.php';
 
     if($_SERVER['REQUEST_METHOD']=="POST")
     {
         $id=$_POST['id'];
         $name = $_POST['name'];
-        $surname = $_POST['surname'];
-        $email = $_POST['email'];
-        $phone = $_POST['phone'];
-        $birthday = $_POST['birthday'];
-        $password = $_POST['password'];
+        $surname = $_POST['surname1'];
+        $email = $_POST['email1'];
+        $phone = $_POST['phone1'];
+        $birthday = $_POST['birthday1'];
+        $password = $_POST['password1'];
+        $confirm = $_POST['confirm1'];
 
-        if(!empty($name)&& !empty($password)&& !is_numeric($name)){
-            $query="insert into regjistrimidb(id,name,surname,email,phone,birthday,password) values('$id','$name','$surname','$email','$phone','$birthday','$password')";
-            mysqli_query($con,$query);
-            echo "<script type='text/javascript'>alert('Successfully Register')</script>";
-        }
-        else
-        {
-            echo "<script type='text/javascript'>alert('Please Enter some Valid Information')</script>";  
+        function insertUser($user){
+            $conn = $this->connection;
+    
+            $id = $user->getId();
+            $name = $user->getName();
+            $surname = $user->getSurname();
+            $email = $user->getEmail();
+            $phone = $user->getPhone();
+            $birthday = $user->getBirthday();
+            $password = $user->getPassword();
+            $confirm = $user->getConfirm();
+    
+            $sql = "INSERT INTO regjistrimidb (id,name,surname,email,phone,birthday,password,confirm) VALUES (?,?,?,?,?,?,?)";
+    
+            $statement = $conn->prepare($sql);
+    
+            $statement->execute([$id,$name,$surname,$email,$phone,$birthday,$password,$confirm]);
+    
+            echo "<script> alert('User has been inserted successfuly!'); </script>";
         }
         
     }
@@ -202,7 +214,7 @@ include_once '../Web-design-Project/RegjistrimiDB.php';
     password.test(passwordInput.value) &&
     passwordInput.value === confrimInput.value
 ) {
-    window.location.href = "login.html";
+    window.location.href = "login.php";
 }
     }
     </script>
