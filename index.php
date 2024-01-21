@@ -27,7 +27,8 @@
                 <button type="button" class="bx bxs-contact stil"<?php if (!isset($_SESSION['user_type'])) {
                     echo "onclick=\"alert('You cannot make rezervation without being logged in!')\"";
                 } ?>>Flights</button>
-            </a></li>        <li><a href="Hotels.php"><h2>Hotels</h2></a></li>
+            </a></li>  
+            <li><a href="Hotels.php"><h2>Hotels</h2></a></li>
         <li><a href="Offers.php"><h2>Offers</h2></a></li>
     </ul>    
      

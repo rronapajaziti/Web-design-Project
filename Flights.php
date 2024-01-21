@@ -25,8 +25,16 @@
             ?>
             </li>
             <li><a href="About us.php"><h2>About us</h2></a></li>
-            <li><a href="Flights.php"><h2>Flights </h2></a></li>
-            <li><a href="Hotels.php"><h2>Hotels</h2></a></li>
+            <li><a href="<?php if (isset($_SESSION['user_type'])) {
+                echo "Flights.php";
+            } else {
+                echo "login.php";
+            } ?>" class="bx">
+                
+                <button type="button" class="bx bxs-contact stil"<?php if (!isset($_SESSION['user_type'])) {
+                    echo "onclick=\"alert('You cannot make rezervation without being logged in!')\"";
+                } ?>>Flights</button>
+            </a></li>            <li><a href="Hotels.php"><h2>Hotels</h2></a></li>
             <li><a href="Offers.php"><h2>Offers</h2></a></li>
             <li>
             <?php
