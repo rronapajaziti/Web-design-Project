@@ -1,33 +1,4 @@
-<!-- session_start();
-include '../Web-design-Project/Regjistrimi.php';
 
-    if($_SERVER['REQUEST_METHOD']=="POST"){
-        $name = $_POST['name'];
-        $password=$_POST['password'];
-
-        if(!empty($name)&& !empty($password)&& !is_numeric($name)){
-        $regjistrimi = new Regjistrimi();
-        $conn = $regjistrimi->startConnection();
-        
-            $query="select * from regjistrimidb where name='$name'limit 1 ";
-            $result =mysqli_query($conn,$query);
-
-            if($result)
-            {
-                if($result && mysqli_num_rows($result)>0)
-                {
-                    $user_data=mysqli_fetch_assoc($result);
-                    if($user_data['password']==$password)
-                    {
-                        header("location:index.php");
-                        die;
-                    }
-                }
-            }
-            echo "<script type='text/javascript'>alert('wrong username or password')</script>";
-        }
-    }
-     -->
 
 
 

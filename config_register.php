@@ -4,7 +4,7 @@ class DatabaseRegister
 {
     public $server = 'localhost';
     public $username = 'root';
-    public $password;
+    public $password="";
     public $database = 'travelagency';
     public $conn;
 
@@ -37,37 +37,36 @@ class DatabaseRegister
     }
 
     public function insert()
-    {
-        if (isset($_POST['registerBtn'])) {
+{
+    if (isset($_POST['submit'])) {
 
-            $name = $_POST['name'];
-            $surname = $_POST['surname'];
-            $email = $_POST['email'];
-            $phone = $_POST['phone'];
-            $birthday = $_POST['birthday'];
-            $password = $_POST['password'];
+        $name = $_POST['name'];
+        $surname = $_POST['surname'];
+        $email = $_POST['email'];
+        $phone = $_POST['phone'];
+        $birthday = $_POST['birthday'];
+        $password = $_POST['password'];
 
-
-            if ($this->emailExists()) {
-                echo "<script>alert('A user with this email already exists!')</script>";
-                echo "<script>window.location.href = 'register.php';</script>";
-                return;
+        if ($this->emailExists($email)) {
+            echo "<script>alert('A user with this email already exists!')</script>";
+            echo "<script>window.location.href = 'register.php';</script>";
+            return;
+        } else {
+            $query = "INSERT INTO travel_register(name, surname, email, phone, birthday, password, user_type) VALUES ('$name','$surname','$email','$phone','$birthday','$password', 'user')";
+            if ($sql = $this->conn->query($query)) {
+                echo "<script>alert('You have been registered successfully!!');</script>";
+                echo "<script>window.location.href = 'login.php';</script>";
             } else {
-                $query = "INSERT INTO travel_register(name, surname, email,phone,birthday, password, user_type) VALUES ('$name','$surname','$email','$phone','$birthday','$password', 'user')";
-                if ($sql = $this->conn->query($query)) {
-                    echo "<script>alert('You have been registered successfully!!');</script>";
-                    echo "<script>window.location.href = 'login.php';</script>";
-                } else {
-                    echo "<script>alert('The user already exists!');</script>";
-                    echo "<script>window.location.href = 'index.php';</script>";
-                }
+                echo "<script>alert('Registration failed. Please try again!');</script>";
+                echo "<script>window.location.href = 'index.php';</script>";
             }
         }
     }
+}
 
     public function insert2()
     {
-        if (isset($_POST['registerBtn'])) {
+        if (isset($_POST['submit'])) {
 
             $name = $_POST['name'];
             $surname = $_POST['surname'];
@@ -109,7 +108,7 @@ class DatabaseRegister
     public function check()
     {
 
-        if (isset($_POST['registerBtn'])) {
+        if (isset($_POST['submit'])) {
 
 
             $email = $_POST['email'];
@@ -143,7 +142,7 @@ class DatabaseRegister
             }
 
         }
-        ;
+        
     }
 
 

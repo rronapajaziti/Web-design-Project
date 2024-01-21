@@ -30,8 +30,8 @@
     <p>Like never before,unique adventures that fill your soul with happiness and fun stories to tell. 
     </p>   
     <div>
-        <a href="Login.php"><button type="button"><span></span>LOG IN</button></a>
-        <a href="Regjister.php"><button type="button"><span></span>SIGN UP</button></a>
+        <a href="login.php"><button type="button"><span></span>LOG IN</button></a>
+        <a href="register.php"><button type="button"><span></span>SIGN UP</button></a>
     </div>    
 </div>
 </div>

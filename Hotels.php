@@ -160,16 +160,16 @@
             <h3>RECIVE NEWS <div class="underline"><span></span></div></h3>
             <form method="post" class="form">
                 <i class="fa-regular fa-envelope"></i>
-                <input type="email" placeholder="Enter your email" id="email" required>
+                <input type="email" placeholder="Enter your email" name="email" id="email" required>
                 <?php
                         include 'config_email.php';
                         $contactForm = new DatabaseEmail();
                         $check = $contactForm->check();
 
                         ?>
-                 
-                <button type="submit"><i class="fa-solid fa-right-long" onclick="emalValid()"></i></button>
-               
+                <button type="submit" name="submit"><i class="fa-solid fa-right-long" onclick="emalValid()"></i></button>
+                <br>
+                
             </form>
             <div class="error-messagee" id="emailiError"></div>
             <div class="social-media">

@@ -15,8 +15,8 @@ session_start ()
 <body class="body-sign">
     <div class="signU">
         
-        <form class="forma-Sign">
-            <form class="forma-Sign" method="POST" action="../Web-design-Project/confgRegister.php">
+        
+            <form class="forma-Sign" method="post" >
             <h1>Sign Up</h1>
             <?php
             include 'config_register.php';
@@ -30,7 +30,7 @@ session_start ()
                     <div class="sg">
                         <label>Name:</label>
                      <i class='bx bx-user'></i>
-                        <input type="text" id="name">
+                        <input type="text" id="name" name="name">
                         </div>
                         <div class="error-message" id="nameError1">
                         
@@ -40,7 +40,7 @@ session_start ()
                     <div class="sg">
                         <label >Surname</label>
                           <i class='bx bx-user'></i>
-                        <input type="text"id="surname1">
+                        <input type="text"id="surname1" name="surname">
                        </div>
                        <div class="error-message" id="surnameError1">
                       
@@ -50,7 +50,7 @@ session_start ()
                     <div class="sg">
                         <label >Email</label>
                         <i class='bx bx-envelope' ></i>
-                        <input type="email"id="email1">
+                        <input type="email"id="email1" name="email">
                         </div>
                         <div class="error-message" id="emailiError1">
                         
@@ -60,7 +60,7 @@ session_start ()
                 <div class="sg"> 
                     <label >Phone</label>
                     <i class='bx bx-phone'></i>
-                    <input type="text" id="phone1">
+                    <input type="text" id="phone1" name="phone">
                    </div>
                    <div class="error-message" id="phoneError1">
                     
@@ -70,7 +70,7 @@ session_start ()
                 <div class="sg">
                     <label >Birthday</label>
                     <i class='bx bxs-calendar'></i>
-                    <input type="date"id="Birthday1">
+                    <input type="date"id="Birthday1"name="birthday">
                     </div>
                     <div class="error-message" id="birthdayError1">
                     
@@ -80,7 +80,7 @@ session_start ()
                     <label >Password</label>
 
                    <i class='bx bx-lock-alt'></i>
-                    <input type="password"id="password1">
+                    <input type="password"id="password1"name="password">
                    </div>
                    <div class="error-message" id="passwordError1">
                      
@@ -96,13 +96,13 @@ session_start ()
             </div>
             
             <div class="butoni-Sign">
-                <button type="button"id="sign"name="registerBtn" onclick="validimiSignIn()">Sign up </button>
+                <button type="submit"id="sign"name="submit"onclick="validimiSignIn()">Sign up </button>
             </div>
  
         </form>
 
     </div>
-    <?php include '../Web-design-Project/confgRegister.php';?>
+    
               
 
     <!-- </div> -->
