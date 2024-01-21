@@ -118,7 +118,7 @@ class DatabaseRegister
             $select = "SELECT * FROM travel_register WHERE email = '$email' && password = '$password' ";
 
             $result = mysqli_query($this->conn, $select);
-
+ 
             if (mysqli_num_rows($result) > 0) {
 
                 $row = mysqli_fetch_array($result);

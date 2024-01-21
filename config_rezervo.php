@@ -15,36 +15,39 @@ class DatabaseRezervo{
     }
 
 
-public function insert(){
-    if(isset($_POST['submit'])){
-
-        $flying_from = $_POST['flying_from'];
-        $flying_to = $_POST['flying_to'];
-        $departing = $_POST['departing'];
-        $returning= $_POST['returning'];
-        $adults= $_POST['adults'];
-        $children= $_POST['children'];
-        $name = $_POST['name'];
-        $last_name = $_POST['last_name'];
-        $email = $_POST['email']; 
-        $images = $_POST['images'];
-        $travel = $_POST['travel'];
-
-       
-
-        $query = "INSERT INTO travel_rezervo(flying_from,flying_to,departing,returning,adults,children,name,last_name,email,images,travel) VALUES ('$flying_from','$flying_to','$departing','$returning','$adults','$children','$name','$last_name','$email','$images','$travel')";
-        if ($sql = $this->conn->query($query)) {
-
-            echo "<script>alert('Thank you for your rezervation!');</script>";
-            echo "<script>window.location.href = 'index2.php';</script>";
+    public function insert(){
+        if(isset($_POST['submit'])){
+            $flying_from = $_POST['flying_from'];
+            $flying_to = $_POST['flying_to'];
+            $departing = $_POST['departing'];
+            $returning = $_POST['returning'];
+            $adults = $_POST['adults'];
+            $children = $_POST['children'];
+            $name = $_POST['name'];
+            $last_name = $_POST['last_name'];
+            $email = $_POST['email'];
+            $images = isset($_POST['images']) ? $_POST['images'] : '';
+            $travel = $_POST['travel'];
+    
+            $query = "INSERT INTO travel_rezervo (`flying_from`, `flying_to`, `departing`, `returning`, `adults`, `children`, `name`, `last_name`, `email`, `images`, `travel`) 
+                      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    
+            $stmt = $this->conn->prepare($query);
+            $stmt->bind_param("sssssssssss", $flying_from, $flying_to, $departing, $returning, $adults, $children, $name, $last_name, $email, $images, $travel);
+    
+            if ($stmt->execute()) {
+                echo "<script>alert('Thank you for your reservation!');</script>";
+                echo "<script>window.location.href = 'index2.php';</script>";
+            } else {
+                echo "Error: " . $stmt->error;
+                echo "<script>alert('Error in reservation.');</script>";
+                echo "<script>window.location.href = 'register.php';</script>";
+            }
+    
+            $stmt->close();
         }
-
-    else{
-        echo "<script>alert('You have not been registered yet');</script>";
-        echo "<script>window.location.href = 'register.php';</script>";
-         }
     }
-  }
+    
 
 public function check(){
    
@@ -65,7 +68,7 @@ public function check(){
            if($row['email'] == $email){
             
             echo "<script>alert('Thank you for your rezervation!');</script>";
-            echo "<script>window.location.href = 'index2.php';</script>";
+            echo "<script>window.location.href = 'index.php';</script>";
             $this->insert();
            }
           
