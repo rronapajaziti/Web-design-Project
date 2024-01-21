@@ -1,5 +1,5 @@
-<?php session_start ()
-include "includeNF.php";  ?>
+<?php session_start ();
+include "includeNF.php" ?>
 
 <!DOCTYPE html>
 <html lang="en">

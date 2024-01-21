@@ -11,7 +11,7 @@
 </head>
 <body class="trupi">
     <div class="log">
-        <form method="POST">
+        <form method="post">
         <form onsubmit="validimi(); return false;" >
             <h1>Login</h1>
             <?php
@@ -41,7 +41,7 @@
             <button type="submit" name="submit" class="btn">Login</button>
             
             <div class="register">
-                <p>Don't have an account?<br><a href="Regjister.php">Register</a></p>
+                <p>Don't have an account?<br><a href="register.php">Register</a></p>
             </div>
         </form>
     </div>
@@ -70,7 +70,7 @@
             }
         {
            
-            window.location.href = "Travel.php";
+            window.location.href = "index2.php";
         }
     }
     </script>

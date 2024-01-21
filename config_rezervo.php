@@ -35,8 +35,8 @@ public function insert(){
         $query = "INSERT INTO travel_rezervo(flying_from,flying_to,departing,returning,adults,children,name,last_name,email,images,travel) VALUES ('$flying_from','$flying_to','$departing','$returning','$adults','$children','$name','$last_name','$email','$images','$travel')";
         if ($sql = $this->conn->query($query)) {
 
-            echo "<script>alert('Thank you for your donation. God bless you!!');</script>";
-            echo "<script>window.location.href = 'index.php';</script>";
+            echo "<script>alert('Thank you for your rezervation!');</script>";
+            echo "<script>window.location.href = 'index2.php';</script>";
         }
 
     else{
@@ -65,7 +65,7 @@ public function check(){
            if($row['email'] == $email){
             
             echo "<script>alert('Thank you for your rezervation!');</script>";
-            echo "<script>window.location.href = 'index.php';</script>";
+            echo "<script>window.location.href = 'index2.php';</script>";
             $this->insert();
            }
           
@@ -148,13 +148,7 @@ public function edit($id){
 
 public function update($data){
     $query = "UPDATE travel_rezervo SET 
-    flying_from='$data[flying_from]', flying_to='$data[flying_to]',
-     departing='$data[departing]',returning='$data[returning]',  
-     adults='$data[adults]',children ='$data[children]',
-     name ='$data[name]',last_name ='$data[last_name]',
-     email ='$data[email]',images ='$data[images]',
-     travel ='$data[travel]',
-      WHERE id='$data[id] '";
+    flying_from='$data[flying_from]', flying_to='$data[flying_to]', departing='$data[departing]', returning='$data[returning]',   adults='$data[adults]', children ='$data[children]',   name ='$data[name]', last_name ='$data[last_name]', email ='$data[email]', images ='$data[images]', travel ='$data[travel]' WHERE id='$data[id]'";
 
     if ($sql = $this->conn->query($query)) {
         return true;

@@ -26,7 +26,7 @@ public function insert(){
         if ($sql = $this->conn->query($query)) {
 
             echo "<script>alert('Thank you for contacting us. We will inform you ASAP!');</script>";
-            echo "<script>window.location.href = 'index.php';</script>";
+            echo "<script>window.location.href = 'index2.php';</script>";
         }
 
     else{
@@ -55,7 +55,7 @@ public function check(){
            if($row['email'] == $email){
             
             echo "<script>alert('Thank you for contacting us. We will inform you ASAP!');</script>";
-            echo "<script>window.location.href = 'index.php';</script>";
+            echo "<script>window.location.href = 'index2.php';</script>";
             $this->insert();
            }
           

@@ -16,7 +16,7 @@
         <img src="Photos/logo1.png" alt="Logo">
     </div>
     <ul>
-        <li><a href="index.php"><h2>Home</h2></a></li>
+        <li><a href="index2.php"><h2>Home</h2></a></li>
         <li><a href="About us.php"><h2>About us</h2></a></li>
         <li><a href="<?php if (isset($_SESSION['user_type'])) {
                 echo "Flights.php";
@@ -27,8 +27,12 @@
                 <button type="button" class="bx bxs-contact stil"<?php if (!isset($_SESSION['user_type'])) {
                     echo "onclick=\"alert('You cannot make rezervation without being logged in!')\"";
                 } ?>>Flights</button>
-            </a></li>        <li><a href="Hotels.php"><h2>Hotels</h2></a></li>
+            </a></li>
+        <li><a href="Hotels.php"><h2>Hotels</h2></a></li>
         <li><a href="Offers.php"><h2>Offers</h2></a></li>
+        <li><a href="logout.php" style="color: red;"><h2>Log Out</h2></a></li>
+
+
     </ul>    
      
     </div>
@@ -37,10 +41,7 @@
     <h1>Enjoy your trip</h1>
     <p>Like never before,unique adventures that fill your soul with happiness and fun stories to tell. 
     </p>   
-    <div>
-        <a href="login.php"><button type="button"><span></span>LOG IN</button></a>
-        <a href="register.php"><button type="button"><span></span>SIGN UP</button></a>
-    </div>    
+       
 </div>
 </div>
 </header>

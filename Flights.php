@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,17 +15,40 @@
             <img src="Photos/logo1.png" alt="Logo">
         </div>
         <ul>
-            <li><a href="Travel.php"><h2>Home</h2></a></li>
+            <li>
+            <?php
+            if (!(isset($_SESSION['user_type']))) {
+                echo "<a class='ula' id='pad' href='index.php'>Home</a>";
+            } else if (isset($_SESSION['user_type']) == 'user') {
+                echo "<a class='ula' id='pad' href='index2.php' style='color: red; font-size: inherit;'>Home</a>";
+            }
+            ?>
+            </li>
             <li><a href="About us.php"><h2>About us</h2></a></li>
             <li><a href="Flights.php"><h2>Flights </h2></a></li>
             <li><a href="Hotels.php"><h2>Hotels</h2></a></li>
             <li><a href="Offers.php"><h2>Offers</h2></a></li>
+            <li>
+            <?php
+            if (!(isset($_SESSION['user_type']))) {
+                echo "<a class='ula' id='pad' href='login.php'>Login</a>";
+            } else if (isset($_SESSION['user_type']) == 'user') {
+                echo "<a class='ula' id='pad' href='logout.php' style='color: red; font-size: inherit;'>Logout</a>";
+            }
+            ?>
+            </li>
         </ul>
         </div>
     </div> 
     <main>
 
-         <form method="post">
+          <form  name="myForm" method="post">
+            
+          <?php
+            include 'config_rezervo.php';
+            $rezervo = new DatabaseRezervo();
+            $check = $rezervo->check();
+        ?>
         <div class="booking-form-box">
             <fieldset><legend><h1 class="u">Book Your Flights</h1></legend>
          
@@ -34,15 +58,12 @@
             <p>One-Way
                 <input type="radio" class="book" name="check"></p>
         </div>
+
         <!-- -------------------------------Booking form---------------------------------------- -->
-       
+      
             <div class="booking-form">
             <div class="pjeset">
-            <?php
-            include 'config_rezervo.php';
-            $rezervo = new DatabaseRezervo();
-            $check = $rezervo->check();
-        ?>
+          
 
             <div class="input">
                 <label><h3>Flying From</h3></label>
@@ -131,14 +152,15 @@
               </a> </div>
               <div class="input">
               <label class="rezervo" for="id-upload">Upload your Personal ID (optional)</label>
-                <input type="file" name="images" id="image">
+                <input type="file" name="images" id="images">
 
                  
 
 
             <div class="input">
-                <button name="submit" type="submit" class="button" onclick="validimiFlights()"><?php if (!isset($_SESSION['user_type'])) {
-                    // echo "onclick=\"alert('You cannot make rezervation without being logged in!')\"";
+                <button name="submit" type="submit" class="button" onclick="validimiFlights()">
+                <?php if (!isset($_SESSION['user_type'])) {
+                    echo "onclick=\"alert('You cannot make rezervation without being logged in!')\"";
                 } ?>Book now</button>
               
              

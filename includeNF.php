@@ -23,12 +23,29 @@
         <img src="Photos/logo1.png" alt="Logo">
     </div>
     <ul>
-        <li><a href="Travel.php"><h2>Home</h2></a></li>
-        <li><a href="About us.php"><h2>About us</h2></a></li>
-        <li><a href="Flights.php"><h2>Flights </h2></a></li>
-        <li><a href="Hotels.php"><h2>Hotels</h2></a></li>
-        <li><a href="Offers.php"><h2>Offers</h2></a></li>
-    </ul>
+            <li>
+            <?php
+            if (!(isset($_SESSION['user_type']))) {
+                echo "<a class='ula' id='pad' href='index.php'>Home</a>";
+            } else if (isset($_SESSION['user_type']) == 'user') {
+                echo "<a class='ula' id='pad' href='index2.php' style='color: red; font-size: inherit;'>Home</a>";
+            }
+            ?>
+            </li>
+            <li><a href="About us.php"><h2>About us</h2></a></li>
+            <li><a href="Flights.php"><h2>Flights </h2></a></li>
+            <li><a href="Hotels.php"><h2>Hotels</h2></a></li>
+            <li><a href="Offers.php"><h2>Offers</h2></a></li>
+            <li>
+            <?php
+            if (!(isset($_SESSION['user_type']))) {
+                echo "<a class='ula' id='pad' href='login.php'>Login</a>";
+            } else if (isset($_SESSION['user_type']) == 'user') {
+                echo "<a class='ula' id='pad' href='logout.php' style='color: red; font-size: inherit;'>Logout</a>";
+            }
+            ?>
+            </li>
+        </ul>
     </div>
 </div> 
     </header>
