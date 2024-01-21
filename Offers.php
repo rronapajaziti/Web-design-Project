@@ -1,4 +1,5 @@
-<?php include "includeNF.php";  ?>
+<?php session_start ()
+include "includeNF.php";  ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -303,9 +304,15 @@
         
         <div class="kolona">
             <h3>RECIVE NEWS <div class="underline"><span></span></div></h3>
-            <form class="form">
+            <form method="post" class="form">
                 <i class="fa-regular fa-envelope"></i>
                 <input type="email" placeholder="Enter your email"  id="email" required>
+                <?php
+                        include 'config_email.php';
+                        $contactForm = new DatabaseEmail();
+                        $check = $contactForm->check();
+
+                        ?>
                 
                 <button type="submit"><i class="fa-solid fa-right-long" onclick="emalValid()"></i></button>
                 <br>

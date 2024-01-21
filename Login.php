@@ -48,8 +48,8 @@ include '../Web-design-Project/Regjistrimi.php';
             <h1>Login</h1>
              
             <div class="emri-mbiemri">
-                <input type="text" placeholder="Username" id="username">
-                <div class="error-message1" id="usernameError"></div>
+                <input type="text" placeholder="Email" id="email">
+                <div class="error-message1" id="emailError"></div>
                 <!-- icona e userit -->
                 <i class='bx bxs-user'></i>
             </div>
@@ -73,20 +73,20 @@ include '../Web-design-Project/Regjistrimi.php';
     </div>
     
     <script>
-        let usernameRegex = /^[A-Za-z]{2,}$/;
+        let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         let passwordRegex = /^(?=.*[A-Z])(?=.*[@$!%*#?&])(?=.*\d)[A-Za-z@$!%*#?&\d]{8,}$/;
 
         function validimi() {
-            let username = document.getElementById('username');
-            let usernameError = document.getElementById('usernameError');
+            let email = document.getElementById('email');
+            let emailError = document.getElementById('emailError');
             let password = document.getElementById('password');
             let passwordError = document.getElementById('passwordError');
             
-            usernameError.innerText = '';
+            emailError.innerText = '';
             passwordError.innerText = '';
 
-            if (!usernameRegex.test(username.value)) {
-                usernameError.innerText = 'Username is invalid';
+            if (!emailRegex.test(email.value)) {
+                emailError.innerText = 'Email is invalid';
                 return;
             }
 

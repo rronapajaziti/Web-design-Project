@@ -116,8 +116,19 @@
                     <option value="3">First Class</option>
                 </select>
             </div>
+            <a href="<?php if (isset($_SESSION['user_type'])) {
+                echo "Flights.php";
+            } else {
+                echo "login.php";
+            } ?>" class="bx">
+                
             <div class="input">
-                <button type="submit" class="button" onclick="validimiFlights()">Book now</button>
+                <button type="submit" class="button" onclick="validimiFlights()"><?php if (!isset($_SESSION['user_type'])) {
+                    echo "onclick=\"alert('You cannot make rezervation without being logged in!')\"";
+                } ?>>Book now</button>
+              
+            
+            </a>  
             </div>
         </div>
             

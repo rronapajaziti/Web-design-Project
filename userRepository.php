@@ -1,4 +1,8 @@
-<?php
+
+
+
+
+<!-- 
 include_once 'LidhjaDb.php';
 
 class userRepository{
@@ -32,4 +36,4 @@ try {
 }
 }
 }
-?>
+ -->

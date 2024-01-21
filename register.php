@@ -1,20 +1,5 @@
 <?php
-include_once 'username.php';
-include_once 'userRepository.php';
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-    $id=$_POST['id'];
-        $name = $_POST['name'];
-        $surname = $_POST['surname1'];
-        $email = $_POST['email1'];
-        $phone = $_POST['phone1'];
-        $birthday = $_POST['birthday1'];
-        $password = $_POST['password1'];
-
-    $user = new username($id,$name,$surname,$phone,$birthday,$email,$password,$confirm);
-    $userRepository = new userRepository();
-    $userRepository->insert($student);
-}
+session_start ()
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +18,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <form class="forma-Sign">
             <form class="forma-Sign" method="POST" action="../Web-design-Project/confgRegister.php">
             <h1>Sign Up</h1>
-           
+            <?php
+            include 'config_register.php';
+            $register = new DatabaseRegister();
+            $insert = $register->insert();
+
+            ?>
           
         
                 <!-- <div class=""> -->
@@ -99,13 +89,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 
                 
 
-                <div class="sg">
-                    <label >Confirm </label>
-                    <i class='bx bx-lock-alt'></i>
-                    <input type="password" id="confrim1" >
-                    </div>
-                    <div class="error-message" id="confrimError1">
-                     </div>
+                
+                    
                 <div class="Click">
                 <p> <a href="Login.php">Log In!</a></p>
             </div>
@@ -131,7 +116,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         let phoneInput = document.getElementById('phone1');
         let birthdayInput = document.getElementById('Birthday1');
         let passwordInput=document.getElementById('password1');
-        let confrimInput=document.getElementById('confrim1')
+       
 
         let nameError = document.getElementById('nameError1');
         let surnameError = document.getElementById('surnameError1');
@@ -139,7 +124,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         let phoneError = document.getElementById('phoneError1');
         let birthdayError = document.getElementById('birthdayError1');
         let passwordError1=document.getElementById('passwordError1');
-        let confrimError1=document.getElementById('confrimError1');
+        
 
         nameError.innerText = '';
         surnameError.innerText = '';
@@ -147,7 +132,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         phoneError.innerText = '';
         birthdayError.innerText = '';
         passwordError1.innerText='';
-        confrimError1.innerText='';
+        
 
         let namePattern = /^[A-Z][a-z]*$/;
         let surnamePattern = /^[A-Za-z]{2,}$/;
@@ -187,16 +172,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             passwordError1.innerText='It should start with an uppercase letter, contain special characters, as well as numbers.'
             return;
         }
-        if(passwordInput.value!==confrimInput.value){
-            confrimError1.innerText='Passwords do not match';
-            return;
-        }
+        
       if (  namePattern.test(nameInput.value) &&
     surnamePattern.test(surnameInput.value) &&
     emailPattern.test(emailInput.value) &&
     phonePattern.test(phoneInput.value) &&
     password.test(passwordInput.value) &&
-    passwordInput.value === confrimInput.value
+    
 ) {
     window.location.href = "login.php";
 }
