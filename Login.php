@@ -1,8 +1,5 @@
-
-
-
-
-    <!DOCTYPE html>
+  <?php session_start()?>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,15 +14,21 @@
         <form method="POST">
         <form onsubmit="validimi(); return false;" >
             <h1>Login</h1>
+            <?php
+            include 'config_register.php';
+            $login = new DatabaseRegister();
+            $check = $login->check();
+
+            ?>
              
             <div class="emri-mbiemri">
-                <input type="text" placeholder="Email" id="email">
+                <input type="text" placeholder="Email" id="email"name="email">
                 <div class="error-message1" id="emailError"></div>
                 <!-- icona e userit -->
                 <i class='bx bxs-user'></i>
             </div>
             <div class="emri-mbiemri">
-                <input type="password" placeholder="Password" id="password">
+                <input type="password" placeholder="Password" id="password" name="password">
                 <div class="error-message1" id="passwordError"></div>
                 <!-- icona e drynit -->
                 <i class='bx bxs-lock'></i>
@@ -35,7 +38,7 @@
                 <a href="#">Forgot password?</a>
             </div>
             
-            <button type="submit" class="btn">Login</button>
+            <button type="submit" name="submit" class="btn">Login</button>
             
             <div class="register">
                 <p>Don't have an account?<br><a href="Regjister.php">Register</a></p>
