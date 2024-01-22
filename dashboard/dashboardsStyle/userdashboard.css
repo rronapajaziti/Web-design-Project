@@ -10,14 +10,14 @@
   }
   .navbar {
     background-color: black;
-    box-shadow: 0px 2px 5px rgb(201, 137, 53);
+    box-shadow: 0px 2px 5px rgb(6, 113, 77);
   }
   .navbar-brand {
     font-size: 24px;
     font-weight: bold;
     padding-left: 20px;
     text-decoration: none;
-    color: orange;
+    color:  rgb(6, 113, 77);
   }
   .container {
     max-width: 1000px;
@@ -31,7 +31,7 @@
     color: white;
   }
   form {
-    background-color: rgb(238, 149, 33);
+    background-color:  rgb(6, 113, 77);
     border: 1px solid rgb(59, 58, 58);
     border-radius: 5px;
     padding: 20px;
@@ -61,13 +61,13 @@
   }
   
   input[type="number"]:focus {
-    border-color: orange;
-    box-shadow: 0 0 6px orange;
+    border-color:  rgb(6, 113, 77);;
+    box-shadow: 0 0 6px  rgb(6, 113, 77);
   }
 
   button[type="submit"] {
     background-color: rgb(44, 43, 43);
-    color: rgb(201, 137, 53);
+    color: rgb(6, 113, 77);
     padding: 10px 20px;
     font-size: 16px;
     border: none;
@@ -76,7 +76,7 @@
   }
   button[type="submit"]:hover {
     background-color:rgb(44, 43, 43);
-    color: orange;
+    color: rgb(6, 113, 77);
     
   }
   table {
@@ -90,10 +90,10 @@
   }
   th {
     background-color: rgb(44, 43, 43);
-    color: orange;
+    color: rgb(6, 113, 77);
   }
   tr:nth-child(even) {
-    background-color: #f79e39;
+    background-color: rgb(6, 113, 77);
   }
   a.btn {
     margin-right: 10px;
@@ -113,7 +113,7 @@
   #selektimi {
     padding: 0.5em;
     font-size: 1em;
-    border: 1px solid rgb(224, 131, 8);
+    border: 1px solid rgb(6, 113, 77);
     border-radius: 0.25em;
     background-color: white;
     color: #444;
