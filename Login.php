@@ -9,18 +9,24 @@
    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
+
 <body class="trupi">
-    <div class="log">
-        <form method="post">
-        <form onsubmit="validimi(); return false;" >
-            <h1>Login</h1>
-            <?php
+    
+    
+        <?php
             include 'config_register.php';
             $login = new DatabaseRegister();
             $check = $login->check();
 
             ?>
-             
+    
+<div class="log">
+        <form method="post">
+            
+        <form onsubmit="validimi(); return false;" >
+           
+            
+              <h1>Login</h1>
             <div class="emri-mbiemri">
                 <input type="text" placeholder="Email" id="email"name="email">
                 <div class="error-message1" id="emailError"></div>

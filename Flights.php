@@ -60,12 +60,12 @@
         <div class="booking-form-box">
             <fieldset><legend><h1 class="u">Book Your Flights</h1></legend>
          
-        <div class="radio">
+        <!-- <div class="radio">
             <p>Round-Trip
                 <input type="radio" class="book" name="check" checked></p>
             <p>One-Way
                 <input type="radio" class="book" name="check"></p>
-        </div>
+        </div> -->
 
         <!-- -------------------------------Booking form---------------------------------------- -->
       

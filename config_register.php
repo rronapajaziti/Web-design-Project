@@ -46,6 +46,7 @@ class DatabaseRegister
         $phone = $_POST['phone'];
         $birthday = $_POST['birthday'];
         $password = $_POST['password'];
+        $user_type = $_POST['user_type'];
 
         if ($this->emailExists($email)) {
             echo "<script>alert('A user with this email already exists!')</script>";
@@ -113,7 +114,7 @@ class DatabaseRegister
 
             $email = $_POST['email'];
             $password = $_POST['password'];
-            $user_type = $_POST['user_type'];
+            // $user_type = $_POST['user_type'];
 
             $select = "SELECT * FROM travel_register WHERE email = '$email' && password = '$password' ";
 
