@@ -17,10 +17,14 @@
 		<div class="card">
 			<h2>Users</h2>
 			<p>Registered Users</p>
-			<a href="userDashboard.php">View Users</a>
+			<a href="userDashboard.php">View</a>
+        </div>
+        
+		<div class="card">
+			<h2>Reservations</h2>
+			<p>Registered Reservations</p>
+			<a href="ReservationDashboard.php">View</a>
 		</div>
-		
-	</div>
-    
+		</div>
 </body>
 </html> 

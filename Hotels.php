@@ -34,9 +34,9 @@
                 echo "login.php";
             } ?>" class="bx">
                 
-                <button type="button" class="bx bxs-contact stil"<?php if (!isset($_SESSION['user_type'])) {
+                <a href="Flights.php" class="bx bxs-contact stil"<?php if (!isset($_SESSION['user_type'])) {
                     echo "onclick=\"alert('You cannot make rezervation without being logged in!')\"";
-                } ?>>Flights</button>
+                } ?>>Flights</a>
             </a></li>            <li><a href="Hotels.php"><h2>Hotels</h2></a></li>
             <li><a href="Offers.php"><h2>Offers</h2></a></li>
             <li>
