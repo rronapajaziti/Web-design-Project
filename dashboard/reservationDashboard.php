@@ -30,6 +30,7 @@
         <th>Email</th>
         <th>Images</th>
         <th>Travel</th>
+        <th>Action</th>
         </tr>
     </thead>
       <tbody>
@@ -37,11 +38,11 @@
  
         include '../config_rezervo.php';
         $databaseRezervo = new DatabaseRezervo();
-        $rows = $DatabaseRezervo->fetch();
+        $rows = $databaseRezervo->fetch();
         
         if(!empty($rows)){
         foreach($rows as $row){ 
-       ?>
+      ?>
         <tr>
                 
                 <td><?php echo $row['id']; ?></td>
@@ -57,8 +58,8 @@
                 <td><?php echo $row['images']; ?></td>
                 <td><?php echo $row['travel']; ?></td>
                 <td>
-                  <a href="ReservationDelete.php?id=<?php echo $row['id']; ?>" class="btn btn1">Delete</a>
-                  <a href="ReservationEdit.php?id=<?php echo $row['id']; ?>" class="btn btn2">Edit</a>
+                  <a href="rezervationDelete.php?id=<?php echo $row['id']; ?>" class="btn btn1">Delete</a>
+                  <a href="reservationEdit.php?id=<?php echo $row['id']; ?>" class="btn btn2">Edit</a>
                 </td>
               </tr>
               <?php
