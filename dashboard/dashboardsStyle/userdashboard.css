@@ -33,11 +33,12 @@ h1 {
   color: white;
 }
 form {
-  background-color: #193447;
+  background: transparent;
   border: 1px solid #0a171f;
   border-radius: 5px;
   padding: 20px;
   margin-bottom: 40px;
+  box-shadow: 0 0 10px 1px #0a171f;
 }
 label {
   display: block;

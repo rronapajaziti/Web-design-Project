@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,6 +23,11 @@
 			<h2>Reservations</h2>
 			<p>Registered Reservations</p>
 			<a href="ReservationDashboard.php">View</a>
+		</div>
+		<div class="card">
+			<h2>Offers</h2>
+			<p>Update Offers</p>
+			<a href="offersDashboard.php">View</a>
 		</div>
 		</div>
 </body>
