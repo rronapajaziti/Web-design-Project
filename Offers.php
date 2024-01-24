@@ -16,6 +16,10 @@ $conn = $database->startConnection();
     <title>Oferta</title>
 </head>
 <body>
+    <div class="destinacionet">
+    <h1>Offers</h1>
+    
+
 
 <?php
 $sql = "SELECT * FROM offers";
@@ -26,7 +30,7 @@ if($result->rowCount() > 0){
         echo '<div class="column">
         <div class="box">
             <div class="images">
-                <img src="' . $row['image'] . '" alt="' . $row['name'] . '" class="img">
+                <img src="' . $row['image_path'] . '". alt="' . $row['name'] . '" class="img">
                 <div class="cmimi">
                     <p>' . $row['price'] ."€". '</p>
                 </div>
@@ -38,7 +42,7 @@ if($result->rowCount() > 0){
                 <h4>' . $row['name'] . '</h4>
                 <p>' . $row['description'] . '</p>
                 <div class="icona">
-                    <p><i class="fa fa-location-dot"></i>' . $row['location'] . '</p>
+                    <p><i class="fa fa-location-dot" ></i>' . $row['location'] . '</p>
                     <p><i class="fa fa-sun"></i>' . $row['days'] ."Days". '</p>
                     <p><i class="fa fa-moon"></i>' . $row['nights'] ."Nights". '</p>
                 </div>
@@ -58,6 +62,7 @@ function generateStars($rating){
     return $stars;
 }
 ?>
+</div>
 
     <footer>
         <div class="rreshti">

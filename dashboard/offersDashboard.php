@@ -12,7 +12,7 @@
   </nav>
   <div class="container">
     <h1>Offers</h1>
-    <a href="offerAdd.php">  <button type="submit" name="submit" id="offerAdd">Add Offers</button><br> <br> </a> 
+    <a href="/dashboard/offerAdd.php">  <button type="submit" name="submit" id="offerAdd">Add Offers</button><br> <br> </a> 
 
     <table>
       <thead>
@@ -40,8 +40,8 @@
           foreach ($offers as $offer) {
             ?>
             <tr>
-              <td><?php echo $offer['Offer_id']; ?></td>
-              <td><?php echo $offer['images_path']; ?></td>
+              <td><?php echo $offer['id']; ?></td>
+              <td><?php echo $offer['image_path']; ?></td>
               <td><?php echo $offer['name']; ?></td>
               <td><?php echo $offer['description']; ?></td>
               <td><?php echo $offer['rating']; ?></td>
@@ -49,8 +49,8 @@
               <td><?php echo $offer['days']; ?></td>
               <td><?php echo $offer['nights']; ?></td>
               <td>
-                <a href="offerDelete.php?id=<?php echo $row['Offer_id']; ?>" class="btn btn1">Delete</a>
-                <a href="offerEdit.php?id=<?php echo $row['Offer_id']; ?>" class="btn btn2">Edit</a>
+                <a href="/dashboard/offerDelete.php?id=<?php echo $offer['id']; ?>" class="btn btn1">Delete</a>
+                <a href="/dashboard/offerEdit.php?id=<?php echo $offer['id']; ?>" class="btn btn2">Edit</a>
               </td>
             </tr>
           <?php

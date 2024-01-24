@@ -1,3 +1,6 @@
+<?php
+  include_once '../offerController.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,9 +18,9 @@
 
 <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
       
-    <label for="imagePath">Image Path:</label>
-    <input type="text" name="imagePath" required><br>
-    
+    <label for="image_path">Image Path:</label>
+    <input type="text" name="image_path" required><br>
+
       <label for="name">Name:</label>
       <input type="text" name="name" required><br>
 
@@ -39,12 +42,9 @@
       <label for="nights">Nights:</label>
       <input type="number" name="nights" required><br>
 
-      <button type="submit" name="submit">Add Offer</button><br><br>
+      <button type="submit" name="offerRegjisterBtn">Add Offer</button><br><br>
     </form>
     
   </div>
-  <?php
-        include '../offerController.php';
-        ?>
 </body>
 </html>

@@ -1,12 +1,14 @@
 <?php
 include_once '../offerRepository.php';
-include_once '../offer.php';
+include_once '../Offer.php';
 
-if (isset($_POST['offerRegisterBtn'])) {
-    if (empty($_POST['name']) || empty($_POST['description']) || empty($_POST['price']) ||
-        empty($_POST['rating']) || empty($_POST['location']) || empty($_POST['days']) || empty($_POST['nights'])) {
+if (isset($_POST['offerRegjisterBtn'])) {
+    if (empty($_POST['id'])||empty($_POST['name']) || empty($_POST['description']) || empty($_POST['price']) ||
+        empty($_POST['rating']) || empty($_POST['location']) || empty($_POST['days']) || empty($_POST['nights']) || empty($_POST['image_path'])) {
         echo "Fill all fields!";
     } else {
+        $id = $_POST['id'];
+        $imagePath = $_POST['image_path'];
         $name = $_POST['name'];
         $description = $_POST['description'];
         $price = $_POST['price'];
@@ -15,10 +17,10 @@ if (isset($_POST['offerRegisterBtn'])) {
         $days = $_POST['days'];
         $nights = $_POST['nights'];
 
-        $offer = new Offer($name, $description, $price, $rating, $location, $days, $nights);
-        $offerRepository = new OfferRepository();
+        $offer = new Offer($id,$name,$imagePath, $description, $price, $rating, $location, $days, $nights);
+        $offerRepository = new offerRepository();
 
-        $offerRepository->insertOffer($offer);
+        $offerRepository->insertOffers($offer);
     }
 }
 

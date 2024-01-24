@@ -9,8 +9,9 @@ class Offer {
     private $location;
     private $days;
     private $nights;
+    private $image_path;
 
-    public function __construct($id, $name, $description, $price, $rating, $location, $days, $nights) {
+    public function __construct($id,$image_path, $name, $description, $price, $rating, $location, $days, $nights) {
         $this->id = $id;
         $this->name = $name;
         $this->description = $description;
@@ -19,6 +20,7 @@ class Offer {
         $this->location = $location;
         $this->days = $days;
         $this->nights = $nights;
+        $this->image_path = $image_path;
     }
 
     public function getId() {
@@ -51,6 +53,9 @@ class Offer {
 
     public function getNights() {
         return $this->nights;
+    }
+    public function getImagePath() {
+        return $this->image_path;
     }
 }
 ?>

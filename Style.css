@@ -196,7 +196,7 @@ span {
   right: 0;
   position: absolute;
 }
-.destinacionet .fa {
+.icona .fa {
   font-size: 15px;
   color: #4f95c4;
 }
@@ -213,6 +213,7 @@ span {
 }
 .detaje .fa {
   margin-right: 5px;
+  color: #4f95c4;
 }
 .icona {
   display: flex;
