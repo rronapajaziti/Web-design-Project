@@ -21,6 +21,7 @@
           <th>Image_path</th>
           <th>Name</th>
           <th>Description</th>
+          <th>Price</th>
           <th>Rating</th>
           <th>Location</th>
           <th>Days</th>
@@ -44,13 +45,14 @@
               <td><?php echo $offer['image_path']; ?></td>
               <td><?php echo $offer['name']; ?></td>
               <td><?php echo $offer['description']; ?></td>
+              <td><?php echo $offer['price']; ?></td>
               <td><?php echo $offer['rating']; ?></td>
               <td><?php echo $offer['location']; ?></td>
               <td><?php echo $offer['days']; ?></td>
               <td><?php echo $offer['nights']; ?></td>
               <td>
                 <a href="/dashboard/offerDelete.php?id=<?php echo $offer['id']; ?>" class="btn btn1">Delete</a>
-                <a href="/dashboard/offerEdit.php?id=<?php echo $offer['id']; ?>" class="btn btn2">Edit</a>
+                <a href="../dashboard/offerEdit.php?id=<?php echo $offer['id']; ?>" class="btn btn2">Edit</a>
               </td>
             </tr>
           <?php

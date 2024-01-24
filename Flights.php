@@ -15,15 +15,7 @@
             <img src="Photos/logo1.png" alt="Logo">
         </div>
         <ul>
-            <li>
-            <?php
-            if (!(isset($_SESSION['user_type']))) {
-                echo "<a class='ula' id='pad' href='index.php'><h2>Home</h2></a>";
-            } else if (isset($_SESSION['user_type']) == 'user') {
-                echo "<a class='ula' id='pad' href='index2.php' style='color: red; font-size: inherit;'><h2>Home</h2></a>";
-            }
-            ?>
-            </li>
+            <li><a href="index.php"><h2>Home</h2></a></li>
             <li><a href="About us.php"><h2>About us</h2></a></li>
             <li><a href="<?php if (isset($_SESSION['user_type'])) {
                 echo "Flights.php";
@@ -157,11 +149,12 @@
                 echo "login.php";
             } ?>" class="bx">
          
-              </a> </div>
+              </a> 
               <div class="input">
               <label class="rezervo" for="id-upload">Upload your Personal ID (optional)</label>
                 <input type="file" name="images" id="images">
-
+                </div>
+        </div>
                  
 
 

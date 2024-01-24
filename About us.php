@@ -39,8 +39,11 @@ session_start ()
             <li><a href="Offers.php"><h2>Offers</h2></a></li>
             <li>
             <?php
-            if (isset($_SESSION['user_type']) == 'user') {
-                echo "<a class='logOut' id='pad' href='logout.php' color: #4f95c4 >Logout</a>";
+            if (!(isset($_SESSION['user_type']))) {
+                echo "<a class='ula' id='pad' href='login.php'>Login</a>";
+            } else if (isset($_SESSION['user_type']) == 'user') {
+             echo "<a class='log3' id='pad' href='logout.php'>Logout</a>";
+                
             }
             ?>
             </li>

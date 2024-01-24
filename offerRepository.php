@@ -7,12 +7,6 @@ class offerRepository{
     function __construct(){
         $conn = new LidhjaDb;
         $this->connection = $conn->startConnection();
-       
-        if ($this->connection) {
-            echo "Database connected";
-        } else {
-            echo "Database connection failed";
-        }
     }
 
     function insertOffers(Offer $offer){
@@ -56,7 +50,7 @@ class offerRepository{
 
         return $offer;
     }
-    function updateOffer($id, $name, $description, $price, $rating, $location, $days, $nights,$image_path)
+    function updateOffer($id,$imagePath, $name, $description, $price, $rating, $location, $days, $nights)
     {
         $conn = $this->connection;
 
@@ -64,7 +58,7 @@ class offerRepository{
 
         $statement = $conn->prepare($sql);
 
-        $statement->execute([$name, $description, $price, $rating, $location, $days, $nights, $id,$image_path]);
+        $statement->execute([$id,$imagePath,$name, $description, $price, $rating, $location, $days, $nights]);
 
         echo "<script>alert('Update was successful');</script>";
     }

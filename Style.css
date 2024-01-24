@@ -759,7 +759,6 @@ footer {
   align-items: center;
   padding-bottom: 30px;
 }
-
 .form-control {
   font-size: 12px;
   border-radius: 0;
@@ -781,14 +780,14 @@ footer {
   color: #22475f;
 }
 .button {
-  width: 100%;
+  width: 50%;
   color: rgb(242, 242, 249);
   font-size: 20px;
   border: 3px solid rgb(242, 242, 249);
   background: transparent;
   box-shadow: none;
   border-radius: 0;
-  padding: 20px 45px 20px 20px;
+  padding: 20px 45px 20px;
 }
 .button:hover {
   background: #22475f;
@@ -800,6 +799,9 @@ footer {
   font-size: 20px;
   margin-top: 15px;
   color: #acb9c2;
+}
+.log3 {
+  color: #254c66;
 }
 
 /*--------------------------------Log in--------------------------------*/
