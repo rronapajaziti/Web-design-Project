@@ -27,10 +27,12 @@ $result = $conn->query($sql);
 
 if($result->rowCount() > 0){
     while($row = $result->fetch()){
-        echo '<div class="column">
+        echo  '<div class="container">
+        <div class="row">
+        <div class="column">
         <div class="box">
             <div class="images">
-                <img src="' . $row['image_path'] . '". alt="' . $row['name'] . '" class="img">
+                <img src="' . $row['image_path'].'". alt="' . $row['name'] . '" class="img">
                 <div class="cmimi">
                     <p>' . $row['price'] ."€". '</p>
                 </div>
@@ -48,7 +50,8 @@ if($result->rowCount() > 0){
                 </div>
             </div>
         </div>
-    </div>';
+    </div>
+    </div></div>';
     }
 }else{
     echo "We found 0 results";
@@ -58,6 +61,9 @@ function generateStars($rating){
     $stars = '';
     for($i =0; $i<$rating;$i++){
         $stars .= '<i class="fa fa-star"></i>';
+    }
+    if ($rating - floor($rating) === 0.5) {
+        $stars .= '<i class="fa fa-star-half"></i>';
     }
     return $stars;
 }

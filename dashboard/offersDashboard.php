@@ -12,7 +12,7 @@
   </nav>
   <div class="container">
     <h1>Offers</h1>
-    <a href="/dashboard/offerAdd.php">  <button type="submit" name="submit" id="offerAdd">Add Offers</button><br> <br> </a> 
+    <a href="offerAdd.php">  <button type="submit" name="submit" id="offerAdd">Add Offers</button><br> <br> </a> 
 
     <table>
       <thead>

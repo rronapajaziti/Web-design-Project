@@ -133,7 +133,7 @@ class DatabaseRegister
                     $_SESSION['user_type'] = 'user';
 
                     echo "<script>alert('You have been logged in successfuly!!');</script>";
-                    echo "<script>window.location.href = 'index2.php';</script>";
+                    echo "<script>window.location.href = 'index.php';</script>";
 
                 }
 

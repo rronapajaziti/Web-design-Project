@@ -24,9 +24,11 @@
                 echo "login.php";
             } ?>" class="bx">
                 
-                <button type="button" class="bx bxs-contact stil"<?php if (!isset($_SESSION['user_type'])) {
-                    echo "onclick=\"alert('You cannot make rezervation without being logged in!')\"";
-                } ?>>Flights</button>
+            <?php if (!isset($_SESSION['user_type'])) {
+                    echo "<a onclick=\"alert('You cannot access Flights without being logged in!')\" href='login.php'><h2>Flights</h2></a>";
+                    } else {
+                        echo "<a href='Flights.php'><h2>Flights</h2></a>";
+                    }?>
             </a></li>  
             <li><a href="Hotels.php"><h2>Hotels</h2></a></li>
         <li><a href="Offers.php"><h2>Offers</h2></a></li>
@@ -39,8 +41,19 @@
     <p>Like never before,unique adventures that fill your soul with happiness and fun stories to tell. 
     </p>   
     <div>
-        <a href="login.php"><button type="button"><span></span>LOG IN</button></a>
-        <a href="register.php"><button type="button"><span></span>SIGN UP</button></a>
+        <?php
+        if(isset($_SESSION['user_type'])){
+            if ($_SESSION['user_type'] == 'admin') {
+                echo '<a href="logout.php"><button type="button"><span></span>LOG OUT</button></a>';
+                echo '<a href="../dashboard/dashboard.php"><button type="button"><span></span>Dashboard</button> </a>';
+            }else{
+            echo '<a href="logout.php"><button type="button"><span></span>LOG OUT</button></a>';
+        }
+        }else{
+           echo' <a href="login.php"><button type="button"><span></span>LOG IN</button></a>';
+           echo ' <a href="register.php"><button type="button"><span></span>SIGN UP</button></a>';
+        }
+        ?>
     </div>    
 </div>
 </div>

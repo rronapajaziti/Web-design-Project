@@ -37,7 +37,7 @@ class DatabaseRezervo{
     
             if ($stmt->execute()) {
                 echo "<script>alert('Thank you for your reservation!');</script>";
-                echo "<script>window.location.href = 'index2.php';</script>";
+                echo "<script>window.location.href = 'index.php';</script>";
             } else {
                 echo "Error: " . $stmt->error;
                 echo "<script>alert('Error in reservation.');</script>";

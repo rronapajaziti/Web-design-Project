@@ -21,7 +21,7 @@
             <li>
             <?php
             if (!(isset($_SESSION['user_type']))) {
-                echo "<a class='ula' id='pad' href='index.php'>Home</a>";
+                echo "<a class='ula' id='pad' href='index.php'><h2>Home</h2></a>";
             } else if (isset($_SESSION['user_type']) == 'user') {
                 echo "<a class='ula' id='pad' href='index2.php' style='color: red; font-size: inherit;'>Home</a>";
             }
@@ -34,9 +34,12 @@
                 echo "login.php";
             } ?>" class="bx">
                 
-                <a href="Flights.php" class="bx bxs-contact stil"<?php if (!isset($_SESSION['user_type'])) {
-                    echo "onclick=\"alert('You cannot make rezervation without being logged in!')\"";
-                } ?>>Flights</a>
+            <?php if (!isset($_SESSION['user_type'])) {
+                    echo "<a onclick=\"alert('You cannot access Flights without being logged in!')\" href='login.php'><h2>Flights</h2></a>";
+                    } else {
+                        echo "<a href='Flights.php'><h2>Flights</h2></a>";
+                    }?>
+
             </a></li>            <li><a href="Hotels.php"><h2>Hotels</h2></a></li>
             <li><a href="Offers.php"><h2>Offers</h2></a></li>
             <li>

@@ -18,6 +18,9 @@
 
 <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
       
+    <label for="id">ID:</label>
+    <input type="number" name="id" readonly><br>
+
     <label for="image_path">Image Path:</label>
     <input type="text" name="image_path" required><br>
 
