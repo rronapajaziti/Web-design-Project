@@ -8,10 +8,10 @@
 </head>
 <body>
   <nav class="navbar">
-    <a class="navbar-brand" href="dashboard.php">Dashboard</a>
+    <a class="navbar-brand" href="userDasboard.php">Users</a>
   </nav>
   <div class="container">
-    <h1>Users</h1>
+    <h1>Edit Users</h1>
     <?php
               include '../config_register.php';
               $DatabaseRegister = new DatabaseRegister();
@@ -20,7 +20,7 @@
  
               if (isset($_POST['update'])) {
                 if (isset($_POST['name']) &&  isset($_POST['surname']) && isset($_POST['email'])  &&isset($_POST['phone'])&&isset($_POST['birthday'])&& isset($_POST['password']) && isset($_POST['user_type'])) {
-                     
+                
                     $data['id'] = $id;
                     $data['name'] = $_POST['name'];
                     $data['surname'] = $_POST['surname'];

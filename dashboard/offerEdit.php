@@ -35,9 +35,10 @@ if (isset($_POST['editBtn'])) {
 </head>
 <body>
 <nav class="navbar">
-    <a class="navbar-brand" href="dashboard.php">Edit Offers</a>
+    <a class="navbar-brand" href="offerDashboard.php">Offers</a>
   </nav>
 <div class="container">
+<h1>Edit Offers</h1>
 <form action="" method="post">
     
         <label for="id">ID:</label>

@@ -128,7 +128,7 @@ class DatabaseRegister
                     $_SESSION['user_type'] = 'admin';
 
                     echo "<script>alert('You have logged in successfuly!!');</script>";
-                    echo "<script>window.location.href = './dashboard/dashboard.php';</script>";
+                    echo "<script>window.location.href = 'index.php';</script>";
                 } elseif ($row['user_type'] == 'user') {
                     $_SESSION['user_type'] = 'user';
 

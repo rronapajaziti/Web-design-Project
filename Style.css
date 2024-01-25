@@ -26,10 +26,6 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.logout-link {
-  color: red;
-  font-size: inherit;
-}
 .Logo {
   display: flex;
   justify-content: flex-start;
@@ -112,7 +108,7 @@ body {
   border-radius: 25px;
   font-weight: 550;
   font-size: 20px;
-  border: 2px solid #4f95c4;
+  border: 3px solid #4f95c4;
   background: transparent;
   color: white;
   cursor: pointer;
@@ -176,19 +172,17 @@ span {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-  gap: 50px;
+  gap: 60px;
 }
 .column .img {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 300px;
   height: 300px;
 }
 .container {
   width: 100%;
   margin-top: 10px;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .rating {

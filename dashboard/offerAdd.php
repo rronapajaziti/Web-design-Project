@@ -11,10 +11,10 @@
 </head>
 <body>
   <nav class="navbar">
-    <a class="navbar-brand" href="dashboard.php">Dashboard</a>
+    <a class="navbar-brand" href="offersDashboard.php">Offers</a>
   </nav>
   <div class="container">
-    <h1>Offers</h1>
+  <h1>Add Offers</h1>
 
 <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
       

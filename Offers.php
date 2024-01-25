@@ -17,10 +17,8 @@ $conn = $database->startConnection();
 </head>
 <body>
     <div class="destinacionet">
+
     <h1>Offers</h1>
-    
-
-
 <?php
 $sql = "SELECT * FROM offers";
 $result = $conn->query($sql);

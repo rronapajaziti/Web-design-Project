@@ -8,7 +8,7 @@
     <title>Main Dashboard</title>
 </head>
 <body><br>
-	<a href="../index.php"><button class="top-left-btn">Log Out</button></a>
+	<a href="../logout.php"><button class="top-left-btn">Log Out</button></a>
     <br><br>
     <h1>Dashboard</h1>
     <div class="container">
@@ -28,6 +28,11 @@
 			<h2>Offers</h2>
 			<p>Update Offers</p>
 			<a href="offersDashboard.php">View</a>
+		</div>
+		<div class="card">
+			<h2>Emails</h2>
+			<p>Email Review</p>
+			<a href="emailDashboard.php">View</a>
 		</div>
 		</div>
 </body>

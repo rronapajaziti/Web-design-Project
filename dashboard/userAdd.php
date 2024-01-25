@@ -8,10 +8,10 @@
 </head>
 <body>
   <nav class="navbar">
-    <a class="navbar-brand" href="dashboard.php">Dashboard</a>
+    <a class="navbar-brand" href="userDashboard.php">Users</a>
   </nav>
   <div class="container">
-    <h1>Users</h1>
+      <h1>Add Users</h1>
         <?php
             include '../config_register.php';
             $registeri = new DatabaseRegister();

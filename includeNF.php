@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
     <title>Document</title>
     <style>
         .heading1{
@@ -45,15 +46,22 @@
             if (!(isset($_SESSION['user_type']))) {
                 echo "<a class='log3' id='pad' href='login.php'>Login</a>";
             } else if (isset($_SESSION['user_type']) == 'user') {
-             echo "<a class='log3' id='pad' href='logout.php'>Logout</a>";
+                echo "<a class='log3' id='pad' href='logout.php'>Logout</a>";
                 
             }
             ?>
             </li>
         </ul>
+
     </div>
-</div> 
-    </header>
+    <div class="paragrafi">
+    <?php
+            if (isset($_SESSION['user_type'])) {
+                if ($_SESSION['user_type'] == 'admin') {
+                    echo '<a href="../dashboard/offerAdd.php"><button type="button"><span></span>ADD OFFER</button> </a>';
+                }
+            }   ?>
+    </div></header>
 </body>
 </html>
 

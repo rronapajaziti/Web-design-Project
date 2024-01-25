@@ -8,10 +8,10 @@
 </head>
 <body>
   <nav class="navbar">
-    <a class="navbar-brand" href="dashboard.php">Dashboard</a>
+    <a class="navbar-brand" href="reservationDashboard.php">Reservations</a>
   </nav>
   <div class="container">
-    <h1>Reservation</h1>
+  <h1>Add Reservations</h1>
         <?php
             include '../config_rezervo.php';
             $rezervimi = new DatabaseRezervo();
