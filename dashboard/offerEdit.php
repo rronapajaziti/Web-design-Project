@@ -57,7 +57,7 @@ if (isset($_POST['editBtn'])) {
         <input type="number" name="price" value="<?=$offer['price']?>"required><br>
 
         <label for="rating">Rating:</label>
-        <input type="number" name="rating" value="<?=$offer['rating']?>" step="0.1" required><br>
+        <input type="number" name="rating" value="<?=$offer['rating']?>" step="any" required><br>
 
         <label for="location">Location:</label>
         <input type="text" name="location" value="<?=$offer['location']?>"required><br>

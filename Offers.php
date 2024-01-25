@@ -24,9 +24,10 @@ $sql = "SELECT * FROM offers";
 $result = $conn->query($sql);
 
 if($result->rowCount() > 0){
+    echo '<div class="container">
+    <div class="row">';
     while($row = $result->fetch()){
-        echo  '<div class="container">
-        <div class="row">
+        echo  '
         <div class="column">
         <div class="box">
             <div class="images">
@@ -49,18 +50,20 @@ if($result->rowCount() > 0){
             </div>
         </div>
     </div>
-    </div></div>';
+    ';
     }
+    echo '</div></div>';
 }else{
     echo "We found 0 results";
 }
 
 function generateStars($rating){
     $stars = '';
+    $integerPart = floor($rating);
     for($i =0; $i<$rating;$i++){
         $stars .= '<i class="fa fa-star"></i>';
     }
-    if ($rating - floor($rating) === 0.5) {
+    if ($rating - $integerPart >= 0.5) {
         $stars .= '<i class="fa fa-star-half"></i>';
     }
     return $stars;

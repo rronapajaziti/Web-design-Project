@@ -58,7 +58,7 @@
     <?php
             if (isset($_SESSION['user_type'])) {
                 if ($_SESSION['user_type'] == 'admin') {
-                    echo '<a href="../dashboard/offerAdd.php"><button type="button"><span></span>ADD OFFER</button> </a>';
+                    echo '<a href="./dashboard/offerAdd.php"><button type="button"><span></span>ADD OFFER</button> </a>';
                 }
             }   ?>
     </div></header>

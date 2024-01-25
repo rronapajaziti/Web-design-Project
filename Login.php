@@ -1,4 +1,6 @@
-  <?php session_start()?>
+  <?php session_start()
+   
+  ?>
   <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,7 +78,7 @@
             }
         {
            
-            window.location.href = "index2.php";
+            window.location.href = "index.php";
         }
     }
     </script>

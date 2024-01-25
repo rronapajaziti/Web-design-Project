@@ -34,7 +34,7 @@
       <input type="number" name="price" required><br>
 
       <label for="rating">Rating:</label>
-      <input type="number" name="rating" required><br>
+      <input type="number" name="rating" step="any" required><br>
 
       <label for="location">Location:</label>
       <input type="text" name="location" required><br>
