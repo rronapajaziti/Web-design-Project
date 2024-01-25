@@ -7,7 +7,7 @@ $offerRepository = new offerRepository();
 
 $offerRepository->deleteOffer($offerId);
 
-header("location:/dashboard/offersDashboard.php");
+header("location:../dashboard/offersDashboard.php");
 
 
 ?>

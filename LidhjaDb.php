@@ -1,7 +1,5 @@
 <?php
 
-// Define PDO as PHP Data Object
-
 
 class LidhjaDb {
     private $server = "localhost";

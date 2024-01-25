@@ -51,7 +51,7 @@
               <td><?php echo $offer['days']; ?></td>
               <td><?php echo $offer['nights']; ?></td>
               <td>
-                <a href="/dashboard/offerDelete.php?id=<?php echo $offer['id']; ?>" class="btn btn1">Delete</a>
+                <a href="../dashboard/offerDelete.php?id=<?php echo $offer['id']; ?>" class="btn btn1">Delete</a>
                 <a href="../dashboard/offerEdit.php?id=<?php echo $offer['id']; ?>" class="btn btn2">Edit</a>
               </td>
             </tr>

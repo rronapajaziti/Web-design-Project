@@ -1,10 +1,28 @@
 <?php
+
 $offerId = $_GET['id'];
 include_once '../offerRepository.php';
 
 $offerRepository = new offerRepository();
 
 $offer  = $offerRepository->getOfferById($offerId);
+
+if (isset($_POST['editBtn'])) {
+        echo "Form submitted!";
+        $id = $offer['id'];
+        $imagePath = $_POST['image_path'];
+        $name = $_POST['name'];
+        $description = $_POST['description'];
+        $price = $_POST['price'];
+        $rating = $_POST['rating'];
+        $location = $_POST['location'];
+        $days = $_POST['days'];
+        $nights = $_POST['nights'];
+
+        $offerRepository->updateOffer( $id,$imagePath, $name, $description, $price, $rating, $location, $days, $nights);
+        header("location:../dashboard/offersDashboard.php");
+}
+
 
 ?>
 <!DOCTYPE html>
@@ -49,28 +67,11 @@ $offer  = $offerRepository->getOfferById($offerId);
         <label for="nights">Nights:</label>
         <input type="number" name="nights" value="<?=$offer['nights']?>" required><br>
 
-        <button type="submit" name="editBtn">Edit Offer</button><br><br>
+        <button type="submit" name="editBtn" value="save">Edit Offer</button><br><br>
         </form>
 
 </div>
 
 </body>
 </html>
-<?php 
-if (isset($_POST['editBtn'])) {
-        $id = $_POST['id'];
-        $imagePath = $_POST['image_path'];
-        $name = $_POST['name'];
-        $description = $_POST['description'];
-        $price = $_POST['price'];
-        $rating = $_POST['rating'];
-        $location = $_POST['location'];
-        $days = $_POST['days'];
-        $nights = $_POST['nights'];
-
-        $offerRepository->updateOffer($id,$imagePath, $name, $description, $price, $rating, $location, $days, $nights);
-        header("location:../dashboard/offersDashboard.php");
-}
-
-?>
 

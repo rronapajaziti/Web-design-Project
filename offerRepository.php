@@ -58,7 +58,7 @@ class offerRepository{
 
         $statement = $conn->prepare($sql);
 
-        $statement->execute([$id,$imagePath,$name, $description, $price, $rating, $location, $days, $nights]);
+        $statement->execute([$name, $description, $price, $rating, $location, $days, $nights,$imagePath,$id]);
 
         echo "<script>alert('Update was successful');</script>";
     }
