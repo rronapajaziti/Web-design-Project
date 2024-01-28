@@ -314,7 +314,19 @@ span {
   font-size: 60px;
   margin-bottom: 8%;
 }
-
+.b a {
+  background-color: #4f95c4;
+  color: white;
+  padding: 5px 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 13px;
+  box-shadow: 2px 2px 5px rgba(31, 107, 86, 0.3);
+}
+.b {
+  display: flex;
+  justify-content: space-around;
+}
 /*--------------------------------Footer--------------------------------*/
 footer {
   width: 100%;

@@ -1,5 +1,12 @@
-  <?php session_start()
-   
+  <?php session_start();
+
+if(isset($_POST['submit'])){
+    $email = $_POST['email'];
+
+    setcookie('email', $email, time()+3600);
+
+    header('Location: index.php');
+}
   ?>
   <!DOCTYPE html>
 <html lang="en">

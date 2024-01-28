@@ -48,11 +48,19 @@ if($result->rowCount() > 0){
                     <p><i class="fa fa-moon"></i>' . $row['nights'] ."Nights". '</p>
                 </div>
             </div>
-        </div>
-    </div>
-    ';
+        </div>';
+        if(isset($_SESSION['user_type'])){
+            if ($_SESSION['user_type'] == 'admin') {
+                echo '<div class="b">';
+                echo '<a = href="./dashboard/offerEdit.php?id=' . $row['id'] . '" >EDIT</a>';
+                echo '<a href="./dashboard/offerDelete.php?id=' . $row['id'] . '">DELETE</a>';
+                echo '</div>';
+            }
+        }
+    echo '</div>';
     }
     echo '</div></div>';
+
 }else{
     echo "We found 0 results";
 }

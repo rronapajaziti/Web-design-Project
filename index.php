@@ -45,12 +45,12 @@
         if(isset($_SESSION['user_type'])){
             if ($_SESSION['user_type'] == 'admin') {
                 echo '<a href="logout.php"><button type="button"><span></span>LOG OUT</button></a>';
-                echo '<a href="../dashboard/dashboard.php"><button type="button"><span></span>DASHBOARD</button> </a>';
+                echo '<a href="./dashboard/dashboard.php"><button type="button"><span></span>DASHBOARD</button> </a>';
             }else{
             echo '<a href="logout.php"><button type="button"><span></span>LOG OUT</button></a>';
         }
         }else{
-           echo' <a href="login.php"><button type="button"><span></span>LOG IN</button></a>';
+           echo' <a href="Login.php"><button type="button"><span></span>LOG IN</button></a>';
            echo ' <a href="register.php"><button type="button"><span></span>SIGN UP</button></a>';
         }
         ?>

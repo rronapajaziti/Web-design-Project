@@ -1,3 +1,35 @@
+<?php
+	session_start();
+	if (!isset($_SESSION['user_type']) || $_SESSION['user_type'] === 'user') {
+		echo '<div class="overlay" id="overlay"></div>
+			<div class="custom-alert" id="customAlert">
+				<p>You are not authorized to access this page</p>
+				<button onclick="closeAndRedirect()">OK</button>
+			</div>';
+	
+		echo '<script>
+				function showCustomAlert() {
+					document.getElementById("overlay").style.display = "block";
+					document.getElementById("customAlert").style.display = "block";
+				}
+	
+		function closeCustomAlert() {
+			document.getElementById("overlay").style.display = "none";
+			document.getElementById("customAlert").style.display = "none";
+		}
+	
+		function closeAndRedirect() {
+			closeCustomAlert();
+			window.location.href = "../Login.php";
+		}
+	
+				window.onload = function () {
+					showCustomAlert();
+				};
+	</script>';
+	}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +39,8 @@
     <link rel="stylesheet" href="dashboardsStyle/dashboard.css">
     <title>Main Dashboard</title>
 </head>
+   
+
 <body><br>
 	<a href="../logout.php"><button class="top-left-btn">Log Out</button></a>
     <br><br>
