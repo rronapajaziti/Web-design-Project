@@ -25,7 +25,7 @@ public function insert(){
         $query = "INSERT INTO travel_email(email) VALUES ('$email')";
         if ($sql = $this->conn->query($query)) {
 
-            echo "<script>alert('Thank you for contacting us. We will inform you ASAP!');</script>";
+            echo "<script>alert('Thank you for contacting us. We will get back to you ASAP!');</script>";
             echo "<script>window.location.href = 'index.php';</script>";
         }
 
@@ -54,7 +54,7 @@ public function check(){
      
            if($row['email'] == $email){
             
-            echo "<script>alert('Thank you for contacting us. We will inform you ASAP!');</script>";
+            echo "<script>alert('Thank you for contacting us. We will get back to you ASAP!');</script>";
             echo "<script>window.location.href = 'index.php';</script>";
             $this->insert();
            }
@@ -67,38 +67,6 @@ public function check(){
      
      };
  }
-
-//  public function check2(){ //dashboard
-    
-//     if(isset($_POST['submit'])){
-
-        
-//         $email = $_POST['email']; 
-        
-     
-//         $select = "SELECT * FROM travel_register WHERE email = '$email' ";
-     
-//         $result = mysqli_query($this->conn, $select);
-     
-//         if(mysqli_num_rows($result) > 0){
-     
-//            $row = mysqli_fetch_array($result);
-     
-//            if($row['email'] == $email){
-            
-//             echo "<script>alert('Contact Form has been updated successfully!!');</script>";
-//             echo "<script>window.location.href = 'contactDashboard.php';</script>";
-//             $this->insert();
-//            }
-          
-//         }
-//         else{
-//             echo "<script>alert('The email is invalid. Go register first please!');</script>";
-//             echo "<script>window.location.href = 'userDashboard.php';</script>";
-//         }
-     
-//      };
-//  }
 
  public function fetch(){
     $data = null;

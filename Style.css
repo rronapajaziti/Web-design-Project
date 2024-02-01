@@ -26,6 +26,12 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+
+@media screen and (max-width: 952px) {
+  .navbar a {
+    font-size: 13px;
+  }
+}
 .Logo {
   display: flex;
   justify-content: flex-start;

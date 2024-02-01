@@ -33,9 +33,8 @@
             <li><a href="Hotels.php"><h2>Hotels</h2></a></li>
         <li><a href="Offers.php"><h2>Offers</h2></a></li>
     </ul>    
-     
     </div>
-   <div class="header1">
+<div class="header1">
 <div class="paragrafi">
     <h1>Enjoy your trip</h1>
     <p>Like never before,unique adventures that fill your soul with happiness and fun stories to tell. 
@@ -50,8 +49,8 @@
             echo '<a href="logout.php"><button type="button"><span></span>LOG OUT</button></a>';
         }
         }else{
-           echo' <a href="Login.php"><button type="button"><span></span>LOG IN</button></a>';
-           echo ' <a href="register.php"><button type="button"><span></span>SIGN UP</button></a>';
+            echo' <a href="Login.php"><button type="button"><span></span>LOG IN</button></a>';
+            echo ' <a href="register.php"><button type="button"><span></span>SIGN UP</button></a>';
         }
         ?>
     </div>    
@@ -59,7 +58,7 @@
 </div>
 </header>
 <main>   
- 
+
     <!-- ---------------------------Pjesa 1--------------------------- -->
     <section class="destinacionet">
         <h1>The best offers</h1>
@@ -93,7 +92,6 @@
                         </div>
                     </div>
                 </div>
-          
                 <div class="column">
                     <div class="box">
                         <div class="images">
@@ -112,7 +110,7 @@
                         <div class="detaje">
                             <h4>Greece</h4>
                             <p>Santorini, known since ancient times as Thira, is one of the most famous islands in the world. The fact that you can sit in front of the caldera, enjoy local dishes, a drink or a coffee while gazing at the
-                                 remarkable beauty of an active volcano is priceless!</p>
+                                remarkable beauty of an active volcano is priceless!</p>
                                     <div class="icona">
                                         <p><i class="fa fa-location-dot"></i>Greece</p>
                                         <p><i class="fa fa-sun"></i>5 Days</p>
@@ -123,7 +121,7 @@
                 </div>
 
                     <div class="column">
-                       <div class="box">
+                    <div class="box">
                         <div class="images">
                             <img src="Photos/maldives.jpg" alt="Maldives" class="img">
                             <div class="cmimi">
@@ -141,7 +139,7 @@
                             <h4>South Asia</h4>
                             <p>Paradise awaits you… If your idea of paradise is a pristine tropical island with swaying palm trees and pure white beaches surrounded by crystalline lagoons of varying shades of 
                                 blue – then the Maldives will definitely fit the bill!</p>
-                                 <div class="icona">
+                                <div class="icona">
                                     <p><i class="fa fa-location-dot"></i>Maldives</p>
                                     <p><i class="fa fa-sun"></i>3 Days</p>
                                     <p><i class="fa fa-moon"></i>2 Nights</p>
@@ -165,7 +163,7 @@
             At our travel agency, the journey is not just a destination; 
             it's a celebration of the extraordinary. </p>
             <div class="foto-2">
-              <img src="Photos/place2.jpg" class="img2" width="300px" height="400px">
+            <img src="Photos/place2.jpg" class="img2" width="300px" height="400px">
                 <img src="Photos/place1.jpg" class="img1" width="400px" height="500px">
             </div>
         </div>
@@ -181,11 +179,11 @@
         </div>
         <div class="rretha-foto"><img src="Photos/Dubai.jpg" alt=""></div>
         <div class="rretha-foto"> <img src="Photos/foto4.jpg" alt=""></div>
-           
-           <div class="rretha-foto"> <img src="Photos/Mexico.jpg" alt=""></div>
-           
-           <div class="rretha-foto"> <img src="Photos/venice.jpg" alt=""></div>
-           
+        
+            <div class="rretha-foto"> <img src="Photos/Mexico.jpg" alt=""></div>
+            
+            <div class="rretha-foto"> <img src="Photos/venice.jpg" alt=""></div>
+        
         </div>
     </div>
     </section>
@@ -198,7 +196,7 @@
                 <div class="vertikal"></div>
             <h3>
                 One of the most rewarding aspects of travel is the chance to connect with
-                 people from different corners of the globe
+                people from different corners of the globe
             </h3>
             <div class="vertikal"></div>
             <h3>
@@ -232,7 +230,7 @@
             <a href="https://www.google.com/maps/place/Innovation+Campus+-+UBT/@42.5584196,21.1347945,15z/data=!4m2!3m1!1s0x0:0xf9155209d4ad0657?sa=X&ved=2ahUKEwi2vdS-sMGCAxXdFxAIHe4lA-UQ_BJ6BAhDEAA">Kalabria neighborhood, Prishtina 10000</a>
         </div>
 
-       
+
         <div class="kolona">
             <h3>RECIVE NEWS <div class="underline"><span></span></div></h3>
             <form method="post" class="form">
@@ -261,11 +259,5 @@
         <p class="Copyright">&copy; 2023 Coral Travel Agency</p>
         
     </footer>
- 
 </body>
 </html>
-
- 
-    
-
- 
