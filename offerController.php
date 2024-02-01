@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once '../offerRepository.php';
 include_once '../Offer.php';
 
@@ -16,10 +17,12 @@ if (isset($_POST['offerRegjisterBtn'])) {
         $days = $_POST['days'];
         $nights = $_POST['nights'];
 
-        $offer = new Offer($id,$imagePath,$name, $description, $price, $rating, $location, $days, $nights);
+        $adminName = (isset($_SESSION['user_type']) && isset($_SESSION['name']) && $_SESSION['user_type'] === 'admin') ? $_SESSION['name'] : 'Unknown';
+
+        $offer = new Offer($id,$imagePath,$name, $description, $price, $rating, $location, $days, $nights,$adminName);
         $offerRepository = new offerRepository();
 
-        $offerRepository->insertOffers($offer);
+        $offerRepository->insertOffers($offer,$adminName);
     }
 }
 

@@ -9,7 +9,7 @@ class offerRepository{
         $this->connection = $conn->startConnection();
     }
 
-    function insertOffers(Offer $offer){
+    function insertOffers(Offer $offer,$adminName){
         $conn =$this->connection;
 
         $id = $offer->getId();
@@ -22,11 +22,17 @@ class offerRepository{
         $days = $offer->getDays();
         $nights = $offer->getNights(); 
 
-        $sql = "INSERT INTO offers(id,image_path, name, description, price, rating, location, days, nights) VALUES (?, ?, ?, ?, ?, ?, ?, ?,?)";
+        $sql = "INSERT INTO offers(id,image_path, name, description, price, rating, location, days, nights,added_by) VALUES (?, ?, ?, ?, ?, ?, ?, ?,?,?)";
         $statement = $conn->prepare($sql);
 
-        $statement->execute([$id,$image_path, $name, $description, $price, $rating, $location, $days, $nights]);
-        echo "<script> alert('Offer has been inserted successfully!');</script>";
+        $this->logOfferAssociation($id, $adminName);
+        
+        try {
+            $statement->execute([$id, $image_path, $name, $description, $price, $rating, $location, $days, $nights, $adminName]);
+            echo "<script> alert('Offer has been inserted successfully!');</script>";
+        } catch (PDOException $e) {
+            echo "<script> alert('Error: " . $e->getMessage() . "');</script>";
+        }
     }
     function getAllOffers()
     {
@@ -58,6 +64,7 @@ class offerRepository{
 
         $statement = $conn->prepare($sql);
 
+
         $statement->execute([$name, $description, $price, $rating, $location, $days, $nights,$imagePath,$id]);
 
         echo "<script>alert('Update was successful');</script>";
@@ -74,5 +81,16 @@ class offerRepository{
 
         echo "<script>alert('Delete was successful');</script>";
     }
+    private function logOfferAssociation($id, $adminName) {
+        $conn = $this->connection;
+
+        $sql = "UPDATE offers SET added_by=? WHERE id=?";
+
+        $statement = $conn->prepare($sql);
+
+        $statement->execute([$adminName, $id]);
+    }
+
+
 }
 ?>

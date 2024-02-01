@@ -1,3 +1,4 @@
+<?php   session_start();?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,6 +28,7 @@
           <th>Days</th>
           <th>Nights</th>
           <th>Action</th>
+          <th>Added By</th>
         </tr>
       </thead>
       <tbody>
@@ -54,6 +56,7 @@
                 <a href="../dashboard/offerDelete.php?id=<?php echo $offer['id']; ?>" class="btn btn1">Delete</a>
                 <a href="../dashboard/offerEdit.php?id=<?php echo $offer['id']; ?>" class="btn btn2">Edit</a>
               </td>
+              <td><?php echo isset($offer['added_by']) ? $offer['added_by'] : 'Unknown'; ?></td>
             </tr>
           <?php
           }

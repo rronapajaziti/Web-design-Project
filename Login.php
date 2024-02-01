@@ -1,14 +1,20 @@
-  <?php session_start();
+<?php session_start();
+include 'config_register.php';
+$login = new DatabaseRegister();
 
-if(isset($_POST['submit'])){
-    $email = $_POST['email'];
+$userData = $login->check();
+if ($userData && isset($userData['user_type'])) {
+    $_SESSION['user_type'] = $userData['user_type'];
 
-    setcookie('email', $email, time()+3600);
+    if (isset($userData['name'])) {
+        $_SESSION['name'] = $userData['name'];
+    } else {
 
-    header('Location: index.php');
+        $_SESSION['name'] = 'Unknown';
+    } 
 }
-  ?>
-  <!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -23,9 +29,7 @@ if(isset($_POST['submit'])){
     
     
         <?php
-            include 'config_register.php';
-            $login = new DatabaseRegister();
-            $check = $login->check();
+            
 
             ?>
     

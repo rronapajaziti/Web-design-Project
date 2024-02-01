@@ -126,6 +126,7 @@ class DatabaseRegister
 
                 if ($row['user_type'] == 'admin') {
                     $_SESSION['user_type'] = 'admin';
+                    $_SESSION['name'] = $row['name'];
 
                     echo "<script>alert('You have logged in successfuly!!');</script>";
                     echo "<script>window.location.href = 'index.php';</script>";

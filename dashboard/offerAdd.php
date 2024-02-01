@@ -44,7 +44,6 @@
 
       <label for="nights">Nights:</label>
       <input type="number" name="nights" required><br>
-
       <button type="submit" name="offerRegjisterBtn">Add Offer</button><br><br>
     </form>
     
