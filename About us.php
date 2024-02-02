@@ -49,7 +49,6 @@ session_start ()
             </li>
             </ul>
         </div>
-    </div> 
     
     <div class="about">
         <h1>About  us</h1>
@@ -162,7 +161,7 @@ session_start ()
         <a href="https://www.google.com/maps/place/Innovation+Campus+-+UBT/@42.5584196,21.1347945,15z/data=!4m2!3m1!1s0x0:0xf9155209d4ad0657?sa=X&ved=2ahUKEwi2vdS-sMGCAxXdFxAIHe4lA-UQ_BJ6BAhDEAA">Kalabria neighborhood, Prishtina 10000</a>
     </div>
     <div class="kolona">
-        <h3>RECIVE NEWS <div class="underline"><span></span></div></h3>
+        <h3>RECEIVE NEWS <div class="underline"><span></span></div></h3>
         <form method="post" class="form">
                 <i class="fa-regular fa-envelope"></i>
                 <input type="email" placeholder="Enter your email" name="email" id="email" required>

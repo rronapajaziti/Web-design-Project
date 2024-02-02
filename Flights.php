@@ -28,18 +28,10 @@
                 } ?>><h2>Flights</h2></a>
             </a></li>            <li><a href="Hotels.php"><h2>Hotels</h2></a></li>
             <li><a href="Offers.php"><h2>Offers</h2></a></li>
-            <!-- <li>
-            <?php
-            if (!(isset($_SESSION['user_type']))) {
-                echo "<a class='ula' id='pad' href='login.php'>Login</a>";
-            } else if (isset($_SESSION['user_type']) == 'user') {
-                echo "<a class='ula' id='pad' href='logout.php' style='color: red; font-size: inherit;'>Logout</a>";
-            }
-            ?>
-            </li> -->
         </ul>
         </div>
     </div> 
+            </header>
     <main>
 
           <form  name="myForm" method="post">
@@ -51,13 +43,6 @@
         ?>
         <div class="booking-form-box">
             <fieldset><legend><h1 class="u">Book Your Flights</h1></legend>
-         
-        <!-- <div class="radio">
-            <p>Round-Trip
-                <input type="radio" class="book" name="check" checked></p>
-            <p>One-Way
-                <input type="radio" class="book" name="check"></p>
-        </div> -->
 
         <!-- -------------------------------Booking form---------------------------------------- -->
       
@@ -114,7 +99,6 @@
         <!-- -------------------------------Personal info---------------------------------------- -->
         <div class="pjeset">
             <div class="input">
-                <!-- boni me id krejt -->
                 <label><h3>Name</h3></label>
             <input type="text" class="form-control" placeholder="name"id="nameF" name="name" required>
             <div class="error-message3" id="nameError"></div>
@@ -171,7 +155,6 @@
             
         </div>
       </fieldset>
-        </div>
     
 
   

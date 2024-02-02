@@ -830,7 +830,6 @@ footer {
   align-items: center;
   min-height: 100vh;
   background: linear-gradient(#012f49, #1e4041);
-  /* background-image:url(Photos/bg.jpg); */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;

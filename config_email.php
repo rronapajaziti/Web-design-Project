@@ -78,41 +78,5 @@ public function check(){
     }
     return $data;
 }
-
-
-
-public function delete($id){
-
-    $query = "DELETE FROM travel_email where id = '$id'";
-    if ($sql = $this->conn->query($query)) {
-        return true;
-    }else{
-        return false;
-    }
-}
-
-public function edit($id){
-
-    $data = null;
-
-    $query = "SELECT * FROM travel_email WHERE id = '$id'";
-    if ($sql = $this->conn->query($query)) {
-        while($row = $sql->fetch_assoc()){
-            $data = $row;
-        }
-    }
-    return $data;
-}
-
-public function update($data){
-    
-    $query = "UPDATE travel_email SET email='$data[email]'";
-
-    if ($sql = $this->conn->query($query)) {
-        return true;
-    }else{
-        return false;
-    }
-}
 }
 ?>

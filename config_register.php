@@ -114,7 +114,6 @@ class DatabaseRegister
 
             $email = $_POST['email'];
             $password = $_POST['password'];
-            // $user_type = $_POST['user_type'];
 
             $select = "SELECT * FROM travel_register WHERE email = '$email' && password = '$password' ";
 

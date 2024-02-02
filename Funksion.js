@@ -9,22 +9,18 @@ let imgVarg = [
 
 function nextImg() {
   if (i % 2 === 0) {
-    //nese i ehte cift shfaq img 1
     document.getElementById("slide").src = imgVarg[i];
     if (i + 1 < imgVarg.length) {
-      //foton e dyte ne varg e bene te dyten ne rresht
       document.getElementById("slide2").src = imgVarg[i + 1];
     }
   } else {
-    //nese i eshte tek shfaq foton e dyte
     document.getElementById("slide2").src = imgVarg[i];
     if (i - 1 >= 0) {
-      //nese eshte nje foto para kesaj merre ate si te paren ne rresht
       document.getElementById("slide").src = imgVarg[i - 1];
     }
   }
   i++;
-  //nese i behet ma e madhe se vargu.length beje i=0
+
   if (i >= imgVarg.length) {
     i = 0;
   }
@@ -44,18 +40,17 @@ function emalValid() {
     emailError.innerText = "Example: name@gmail.com";
     return;
   }
-  window.location.href = "Travel.html";
+  window.location.href = "index.php";
 }
+//Flights
 
 function dateValidim() {
-  //merr dates e sotme
   var currentDateTime = new Date();
   currentDateTime.setDate(currentDateTime.getDate() + 1);
   var year = currentDateTime.getFullYear();
   var month = currentDateTime.getMonth() + 1;
   var date = currentDateTime.getDate();
 
-  //sigurohemi qe muaji dhe data jan nga dy numra
   if (date < 10) {
     date = "0" + date;
   }
@@ -69,11 +64,10 @@ function dateValidim() {
 
   departingD.setAttribute("min", dateTomorrow);
   departingD.onchange = function () {
-    //min prej dates se selektuar ne departing
     returningD.setAttribute("min", this.value);
   };
 }
-//ne load te faqes bllokon datat e meparshme tek departing
+
 window.addEventListener("load", dateValidim);
 
 function validimiFlights() {
@@ -141,6 +135,6 @@ function validimiFlights() {
     isValid = false;
   }
   if (isValid) {
-    window.location.href = "Travel.html";
+    window.location.href = "index.php";
   }
 }

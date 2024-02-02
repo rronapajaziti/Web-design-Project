@@ -3,16 +3,6 @@ include 'config_register.php';
 $login = new DatabaseRegister();
 
 $userData = $login->check();
-if ($userData && isset($userData['user_type'])) {
-    $_SESSION['user_type'] = $userData['user_type'];
-
-    if (isset($userData['name'])) {
-        $_SESSION['name'] = $userData['name'];
-    } else {
-
-        $_SESSION['name'] = 'Unknown';
-    } 
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,12 +16,6 @@ if ($userData && isset($userData['user_type'])) {
 </head>
 
 <body class="trupi">
-    
-    
-        <?php
-            
-
-            ?>
     
 <div class="log">
         <form method="post">

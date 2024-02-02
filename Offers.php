@@ -103,7 +103,7 @@ function generateStars($rating){
 
         
         <div class="kolona">
-            <h3>RECIVE NEWS <div class="underline"><span></span></div></h3>
+            <h3>RECEIVE NEWS <div class="underline"><span></span></div></h3>
             <form method="post" class="form">
                 <i class="fa-regular fa-envelope"></i>
                 <input type="email" placeholder="Enter your email" name="email" id="email" required>

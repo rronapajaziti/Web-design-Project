@@ -24,9 +24,7 @@ session_start ()
             $insert = $register->insert();
 
             ?>
-          
         
-                <!-- <div class=""> -->
                     <div class="sg">
                         <label>Name:</label>
                      <i class='bx bx-user'></i>
@@ -85,11 +83,6 @@ session_start ()
                    <div class="error-message" id="passwordError1">
                      
                 </div>
-
-                
-                
-
-                
                     
                 <div class="Click">
                 <p> <a href="Login.php">Log In!</a></p>
@@ -103,9 +96,6 @@ session_start ()
 
     </div>
     
-              
-
-    <!-- </div> -->
     
 
     <script>
