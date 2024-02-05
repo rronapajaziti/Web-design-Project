@@ -37,7 +37,7 @@ class DatabaseRezervo{
     
             if ($stmt->execute()) {
                 echo "<script>alert('Thank you for your reservation!');</script>";
-                echo "<script>window.location.href = 'index.php';</script>";
+                echo "<script>window.location.href = '../index.php';</script>";
             } else {
                 echo "Error: " . $stmt->error;
                 echo "<script>alert('Error in reservation.');</script>";
@@ -68,7 +68,7 @@ public function check(){
            if($row['email'] == $email){
             
             echo "<script>alert('Thank you for your rezervation!');</script>";
-            echo "<script>window.location.href = 'index.php';</script>";
+            echo "<script>window.location.href = '../index.php';</script>";
             $this->insert();
            }
           
