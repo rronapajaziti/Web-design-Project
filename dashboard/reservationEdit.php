@@ -43,14 +43,14 @@
                     $data['email'] = $_POST['email'];
                     $data['travel'] = $_POST['travel'];
                     $data['images'] = $_POST['images'];
-            
+                
                     $update = $databaseRezervo->update($data);
                     if ($update) {
                         echo "<script>alert('Reservation has been updated!');</script>";
-                        echo "<script>window.location.href = 'reservationDashboard.php';</script>";
+                        header("location:../dashboard/reservationDashboard.php");
                     } else {
                         echo "<script>alert('Update FAILED try again!');</script>";
-                        echo "<script>window.location.href = 'reservationDashboard.php';</script>";
+                        echo "<script>window.location.href = 'reservationEdit.php?id=$id';</script>";
                     }
                 } else {
                     echo "<script>alert('Is empty!');</script>";
@@ -88,17 +88,16 @@
         <input type="email" id="emailF" name="email" value="<?php echo $row['email']; ?>" required>
 
         <label for="travel">Travel</label>
-                <select  id="travelClass" name="travel" value="<?php echo $row['travel']; ?>">
-                    <option value="Economy Class">Economy Class</option>
-                    <option value="Buisness Class">Buisness Class</option>
-                    <option value="First Class">First Class</option>
-                </select>
+        <select id="travelClass" name="travel">
+            <option value="Economy Class" <?php if ($row['travel'] == 'Economy Class') echo 'selected'; ?>>Economy Class</option>
+            <option value="Business Class" <?php if ($row['travel'] == 'Business Class') echo 'selected'; ?>>Business Class</option>
+            <option value="First Class" <?php if ($row['travel'] == 'First Class') echo 'selected'; ?>>First Class</option>
+</select>
 
         <label class="rezervo" for="images">Upload your Personal ID (optional)</label>
-        <input type="file" name="images" id="images" value="<?php echo $row['images']; ?>">
-    
+        <input type="text" name="images" id="images" value="<?php echo $row['images']; ?>">
 
-    <button type="submit" name="update">Edit Reservation</button>
+    <button type="submit" name="update" value="save">Edit Reservation</button>
     </form>
     
 </div>

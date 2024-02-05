@@ -156,6 +156,7 @@ public function update($data){
     if ($sql = $this->conn->query($query)) {
         return true;
     }else{
+        echo "Error: " . $this->conn->error;
         return false;
     }
 }

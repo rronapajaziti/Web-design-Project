@@ -55,7 +55,7 @@
                 <td><?php echo $row['name']; ?></td>
                 <td><?php echo $row['last_name']; ?></td>
                 <td><?php echo $row['email']; ?></td>
-                <td><?php echo $row['images']; ?></td>
+                <td><img src="../Photos/<?php echo $row['images']; ?>" width="300px" height="200px"></td>
                 <td><?php echo $row['travel']; ?></td>
                 <td>
                   <a href="rezervationDelete.php?id=<?php echo $row['id']; ?>" class="btn btn1">Delete</a>

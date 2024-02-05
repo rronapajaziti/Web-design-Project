@@ -18,7 +18,7 @@
             $insert = $rezervimi->insert();
 
             ?>
-    <form action="" method="post">
+    <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
         <label for="flying_from">Flying From</label>
         <input type="text" id="fromF" name="flying_from" required>
 
