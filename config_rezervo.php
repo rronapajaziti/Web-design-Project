@@ -148,15 +148,24 @@ public function edit($id){
     }
     return $data;
 }
-
 public function update($data){
     $query = "UPDATE travel_rezervo SET 
-    flying_from='{$data['flying_from']}', flying_to='{$data['flying_to']}', departing='{$data['departing']}', returning='{$data['returning']}',   adults='{$data['adults']}', children ='{$data['children']}',   name ='{$data['name']}', last_name ='{$data['last_name']}', email ='{$data['email']}', images ='{$data['images']}', travel ='{$data['travel']}' WHERE id='{$data['id']}'";
+        flying_from='{$data['flying_from']}', 
+        flying_to='{$data['flying_to']}', 
+        departing='{$data['departing']}', 
+        `returning`='{$data['returning']}', 
+        adults='{$data['adults']}', 
+        children ='{$data['children']}', 
+        name ='{$data['name']}', 
+        last_name ='{$data['last_name']}', 
+        email ='{$data['email']}', 
+        images ='{$data['images']}', 
+        travel ='{$data['travel']}' 
+        WHERE id='{$data['id']}'";
 
     if ($sql = $this->conn->query($query)) {
         return true;
-    }else{
-        echo "Error: " . $this->conn->error;
+    } else {
         return false;
     }
 }

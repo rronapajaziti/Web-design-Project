@@ -18,6 +18,7 @@
             $id = $_REQUEST['id'];
             $row = $databaseRezervo->edit($id);
             if (isset($_POST['update'])) {
+                echo "Form submitted!";
                 if (
                     isset($_POST['flying_from']) &&  
                     isset($_POST['flying_to']) && 
@@ -50,6 +51,7 @@
                         header("location:../dashboard/reservationDashboard.php");
                     } else {
                         echo "<script>alert('Update FAILED try again!');</script>";
+                        //echo "Error: " . $databaseRezervo->conn->error;
                         echo "<script>window.location.href = 'reservationEdit.php?id=$id';</script>";
                     }
                 } else {
