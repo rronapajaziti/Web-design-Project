@@ -8,7 +8,7 @@
 </head>
 <body>
   <nav class="navbar">
-    <a class="navbar-brand" href="userDasboard.php">Users</a>
+    <a class="navbar-brand" href="userDashboard.php">Users</a>
   </nav>
   <div class="container">
     <h1>Edit Users</h1>

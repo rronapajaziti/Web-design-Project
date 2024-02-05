@@ -18,41 +18,53 @@
             $id = $_REQUEST['id'];
             $row = $databaseRezervo->edit($id);
             if (isset($_POST['update'])) {
-                if (isset($_POST['flying_from']) &&  isset($_POST['flying_to']) && isset($_POST['adults'])  
-                            &&isset($_POST['children'])&&isset($_POST['name'])&& isset($_POST['last_name'])
-                            && isset($_POST['email']) && isset($_POST['travel']) && isset($_POST['images'])) {
-                    
+                if (
+                    isset($_POST['flying_from']) &&  
+                    isset($_POST['flying_to']) && 
+                    isset($_POST['adults']) &&
+                    isset($_POST['departing']) &&
+                    isset($_POST['returning']) && 
+                    isset($_POST['children']) &&
+                    isset($_POST['name']) &&
+                    isset($_POST['last_name']) &&
+                    isset($_POST['email']) &&
+                    isset($_POST['travel']) &&
+                    isset($_POST['images'])
+                ) {
                     $data['id'] = $id;
                     $data['flying_from'] = $_POST['flying_from'];
                     $data['flying_to'] = $_POST['flying_to'];
                     $data['adults'] = $_POST['adults'];
+                    $data['departing'] = $_POST['departing'];
+                    $data['returning'] = $_POST['returning'];
                     $data['children'] = $_POST['children'];
                     $data['name'] = $_POST['name'];
                     $data['last_name'] = $_POST['last_name'];
                     $data['email'] = $_POST['email'];
                     $data['travel'] = $_POST['travel'];
                     $data['images'] = $_POST['images'];
-
+            
                     $update = $databaseRezervo->update($data);
-                    if($update){
-                    echo "<script>alert('Reservation has been updated!');</script>";
-                    echo "<script>window.location.href = 'reservationDashboard.php';</script>";
-                    }else{
-                    echo "<script>alert('Update FAILED try again!');</script>";
-                    echo "<script>window.location.href = 'reservationDashboard.php';</script>";
+                    if ($update) {
+                        echo "<script>alert('Reservation has been updated!');</script>";
+                        echo "<script>window.location.href = 'reservationDashboard.php';</script>";
+                    } else {
+                        echo "<script>alert('Update FAILED try again!');</script>";
+                        echo "<script>window.location.href = 'reservationDashboard.php';</script>";
                     }
-                }else{
+                } else {
                     echo "<script>alert('Is empty!');</script>";
-                    header("Location: rezervationEdit.php'?id=$id");
+                    header("Location: reservationEdit.php?id=$id");
                 }
-                }
+            }
+            
         ?>
         <form action="" method="post">
         <label for="flying_from">Flying From</label>
-        <input type="text" id="fromF" name="FlyingF" value="<?php echo $row['flying_from']; ?>" required>
+        <input type="text" id="fromF" name="flying_from" value="<?php echo $row['flying_from']; ?>" required>
 
         <label for="flying_to">Flying To</label>
-        <input type="text" id="toF" name="FlyingT" value="<?php echo $row['flying_to']; ?>" required>
+        <input type="text" id="toF" name="flying_to" value="<?php echo $row['flying_to']; ?>" required>
 
         <label for="departing">Departing</label>
         <input type="date" id="departingF" name="departing" value="<?php echo $row['departing']; ?>" required>

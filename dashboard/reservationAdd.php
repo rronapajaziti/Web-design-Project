@@ -20,10 +20,10 @@
             ?>
     <form action="" method="post">
         <label for="flying_from">Flying From</label>
-        <input type="text" id="fromF" name="FlyingF" required>
+        <input type="text" id="fromF" name="flying_from" required>
 
         <label for="flying_to">Flying To</label>
-        <input type="text" id="toF" name="FlyingT" required>
+        <input type="text" id="toF" name="flying_to" required>
 
         <label for="departing">Departing</label>
         <input type="date" id="departingF" name="departing" required>

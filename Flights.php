@@ -134,12 +134,12 @@
             } ?>" class="bx">
          
               </a> 
-              <div class="input">
+             
+        </div>
+                <div class="input">
               <label class="rezervo" for="id-upload">Upload your Personal ID (optional)</label>
                 <input type="file" name="images" id="images">
-                </div>
-        </div>
-                 
+                </div>  
 
 
             <div class="input">

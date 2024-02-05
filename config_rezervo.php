@@ -26,7 +26,7 @@ class DatabaseRezervo{
             $name = $_POST['name'];
             $last_name = $_POST['last_name'];
             $email = $_POST['email'];
-            $images = isset($_POST['images']) ? $_POST['images'] : '';
+            $images = $_POST['images'];
             $travel = $_POST['travel'];
     
             $query = "INSERT INTO travel_rezervo (`flying_from`, `flying_to`, `departing`, `returning`, `adults`, `children`, `name`, `last_name`, `email`, `images`, `travel`) 
@@ -151,7 +151,7 @@ public function edit($id){
 
 public function update($data){
     $query = "UPDATE travel_rezervo SET 
-    flying_from='$data[flying_from]', flying_to='$data[flying_to]', departing='$data[departing]', returning='$data[returning]',   adults='$data[adults]', children ='$data[children]',   name ='$data[name]', last_name ='$data[last_name]', email ='$data[email]', images ='$data[images]', travel ='$data[travel]' WHERE id='$data[id]'";
+    flying_from='{$data['flying_from']}', flying_to='{$data['flying_to']}', departing='{$data['departing']}', returning='{$data['returning']}',   adults='{$data['adults']}', children ='{$data['children']}',   name ='{$data['name']}', last_name ='{$data['last_name']}', email ='{$data['email']}', images ='{$data['images']}', travel ='{$data['travel']}' WHERE id='{$data['id']}'";
 
     if ($sql = $this->conn->query($query)) {
         return true;
@@ -159,5 +159,6 @@ public function update($data){
         return false;
     }
 }
+
 }
 ?>

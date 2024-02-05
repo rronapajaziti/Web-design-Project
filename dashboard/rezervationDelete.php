@@ -5,6 +5,6 @@
     $delete = $rezervimi->delete($id);
     if ($delete) {
         echo "<script>alert('The Reservation has been deleted successfully!');</script>";
-        echo "<script>window.location.href = 'rezervationDashboard.php';</script>";
+        echo "<script>window.location.href = 'reservationDashboard.php';</script>";
     }
 ?>
